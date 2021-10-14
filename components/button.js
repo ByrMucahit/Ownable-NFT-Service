@@ -4,7 +4,14 @@ import styles from './button.module.css'
 
 
 function button ({children}) {
-    return <button type="button" className={styles.button}>{children}</button>
+    return (
+        <div className={styles.btn}>
+            <button type="button">{children}</button>
+            <span className={styles.c}> Heyyo</span>
+        </div>
+   
+    
+    ) 
 }
 
 

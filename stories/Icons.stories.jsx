@@ -9,7 +9,24 @@ export default {
 };
 
 export const Icon= () => (
-    <div>
+    <div className="icons">
         <Icons.Discord style={{color:"red"}} />
+        <Icons.DropDown/>
+        <Icons.DropDownİcon/>
+        <Icons.EthLogo/>
+        <Icons.Facebook/>
+        <Icons.Fingerprint/>
+        <Icons.İnstagram/>
+        <Icons.Linkdn/>
+        <Icons.Mail/>
+        <Icons.Media/>
+        <Icons.MetaData/>
+        <Icons.OpenseaLogo/>
+        <Icons.QrCode/>
+        <Icons.RaribleLogo/>
+        <Icons.SavingsPig/>
+        <Icons.SmartContractİcon/>
+        <Icons.Twitter/>
+        <Icons.Youtube/>
     </div>
 )

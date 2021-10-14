@@ -10,7 +10,7 @@
     "lint": "next lint",
     "storybook": "start-storybook --no-manager-cache -p 6006",
     "build-storybook": "build-storybook",
-    "icon":"svgr icons -d components/icons --icon --replace-attr-values \"#fff=currentColor\""
+    "icon": "svgr icons -d components/icons --icon --replace-attr-values \"#fff=currentColor\""
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,9 @@
     "@svgr/cli": "^5.5.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.7",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.2.3",
     "style-loader": "^2.0.0"
   },
   "dependencies": {
