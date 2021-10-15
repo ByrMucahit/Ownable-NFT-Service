@@ -1,6 +1,4 @@
-import React from "react";
-
-import Button from '../components/button'
+import React from "react"
 
 import * as Icons from '../components/icons'
 

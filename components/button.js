@@ -7,7 +7,6 @@ function button ({children}) {
     return (
         <div className={styles.btn}>
             <button type="button">{children}</button>
-            <span className={styles.c}> Heyyo</span>
         </div>
    
     
