@@ -18,9 +18,9 @@ export const NavigationButton = () => (
     </NavButton>
 )
 
-export const Navigator = () =>{
+export const Navigator = () =>(
     <Navigation/>
-}
+)
 
 
 

@@ -2,15 +2,11 @@ import React from "react";
 import styles from './navigation.module.css'
 
 import NavigationButton from './navigation-button'
-
+import textTitle from './text-title'
+import headTitle from './head-title'
+import { Facebook } from "./icons";
 
 const MENU = [
-    {
-        key: 'mark',
-        icon: '',
-        title: 'OWNABLE-NS',
-
-    },
     {
         key: 'make-an-nft',
         icon: '',
@@ -38,23 +34,32 @@ const MENU = [
     }
 ]
 
-
 function Navigation(){
     return (
-    <nav>
+    <nav className={styles.navigator}>
+        
+        
+        <div className={styles.mark}>
+            <textTitle bold>Ownable-NS</textTitle> 
+        </div>
+
+
+        <div className={styles.navBtn}>
+        
         { 
             MENU.map((menu) => {
                 const showElement = menu.icon.length > 0
                 return (
                     <NavigationButton
                     key= {menu.key}
-                    icon= {menu.icon}
+                    isIcon= {showElement}
                     >
-                        <p>menu.title</p>
+                    <textTitle className={styles.Title}> {menu.title} </textTitle>
                     </NavigationButton>
                 )
             })
         }
+        </div>
     </nav>
     )
 }

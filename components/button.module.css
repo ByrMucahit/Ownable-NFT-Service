@@ -1,5 +1,13 @@
 .btn{
-    .button{
-        background-color: eda;
-    }
+    display: inline-block;
 }
+
+button{
+    background-color: transparent;
+    border:none
+}
+
+button:hover{
+    color: var(--c-btn-background)
+}
+    
