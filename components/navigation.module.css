@@ -3,25 +3,36 @@
         border: 1px solid;
         border-color: #9E9E9E;
         width: 1903px;
-        height: 62px;
+        height: 71px;
         max-height: 95px;
-        padding-top: 33px;
-        display: flex;
+        padding-top: 22px;
+        display: table;
+
+    div + div {
+        padding-left:16px; 
+    }
+
+    /* Navigator Button */
+    .navBtn{
+        padding-left: 750px;
+        display: table-cell
+            }
+
+    /* Mark */
+    .mark{
+        padding-left: 30px;
+        display: table-cell;
+        
+        .mark svg{
+            font-size: 30px;
+            display: table-cell;
+        }
+    /* .navBtn and .mark has the same display, because both of them is in different div, and those two div must be same row.*/
+    }
+    .loginButton{
+        padding-right: 40px;
+    }
 }
 
-/* Navigator Button */
-.navBtn{
-    padding-left: 864px;
-}
 
-/* Mark */
-.mark{
-    padding-left: 60px;
-}
-
-.mark svg{
-    font-size: 30px;
-}
-
-/* .navBtn and .mark has the same display, because both of them is in different div, and those two div must be same row.*/
 

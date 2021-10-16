@@ -5,9 +5,8 @@ import { Facebook } from "./icons"
 import cn from 'classnames'
 import Button from './button'
 
-function NavigationButton ({isIcon=true,children, ...props}) {
-    return (<Button>
-        {isIcon && <Facebook/>}
+function NavigationButton ({isIcon=false,children, ...props}) {
+    return (<Button >
         {children}
     </Button>)
 }
