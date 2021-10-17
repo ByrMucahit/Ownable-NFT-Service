@@ -1,5 +1,6 @@
 import React from "react";
 import styles from './navigation.module.css'
+import cn from 'classnames'
 
 import NavigationButton from './navigation-button'
 import textTitle from './text-title'
@@ -38,8 +39,8 @@ const MENU = [
 function Navigation(){
     return (
     <nav className={styles.navigator}>
-        <div className={styles.mark}>
-            <textTitle bold>Ownable-NS</textTitle> 
+        <div className={cn(styles.mark)}>
+            <headTitle>Ownable-NS</headTitle> 
         </div>
 
         <div className={styles.navBtn}>
@@ -49,9 +50,8 @@ function Navigation(){
                 return (
                     <NavigationButton
                     key= {menu.key}
-                    isIcon= {showElement}
                     >
-                    <textTitle className={styles.Title}> {menu.title} </textTitle>
+                    <textTitle> {menu.title} </textTitle>
                     </NavigationButton>
                 ) })
         }

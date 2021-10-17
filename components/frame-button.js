@@ -6,9 +6,12 @@ import Button from './button'
 
 function FrameButton ({children}) {
     return (
-        <div className={styles.frameContainer}>
-            <Button type="button" className={styles.frameBtn} border>{children}</Button>
-        </div>
+            <Button type="button" 
+            className={styles.frameBtn}
+             border
+             >
+            {children}
+            </Button>
     ) 
 }
 

@@ -14,7 +14,7 @@
 
     /* Navigator Button */
     .navBtn{
-        padding-left: 750px;
+        padding-left: 980px;
         display: table-cell
             }
 
@@ -30,7 +30,7 @@
     /* .navBtn and .mark has the same display, because both of them is in different div, and those two div must be same row.*/
     }
     .loginButton{
-        padding-right: 40px;
+        padding-right: 60px;
     }
 }
 

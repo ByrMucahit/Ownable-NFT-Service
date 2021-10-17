@@ -1,15 +1,19 @@
 import React from'react';
 
-import Button from '../components/button'
+
+import Layout from '../components/layout'
+
+
+
 
 
 function HomePage() {
-    return <div>
-      <h1>
-        Welcome to next.js
-      </h1>
-      <Button>Merhaba</Button>
-    </div>
+
+
+    return (
+      <Layout/>
+          
+    )
   }
   
   export default HomePage

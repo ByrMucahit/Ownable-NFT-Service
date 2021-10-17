@@ -5,13 +5,8 @@ import cn from 'classnames'
 
 function button ({border=false, children, ...props}) {
     return (
-        <div className={styles.buttonContainer}>
-            <button  className={cn(border && styles.FrameBorder)} type="button"> {children} </button>
-        </div>
-   
-    
+            <button  className={cn([styles.baseBtn ,border && styles.FrameBorder])} type="button"> {children} </button>
     ) 
 }
-
 
 export default button

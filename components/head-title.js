@@ -3,7 +3,7 @@ import styles from './head-title.module.css'
 
 import cn from "classnames";
 
-function HeadTitle({ bold= true, children}){
+function HeadTitle({ bold= false, children}){
     return <h1 className={cn([styles.Title, bold && styles.bold])}>{children}</h1>
 }
 

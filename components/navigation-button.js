@@ -1,11 +1,9 @@
 import React from "react"
 import styles from './navigation-button.module.css'
 
-import { Facebook } from "./icons"
-import cn from 'classnames'
 import Button from './button'
 
-function NavigationButton ({isIcon=false,children, ...props}) {
+function NavigationButton ({ children }) {
     return (<Button >
         {children}
     </Button>)

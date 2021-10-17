@@ -5,7 +5,7 @@ import Button from '../components/button'
 import NavButton from '../components/navigation-button'
 import Navigation from "../components/navigation";
 import FrameButton from '../components/frame-button'
-
+import HeadTitle from "../components/head-title";
 
 export default {
     title: 'Buttons'

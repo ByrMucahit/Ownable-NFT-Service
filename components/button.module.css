@@ -1,14 +1,14 @@
 /* Container from button */
-.buttonContainer{
-    display: inline-block;
     /* Button Elements */
-    button{
+    .baseBtn{
+        font-size: 12px;
         background-color: transparent;
-        border:none  
+        display: inline-block;
+        border:none;  
     }
 
     /* While hovering on buttons of navigation, text will have been yellow. */
-    button:hover{
+    .baseBtn:hover{
         color: var(--c-btn-background)
     }
 
@@ -24,7 +24,7 @@
     .FrameBorder:hover{
         background: var(--c-frame-background);
                         }
-}
+
 
 
 
