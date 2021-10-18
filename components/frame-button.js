@@ -2,7 +2,7 @@ import React from "react";
 import styles from './frame-button.module.css'
 
 import Button from './button'
-
+import TextTitle from "./text-title";
 
 function FrameButton ({children}) {
     return (
@@ -10,7 +10,7 @@ function FrameButton ({children}) {
             className={styles.frameBtn}
              border
              >
-            {children}
+            <TextTitle>{children}</TextTitle>
             </Button>
     ) 
 }

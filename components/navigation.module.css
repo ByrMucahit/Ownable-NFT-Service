@@ -8,14 +8,14 @@
         padding-top: 22px;
         display: table;
 
-    div + div {
-        padding-left:16px; 
-    }
-
     /* Navigator Button */
     .navBtn{
-        padding-left: 980px;
-        display: table-cell
+        padding-left: 700px;
+        display: table-cell;
+        
+        button + button {
+        padding-left: 20px; 
+        }
             }
 
     /* Mark */

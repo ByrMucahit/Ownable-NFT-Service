@@ -3,8 +3,8 @@ import styles from './navigation.module.css'
 import cn from 'classnames'
 
 import NavigationButton from './navigation-button'
-import textTitle from './text-title'
-import headTitle from './head-title'
+import TextTitle from './text-title'
+import HeadTitle from './head-title'
 import { Facebook } from "./icons";
 import FrameButton from "./frame-button";
 
@@ -40,7 +40,7 @@ function Navigation(){
     return (
     <nav className={styles.navigator}>
         <div className={cn(styles.mark)}>
-            <headTitle>Ownable-NS</headTitle> 
+            <HeadTitle>Ownable-NS</HeadTitle> 
         </div>
 
         <div className={styles.navBtn}>
@@ -51,7 +51,7 @@ function Navigation(){
                     <NavigationButton
                     key= {menu.key}
                     >
-                    <textTitle> {menu.title} </textTitle>
+                    <TextTitle> {menu.title} </TextTitle>
                     </NavigationButton>
                 ) })
         }

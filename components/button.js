@@ -5,7 +5,11 @@ import cn from 'classnames'
 
 function button ({border=false, children, ...props}) {
     return (
-            <button  className={cn([styles.baseBtn ,border && styles.FrameBorder])} type="button"> {children} </button>
+            <button  className={cn([styles.baseBtn ,border && styles.FrameBorder])} 
+            type="button"
+            > 
+            {children} 
+            </button>
     ) 
 }
 

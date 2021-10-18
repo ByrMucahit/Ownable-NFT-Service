@@ -4,7 +4,7 @@ import styles from './text-title.module.css'
 import cn from "classnames";
 
 function TextTitle({ bold=false, children}){
-    return <h2 className={cn([styles.Title, bold && styles.bold, className])}>{children}</h2>
+    return <h2 className={cn([styles.Title, bold && styles.bold])}>{children}</h2>
 }
 
 
