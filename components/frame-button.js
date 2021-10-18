@@ -17,3 +17,9 @@ function FrameButton ({children}) {
 
 
 export default FrameButton
+
+/* 
+    Document:
+    --------
+    <TextTitle/>: It's vary of text, It just has some specific attribute such as 16 px font size, and bold font wight.
+*/

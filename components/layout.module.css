@@ -1,6 +1,5 @@
 .layout{
     display: grid;
     min-height: 640px;
-    grid-template-columns: repeat(3, 1fr);
 }
 

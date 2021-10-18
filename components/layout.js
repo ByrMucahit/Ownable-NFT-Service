@@ -1,21 +1,13 @@
 import React from "react";
-import cn from 'classnames'
 
 import styles from './layout.module.css'
 
-import CONST from '../constant'
-import MarkSide from '../components/col-markSide'
 import MainSide from '../components/col-mainSide'
-import LoginSide from '../components/col-loginSide'
-import useWindowSize from '../Hook/useWindowsSize'
 import Navigation from "./navigation";
 
+function Layout() {
 
-function Layout({ children }) {
-    const size = useWindowSize();
-
-    return <div className={cn(styles.layout)}>
-          
+    return <div className={styles.layout}>      
           <MainSide>
               <Navigation/>
           </MainSide>
@@ -23,3 +15,8 @@ function Layout({ children }) {
 }
 
 export default Layout
+
+/*
+<MainSide/>: Page has one grid named MainSide. 
+<Navigation/>: It has icon, mark, buttons,and located on top of pages. 
+*/
