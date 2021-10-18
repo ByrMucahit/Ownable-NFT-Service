@@ -5,7 +5,8 @@ import Button from '../components/button'
 import NavButton from '../components/navigation-button'
 import Navigation from "../components/navigation";
 import FrameButton from '../components/frame-button'
-import HeadTitle from "../components/head-title";
+import MintButton from "../components/button-mintButton";
+
 
 export default {
     title: 'Buttons'
@@ -26,6 +27,5 @@ export const Navigator = () =>(
 export const FrameButtons = () => <FrameButton>Login</FrameButton>
 
 
-
-
+export const MintNFTButton = () => <MintButton>Mint NFT</MintButton>
 
