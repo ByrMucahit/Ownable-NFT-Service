@@ -3,3 +3,11 @@
     min-height: 640px;
 }
 
+.nav{
+
+    @media (--t) {
+        padding-left: auto;
+    }
+}
+
+

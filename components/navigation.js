@@ -5,7 +5,6 @@ import cn from 'classnames'
 import NavigationButton from './navigation-button'
 import TextTitle from './text-title'
 import HeadTitle from './head-title'
-import { Facebook } from "./icons";
 import FrameButton from "./frame-button";
 
 const MENU = [
@@ -36,7 +35,7 @@ const MENU = [
     }
 ]
 
-function Navigation(){
+function Navigation({flat=false}){
     return (
     <nav className={styles.navigator}>
         <div className={cn(styles.mark)}>
@@ -46,12 +45,11 @@ function Navigation(){
         <div className={styles.navBtn}>
         { 
             MENU.map((menu) => {
-                const showElement = menu.icon.length > 0
                 return (
                     <NavigationButton
                     key= {menu.key}
                     >
-                    <TextTitle> {menu.title} </TextTitle>
+                    {!flat &&<TextTitle> {menu.title} </TextTitle>}
                     </NavigationButton>
                 ) })
         }

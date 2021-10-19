@@ -6,8 +6,9 @@ import TextTitle from "./text-title";
 
 function FrameButton ({children}) {
     return (
-            <Button type="button" 
+            <Button  
                 className={styles.frameBtn}
+                type="button"
                 border
                 >
                 <TextTitle>{children}</TextTitle>

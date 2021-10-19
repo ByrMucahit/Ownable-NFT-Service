@@ -28,3 +28,9 @@ export default button
     children: Content, which include within element.
     ...props: What if Any properties is passed into function, Function can catch.
 */
+
+/* 
+// TO DO List
+[]  frame button / Transparent - color
+
+*/

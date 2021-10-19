@@ -27,5 +27,5 @@ export const Navigator = () =>(
 export const FrameButtons = () => <FrameButton>Login</FrameButton>
 
 
-export const MintNFTButton = () => <MintButton>Mint NFT</MintButton>
+export const MintNFTButton = () => <MintButton>MINT CHIC-A-DEE NFT</MintButton>
 
