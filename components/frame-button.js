@@ -7,10 +7,10 @@ import TextTitle from "./text-title";
 function FrameButton ({children}) {
     return (
             <Button type="button" 
-            className={styles.frameBtn}
-             border
-             >
-            <TextTitle>{children}</TextTitle>
+                className={styles.frameBtn}
+                border
+                >
+                <TextTitle>{children}</TextTitle>
             </Button>
     ) 
 }

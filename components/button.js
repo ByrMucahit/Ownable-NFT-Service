@@ -3,12 +3,17 @@ import styles from './button.module.css'
 
 import cn from 'classnames'
 
-function button ({border=false, children, ...props}) {
+function button ({border=false, children, className ,...props}) {
     return (
-            <button  className={cn([styles.baseBtn ,border && styles.FrameBorder])} 
-            type="button"
+            <button  
+            className={cn(
+                [styles.baseBtn ,
+                border && styles.FrameBorder,
+                className
+            ])} 
+                type="button"
             > 
-            {children} 
+                {children} 
             </button>
     ) 
 }
