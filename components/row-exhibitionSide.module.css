@@ -1,6 +1,21 @@
 .container{
+    display: grid;
+    grid-template-areas: 'Advert Photos';
+    grid-template-columns: 700px 1fr;
     background-color: var(--c-frame-background);
     color: white;
     width: 1903px;
     height: 426.26px;
+}
+
+.advert{
+    grid-area: Advert;
+}
+
+.photoExhibition{
+    grid-area: Photos;
+    text-align: center;
+    .photos{
+        
+    }
 }

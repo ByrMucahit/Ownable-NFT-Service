@@ -1,20 +1,6 @@
 .layout{
 background-color: #eee;
 min-height: 640px;
-    @media (--t){
-        grid-template-rows: auto;
-    }
-
-    @media (--d) {
-        
-        
-        
-    }
-
-}
-
-.nav{
-    background-color: yellow;
 }
 
 

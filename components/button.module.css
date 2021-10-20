@@ -26,14 +26,16 @@
 
     .linkContainer {
     
-
         &+*{
-            padding-left: 16px;
+            padding-left: 20px;
         }
 
-        @media (--t){
+    
+      
+    }
 
-        }
+    .linkContainer:hover{
+        color:var(--c-frame-background);
     }
 
   

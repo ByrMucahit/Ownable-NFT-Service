@@ -23,7 +23,7 @@ function frameButton ({border=false, children, className ,...props}) {
 function linkButton ({ children, className ,...props}) {
     return (
         <div className={styles.linkContainer}>
-        <a> {children} </a>
+            <a className={styles.links}> {children} </a>
         </div>  
     ) 
 }
