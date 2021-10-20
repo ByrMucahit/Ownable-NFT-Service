@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgDropDown(props) {
   return (
@@ -15,7 +15,7 @@ function SvgDropDown(props) {
         fill="#000"
       />
     </svg>
-  );
+  )
 }
 
-export default SvgDropDown;
+export default SvgDropDown

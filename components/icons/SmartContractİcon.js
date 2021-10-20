@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgSmartContractİcon(props) {
   return (
@@ -23,7 +23,7 @@ function SvgSmartContractİcon(props) {
         fill="#000"
       />
     </svg>
-  );
+  )
 }
 
-export default SvgSmartContractİcon;
+export default SvgSmartContractİcon

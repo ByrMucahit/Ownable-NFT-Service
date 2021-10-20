@@ -24,6 +24,18 @@
         background: var(--c-frame-background);
                         }
 
+    .linkContainer {
+    
+
+        &+*{
+            padding-left: 16px;
+        }
+
+        @media (--t){
+
+        }
+    }
+
   
 
 

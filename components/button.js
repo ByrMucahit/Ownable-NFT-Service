@@ -2,8 +2,9 @@ import React from 'react'
 import styles from './button.module.css'
 
 import cn from 'classnames'
+import TextTitle from './text-title'
 
-function button ({border=false, children, className ,...props}) {
+function frameButton ({border=false, children, className ,...props}) {
     return (
             <button  
             className={cn(
@@ -15,6 +16,32 @@ function button ({border=false, children, className ,...props}) {
             > 
                 {children} 
             </button>
+    ) 
+}
+
+
+function linkButton ({ children, className ,...props}) {
+    return (
+        <div className={styles.linkContainer}>
+        <a> {children} </a>
+        </div>  
+    ) 
+}
+
+
+function button ({border=false, children, className ,...props}) {
+    const Comp = border ? frameButton : linkButton
+    return (
+            <Comp  
+            className={cn(
+                [styles.baseBtn ,
+                border && styles.FrameBorder,
+                className
+            ])} 
+                type="button"
+            > 
+                {children} 
+            </Comp>
     ) 
 }
 

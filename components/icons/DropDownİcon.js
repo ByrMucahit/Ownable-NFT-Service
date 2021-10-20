@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgDropDownİcon(props) {
   return (
@@ -12,7 +12,7 @@ function SvgDropDownİcon(props) {
     >
       <path d="M7 10l5 5 5-5H7z" fill="#000" />
     </svg>
-  );
+  )
 }
 
-export default SvgDropDownİcon;
+export default SvgDropDownİcon

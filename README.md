@@ -2,4 +2,4 @@
 My Enterpreuner
 
 # TO DO List
-[] Responsive Creation
+[] When size of window equals size of tablet, Nav Menu Icon will be seen.

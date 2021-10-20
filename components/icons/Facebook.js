@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgFacebook(props) {
   return (
@@ -15,7 +15,7 @@ function SvgFacebook(props) {
         fill="currentColor"
       />
     </svg>
-  );
+  )
 }
 
-export default SvgFacebook;
+export default SvgFacebook

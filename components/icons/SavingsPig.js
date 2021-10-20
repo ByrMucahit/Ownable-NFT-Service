@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgSavingsPig(props) {
   return (
@@ -19,7 +19,7 @@ function SvgSavingsPig(props) {
         fill="#000"
       />
     </svg>
-  );
+  )
 }
 
-export default SvgSavingsPig;
+export default SvgSavingsPig

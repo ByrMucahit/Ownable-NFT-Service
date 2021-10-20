@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgOpenseaLogo(props) {
   return (
@@ -19,7 +19,7 @@ function SvgOpenseaLogo(props) {
         fill="#3291E9"
       />
     </svg>
-  );
+  )
 }
 
-export default SvgOpenseaLogo;
+export default SvgOpenseaLogo

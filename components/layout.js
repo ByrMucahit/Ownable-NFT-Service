@@ -4,20 +4,23 @@ import useWindowSize from '../hook/useWindowSize'
 import styles from './layout.module.css'
 import CONST from '../constant'
 import MainSide from '../components/col-mainSide'
-import Navigation from "./navigation";
+import Navigation from "./navigation"
+import ExhibitionSide from './row-exhibitionSide'
 
 function Layout() {
     const size = useWindowSize()
     return <div className={styles.layout}>      
-          <MainSide>
               { size.width < CONST.TABLET_SIZE ? 
-              <Navigation className={styles.nav} flat/> : <Navigation />
+              <Navigation  flat/> : <Navigation />
               }
               
-              <span>{JSON.stringify(size)}</span>
-          </MainSide>
-         
-    </div>
+
+               <div>
+                <ExhibitionSide/>
+               </div>
+               <span className={styles.sizing}>{JSON.stringify(size)}</span>
+               {/* There having main side */}
+        </div>
 }
 
 export default Layout

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgRaribleLogo(props) {
   return (
@@ -19,7 +19,7 @@ function SvgRaribleLogo(props) {
         fill="#000"
       />
     </svg>
-  );
+  )
 }
 
-export default SvgRaribleLogo;
+export default SvgRaribleLogo

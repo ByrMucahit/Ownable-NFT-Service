@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgMail(props) {
   return (
@@ -15,7 +15,7 @@ function SvgMail(props) {
         fill="currentColor"
       />
     </svg>
-  );
+  )
 }
 
-export default SvgMail;
+export default SvgMail

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgYoutube(props) {
   return (
@@ -15,7 +15,7 @@ function SvgYoutube(props) {
         fill="currentColor"
       />
     </svg>
-  );
+  )
 }
 
-export default SvgYoutube;
+export default SvgYoutube

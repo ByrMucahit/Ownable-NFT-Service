@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgQrCode(props) {
   return (
@@ -22,7 +22,7 @@ function SvgQrCode(props) {
         </clipPath>
       </defs>
     </svg>
-  );
+  )
 }
 
-export default SvgQrCode;
+export default SvgQrCode

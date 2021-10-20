@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function Svgİnstagram(props) {
   return (
@@ -15,7 +15,7 @@ function Svgİnstagram(props) {
         fill="currentColor"
       />
     </svg>
-  );
+  )
 }
 
-export default Svgİnstagram;
+export default Svgİnstagram

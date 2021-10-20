@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgMetaData(props) {
   return (
@@ -21,7 +21,7 @@ function SvgMetaData(props) {
         stroke="#000"
       />
     </svg>
-  );
+  )
 }
 
-export default SvgMetaData;
+export default SvgMetaData

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgEthLogo(props) {
   return (
@@ -40,7 +40,7 @@ function SvgEthLogo(props) {
         stroke="#000"
       />
     </svg>
-  );
+  )
 }
 
-export default SvgEthLogo;
+export default SvgEthLogo

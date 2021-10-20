@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgLinkdn(props) {
   return (
@@ -15,7 +15,7 @@ function SvgLinkdn(props) {
         fill="currentColor"
       />
     </svg>
-  );
+  )
 }
 
-export default SvgLinkdn;
+export default SvgLinkdn

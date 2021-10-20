@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react'
 
 function SvgFingerprint(props) {
   return (
@@ -23,7 +23,7 @@ function SvgFingerprint(props) {
         </clipPath>
       </defs>
     </svg>
-  );
+  )
 }
 
-export default SvgFingerprint;
+export default SvgFingerprint

@@ -3,7 +3,7 @@ import styles from './navigation-button.module.css'
 
 import Button from './button'
 
-function NavigationButton ({ children, className}) {
+function NavigationButton ({ children}) {
     return (<Button className={styles.nav}>
         {children}
     </Button>)

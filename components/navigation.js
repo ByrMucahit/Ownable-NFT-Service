@@ -7,6 +7,8 @@ import TextTitle from './text-title'
 import HeadTitle from './head-title'
 import FrameButton from "./frame-button";
 
+import {HomepageOption} from './icons'
+
 const MENU = [
     {
         key: 'make-an-nft',
@@ -47,6 +49,7 @@ function Navigation({flat=false}){
             MENU.map((menu) => {
                 return (
                     <NavigationButton
+                    className={styles.subBtn}
                     key= {menu.key}
                     >
                     {!flat &&<TextTitle> {menu.title} </TextTitle>}
@@ -58,6 +61,7 @@ function Navigation({flat=false}){
         <div className={styles.loginButton}>
             <FrameButton>Login</FrameButton>
         </div>
+            {flat && <HomepageOption/>}
     </nav>
     )
 }

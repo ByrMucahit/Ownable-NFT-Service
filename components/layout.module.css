@@ -1,13 +1,31 @@
 .layout{
-    display: grid;
-    min-height: 640px;
+background-color: #eee;
+min-height: 640px;
+    @media (--t){
+        grid-template-rows: auto;
+    }
+
+    @media (--d) {
+        
+        
+        
+    }
+
 }
 
 .nav{
-
-    @media (--t) {
-        padding-left: auto;
-    }
+    background-color: yellow;
 }
+
+
+
+
+
+
+    
+
+
+
+
 
 
