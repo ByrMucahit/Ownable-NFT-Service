@@ -11,18 +11,21 @@ function Exhibition({ Header, Text, Owner, src="https://ownerfy.com/jpandfriends
         <article className={styles.container}>
             {/* Text Side From Exhibition side */}
             <div className={styles.advert}>  
-                {/* Header Side */}
-                <div className={styles.header}>
-                    <HeadTitle>HIGHER QUALITY NFTs</HeadTitle>
-                </div>
-                {/* Text Side */}
-                <div className={styles.text}>
-                    <TextTitle>Text</TextTitle>
-                </div>
-                {/* Button Side */}
-                <div className={styles.mintButton}>
-                    <MintButton>Mınt CHIC-A-DEE NFT</MintButton>
-                </div>
+                    {/* Header Side */}
+                
+                    <HeadTitle bold>HIGHER QUALITY NFTs</HeadTitle>
+                    <hr/>
+               
+                    {/* Text Side */}
+                
+                    <a>
+                        <TextTitle bold>Now Minting: Chic-A-Dees,First NFTs to Generate EGGS Tokens</TextTitle>
+                    </a>
+               
+                    {/* Button Side */}
+                
+                    <MintButton className={styles.mintButton}>MINT CHIC-A-DEE NFT</MintButton>
+                
             </div>
 
             {/* Photos Side */}
@@ -33,9 +36,12 @@ function Exhibition({ Header, Text, Owner, src="https://ownerfy.com/jpandfriends
                     <Photo src="https://firebasestorage.googleapis.com/v0/b/receiptcoin-receiptchain-de560.appspot.com/o/website%2Fchicadees%2Fcashcows.png?alt=media&token=60ef4aa7-42c9-47de-82a6-b719953749c3"/>
                 </div>
                 {/* Owner Of Photos */}
-                <div className={styles.owner}>
-                    <p>Owner</p>
-                </div>
+                <a className={styles.owner}>
+                    <p className={styles.subOwner}>
+                        <span>My </span>
+                        Owner
+                    </p>
+                </a>
             </div>
         </article>
     )

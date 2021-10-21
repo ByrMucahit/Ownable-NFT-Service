@@ -18,7 +18,7 @@ function Layout() {
                <div>
                 <ExhibitionSide/>
                </div>
-               <span className={styles.sizing}>{JSON.stringify(size)}</span>
+               <span className={styles.sizing} style={{color:'white'}}>{JSON.stringify(size)}</span>
                {/* There having main side */}
         </div>
 }

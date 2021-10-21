@@ -7,7 +7,7 @@ function Photo({src="https://firebasestorage.googleapis.com/v0/b/receiptcoin-rec
         
             <a className={styles.photo} >
                 <img className={styles.img}
-                style={{ fontWeight: width, lineHeight:height}}
+                style={{ width: width, height:height}}
                 src={src}
                 alt={alt}
                 />
