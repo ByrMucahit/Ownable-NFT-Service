@@ -2,5 +2,7 @@
     --c-btn-background: #FCC729;
     --c-frame-background: rgb(28, 29, 30);
     --c-icon-color: #FFFFFF;
-    --c-border-color: rgb(129,130,130)
+    --c-border-color: rgb(129,130,130);
+    --c-background-alternative-color: #FAFAFA;
+    --c-color-alternative: #4D5153;
 }

@@ -3,13 +3,13 @@ import styles from './head-title.module.css'
 
 import cn from "classnames";
 
-function HeadTitle({ bold= false,className ,children, size=20}){
+function HeadTitle({ bold= false,className ,children, size=20, opacity=1}){
     return <h1 className={cn(
         [styles.Title, 
         bold && styles.bold,
         className
         ])}
-        style={{fontSize:size}}
+        style={{fontSize:size, opacity: opacity}}
         >{children}</h1>
 }
 

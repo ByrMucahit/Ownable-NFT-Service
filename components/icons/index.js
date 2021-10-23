@@ -1,3 +1,4 @@
+export { default as CheckSquare } from './CheckSquare'
 export { default as Discord } from './Discord'
 export { default as DropDownİcon } from './DropDownİcon'
 export { default as DropDown } from './DropDown'

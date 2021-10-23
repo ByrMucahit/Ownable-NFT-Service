@@ -25,12 +25,11 @@
         .borderLine{
             line-height: 22.88px;
             }  
-    }
+        }
     
     .mintButton{
             margin-top: 32px;
-    }
-   
+    }  
 }
 
 .photoExhibition{
@@ -41,9 +40,10 @@
         display: flex;
     }
     .subOwner{
+        display: flex;
         margin-top: 32px;
         margin-left: 20px;
-        display: flex;
+        
     }
 }
 

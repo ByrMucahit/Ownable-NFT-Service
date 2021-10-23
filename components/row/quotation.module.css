@@ -1,0 +1,33 @@
+.quo{
+    padding-top: 40px;
+    text-align: center;
+    background-color: var(--c-background-alternative-color);
+    min-height: 214.72px;
+
+    .quoMiddleText {
+        color: var(--c-color-alternative);
+    }
+    .quoFooterText{
+        color: var(--c-color-alternative);
+    }
+
+    div + div{
+        padding-top: 20px;
+    }
+
+    .quoOpensea{
+        padding-left: 20px;
+    }
+    .Span{
+        color: var(--c-btn-background);
+    }
+    .quoRarible{
+        width: 25px;
+        height: 25px;
+    }
+    .quoOpensea{
+        width: 25px;
+        height: 25px;
+    }
+   
+}
