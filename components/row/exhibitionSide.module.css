@@ -17,6 +17,10 @@
         left: 50%;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+
+        @media(--t){
+            left: 35%;
+        }
        
         .borderLine{
             line-height: 22.88px;
@@ -26,17 +30,20 @@
     .mintButton{
             margin-top: 32px;
     }
+   
 }
-
-
-
-
 
 .photoExhibition{
     grid-area: Photos;
-    
+
     .photos{
-        
+        text-align: justify;
+        display: flex;
+    }
+    .subOwner{
+        margin-top: 32px;
+        margin-left: 20px;
+        display: flex;
     }
 }
 

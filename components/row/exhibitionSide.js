@@ -34,13 +34,13 @@ function Exhibition({ Header, Text, Owner, src="https://ownerfy.com/jpandfriends
                     <Photo/>
                     <Photo src="https://firebasestorage.googleapis.com/v0/b/receiptcoin-receiptchain-de560.appspot.com/o/website%2Fchicadees%2Fcashcows.png?alt=media&token=60ef4aa7-42c9-47de-82a6-b719953749c3"/>
                 </div>
-                {/* Owner Of Photos */}
-                <a className={styles.owner}>
-                    <p className={styles.subOwner}>
-                        <span>My </span>
-                        Owner
-                    </p>
-                </a>
+                     {/* Owner Of Photos */}
+                     <a className={styles.owner}>
+                        <p className={styles.subOwner}>
+                            <HeadTitle size='12px' bold>UPCOMING COLLECTION:</HeadTitle>
+                            <HeadTitle size='12px'>J.Pierce and Friends - Hand Painted and Signed</HeadTitle>
+                        </p>
+                </a>          
             </div>
         </article>
     )
