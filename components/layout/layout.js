@@ -4,7 +4,7 @@ import useWindowSize from '../../hook/useWindowSize'
 import styles from './layout.module.css'
 import CONST from '../../constant'
 import Navigation from "../navigation/navigation"
-import ExhibitionSide from '../row/row-exhibitionSide'
+import ExhibitionSide from '../row/exhibitionSide'
 
 function Layout() {
     const size = useWindowSize()

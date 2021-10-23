@@ -2,10 +2,10 @@ import React from "react";
 import styles from './navigation.module.css'
 import cn from 'classnames'
 
-import NavigationButton from './navigation-button'
+import NavigationButton from './button'
 import TextTitle from '../text/text-title'
 import HeadTitle from '../text/head-title'
-import FrameButton from "../frame/frame-button";
+import FrameButton from "../frame/frameButton";
 
 import {HomepageOption} from '../icons'
 

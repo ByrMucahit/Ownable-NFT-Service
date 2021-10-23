@@ -1,0 +1,41 @@
+/* Container from button */
+    /* Button Elements */
+    .baseBtn{
+        background-color: transparent;
+        display: inline-block;
+        border:none;  
+    }
+
+    /* While hovering on buttons of navigation, text will have been yellow. */
+    .baseBtn:hover{
+        color: var(--c-btn-background)
+    }
+
+    /* If Button has border, This code snippet will have been activated*/
+    .FrameBorder{
+        border: 2px solid;
+        border-color: var( --c-btn-background);
+        width: 92.94px;
+        height: 53.81px;
+                }
+
+    /* while hovering on button, Button background will have been black, even text will have been yellow */
+    .FrameBorder:hover{
+        background: var(--c-frame-background);
+                        }
+
+    .linkContainer {
+    
+        &+*{
+            padding-left: 20px;
+        }    
+    }
+    
+    .linkContainer:hover{
+        color:var(--c-frame-background);
+    }
+
+  
+
+
+
