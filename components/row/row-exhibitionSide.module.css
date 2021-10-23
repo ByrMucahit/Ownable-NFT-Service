@@ -1,0 +1,42 @@
+.container{
+    display: grid;
+    grid-template-areas: 'Advert Photos';
+    grid-template-columns: 700px 1fr;
+    background-color: var(--c-frame-background);
+    color: white;
+    width: 1920px;
+    height: 426.26px;
+    position: fixed;
+
+    /*Advert Side */
+    .advert{
+        grid-area: Advert;
+        text-align: start;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+       
+        .borderLine{
+            line-height: 22.88px;
+            }  
+    }
+    
+    .mintButton{
+            margin-top: 32px;
+    }
+}
+
+
+
+
+
+.photoExhibition{
+    grid-area: Photos;
+    
+    .photos{
+        
+    }
+}
+
