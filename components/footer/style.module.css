@@ -1,0 +1,42 @@
+.footerContainer{
+    background-color: var(--c-frame-background);
+    display: grid;
+    grid-template-areas: 'left right';
+    grid-template-columns:800px 50%;
+    min-height: 350px;
+
+        /* CSS from left side of footer */
+    .leftSideOfContainer{
+        color: white;
+        padding: 20px;
+        position: relative;
+        .Icons{
+        
+            svg+svg{
+                padding-left: 10px;
+            } 
+
+            svg{
+                width: 29px;
+                height: 29px;
+             }
+        }
+      
+       .copyText{
+           color: var(--c-btn-background); 
+       }
+
+        .copy{
+            position: absolute;
+            bottom: 20px;
+        }
+    }
+    /* CSS from right side of footer */
+    .rightSideOfContainer{
+       background-color: red;
+       .footer{
+           padding-top: 50px;
+       }
+        
+    }
+}

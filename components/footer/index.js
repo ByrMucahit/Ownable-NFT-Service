@@ -2,12 +2,15 @@ import React from "react";
 import styles from './style.module.css'
 import * as Icon from '../icons'
 import HeadTitle from '../text/head-title'
-import FooterNav from '../footer/index.js'
+import FooterSide from '../navigation/footer'
 
 function Footer(){
     return(
-        <div className={styles.container}>
+        /* Container */
+        <div className={styles.footerContainer}>
+            {/* Left Side Of Footer */}
             <div className={styles.leftSideOfContainer}>
+                {/* Icons Of Footer */}
                 <div className={styles.Icons}>
                 <Icon.Twitter/>
                 <Icon.Facebook/>
@@ -17,15 +20,18 @@ function Footer(){
                 <Icon.Mail/>
                 <Icon.Discord/>
                 </div>
-                <div>
-                    <HeadTitle>Join the community of #ownable-NS</HeadTitle>
+                {/* Text from left side */}
+                <div className={styles.join}>
+                    <HeadTitle className={styles.joinText} size='12px'>Join the community of #ownable-NS</HeadTitle>
                 </div>
-                <div>
-                    <HeadTitle>Copyright © 2021 Ownable-NS</HeadTitle>
+                {/* Copy from left side */}
+                <div className={styles.copy}>
+                    <HeadTitle className={styles.copyText} size='12px'>Copyright © 2021 Ownable-NS</HeadTitle>
                 </div>
             </div>
+            {/* Navigator from right side */}
             <div className={styles.rightSideOfContainer}>
-                <FooterNav/>
+                <FooterSide className={styles.footer}/>
             </div>
         </div>
     )
