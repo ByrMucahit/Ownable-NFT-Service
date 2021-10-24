@@ -2,6 +2,8 @@ import React from "react";
 import styles from './style.module.css'
 import * as Icon from '../../icons'
 
+import HeadTitle from '../../text/head-title'
+
 const INFO = [
     {
         title: 'Claim Ownership',
@@ -29,10 +31,11 @@ function ReasonSideForm(){
     return (
         INFO.map((info) => {
             return(
-                <div style={{display: 'flex'}}>
+                <div className={styles.reasonSideContainer}>
+                    {/* Icon Side*/}
                     <Icon.CheckSquare/>
-
-                    <p>{info.title}</p>
+                    {/* Reason Side */}
+                    <HeadTitle size='18px' opacity='0.8'>{info.title}</HeadTitle>
                 </div>
                
             )

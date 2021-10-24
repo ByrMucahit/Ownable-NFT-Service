@@ -1,0 +1,6 @@
+.Nav{
+    color: var(--c-btn-background); 
+}
+.Nav+.Nav{
+    padding-top: 15px;
+}

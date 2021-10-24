@@ -1,0 +1,11 @@
+.businessContainer{
+    background-color: var(--c-background-alternative-color);
+    height: 44.438px;
+   
+    text-align: center;
+    .businessText{
+        .Span{
+            color: var(--c-btn-background)
+        }
+    }
+}

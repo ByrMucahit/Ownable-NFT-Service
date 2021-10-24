@@ -1,0 +1,19 @@
+.getStartedContainer{
+    display: flex;
+    padding-left: 10%;
+    .getStartedTextSide{
+        text-align: center;
+        div+div{
+            padding-top: 20px;
+        }
+        -webkit-transform: translateY(25%);
+        color: var(--c-color-alternative);
+        .getStartedHeaderText{
+           
+            .Span {
+                font-weight: bold;
+            }
+        }
+        
+    }
+}

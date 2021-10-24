@@ -1,0 +1,12 @@
+.getStartedButton{
+    width: 192.934px;
+    height: 48.437;
+    border-color: var(--c-frame-background);
+    background-color: var(--c-frame-background);
+    color: var(--c-btn-background);
+
+    &:hover{
+        background-color: var(--c-btn-background);
+        color: var(--c-frame-background);
+    }
+}

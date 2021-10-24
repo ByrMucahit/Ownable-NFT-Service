@@ -1,0 +1,7 @@
+.reasonSideContainer{
+    display: flex;
+    padding-top: 10px;
+    svg + h1 {
+        padding-left: 10px;
+    }
+}

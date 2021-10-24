@@ -1,0 +1,28 @@
+.reasonContainer{
+    color: var(--c-color-alternative);
+
+    .reasonHeader{
+        .Span{
+            color: var(--c-btn-background);
+        }
+        .Line{
+            opacity: 0.30;
+        }
+    }
+    .middleContainer{
+        display: flex;
+        padding-left: 100px;
+    }
+    .reasonTextSide{
+        padding-top: 56px;
+    }
+
+    .reastImageSide{
+        padding-top: 45px;
+    }
+    .footerContainer{
+        padding-left: 30%;
+        padding-top: 3%;
+
+    }
+}
