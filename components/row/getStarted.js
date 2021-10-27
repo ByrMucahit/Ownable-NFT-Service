@@ -11,6 +11,7 @@ function GetStarted(){
         /* Container */ 
         <div className={styles.getStartedContainer}>
             {/* Container Text Side*/ }
+           
             <div className={styles.getStartedTextSide}>
                 {/* Header */}
                 <div className={styles.getStartedHeaderText}>
@@ -37,7 +38,8 @@ function GetStarted(){
             </div>
             {/* Image Side */}
             <div className={styles.ImageSide}>
-                <Photo className={styles.Image} src={SuitCase} width='345px' height='207.986' />
+                <Photo className={styles.Image} src="https://ownerfy.com/img/home/suitcase.jpg" width='345px' height='207.986' />
+            
             </div>
         </div>
     )

@@ -4,17 +4,16 @@
     grid-template-columns: 700px 1fr;
     background-color: var(--c-frame-background);
     color: white;
-    width: 1920px;
-    height: 426.26px;
-    position: fixed;
-
+    width: 1730px;
+    max-height: 426.26px;
+    
     /*Advert Side */
     .advert{
         grid-area: Advert;
         text-align: start;
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 60%;
+        left: 20%;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
 
@@ -30,20 +29,22 @@
     .mintButton{
             margin-top: 32px;
     }  
+
+    .photoExhibition{
+        grid-area: Photos;
+    
+        .photos{
+            text-align: justify;
+            display: flex;
+        }
+        .subOwner{
+            display: flex;
+            margin-top: 32px;
+            margin-left: 20px;
+            
+        }
+    }
+    
 }
 
-.photoExhibition{
-    grid-area: Photos;
-
-    .photos{
-        text-align: justify;
-        display: flex;
-    }
-    .subOwner{
-        display: flex;
-        margin-top: 32px;
-        margin-left: 20px;
-        
-    }
-}
 

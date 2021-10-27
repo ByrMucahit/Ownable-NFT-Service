@@ -1,5 +1,9 @@
 .layout{
 min-height: 640px;
+display: block;
+.getStarted{
+    display: block;
+}
 }
 
 

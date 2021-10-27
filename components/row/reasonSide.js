@@ -23,8 +23,11 @@ function ReasonSide() {
                 </div>
                 {/* Image Side */}
                 <div className={styles.reastImageSide}>
-                    <Photo src={ReasonImage} 
-                    width='832px' 
+                    <Photo 
+                    className={styles.photo}
+                    src='https://ownerfy.com/img/home/valuables.svg'
+                    width='831.997px'
+                    height= '138.993px'
                     height='139' 
                     alt='reasonside'
                     />
