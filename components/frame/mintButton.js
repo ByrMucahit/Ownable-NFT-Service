@@ -2,7 +2,7 @@ import React from "react";
 import cn from 'classnames'
 
 import styles from './mintButton.module.css'
-import Button from '../button/index'
+import Button from '../button/base/index'
 import TextTitle from '../text/text-title'
 
 

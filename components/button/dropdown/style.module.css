@@ -1,0 +1,15 @@
+.header{
+    font-size: 15px;
+    color: var(--c-color-alternative);
+}
+
+.options{
+    outline: 0;
+    border-width: 0 0 1px;
+    width: 1388.84px;
+    height: 36.75px;
+}
+
+.option{
+    font-size: 15px;
+}

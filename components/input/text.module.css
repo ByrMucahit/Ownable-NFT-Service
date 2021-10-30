@@ -1,0 +1,15 @@
+input[type='text']{
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: var(--c-color-alternative);
+}
+
+.smalltextInput{
+    width: 243px;
+    height: 36.75px;
+}
+
+.bigtextInput{
+    width: 1388.84px;
+    height: 36.75px;
+}

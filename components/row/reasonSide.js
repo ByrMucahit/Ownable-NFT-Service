@@ -2,7 +2,7 @@ import React from "react";
 import HeadTitle from "../text/head-title";
 import styles from './reasonSide.module.css'
 import Photo from '../photo/index'
-import Reason from '../form/ReasonSide/index'
+import Reason from '../form/reasonSide/index'
 import ReasonImage from '../../Photos/reasonSidePhoto.png'
 
 function ReasonSide() {

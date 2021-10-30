@@ -9,7 +9,7 @@ function BusinessSide(){
             <HeadTitle className={styles.businessText} 
             size='33px' 
             bold>
-                <span className={styles.Span}>Ownable-NS</span> 
+                <span className={styles.Span}>Ownable-NS </span> 
                 for Business
             </HeadTitle>
         </div>

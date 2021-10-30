@@ -1,7 +1,10 @@
 .reasonContainer{
     color: var(--c-color-alternative);
-
+    padding-left: 150px;
+    min-height: 362.802px;
+    
     .reasonHeader{
+        -webkit-transform: translateY(45%);
         .Span{
             color: var(--c-btn-background);
         }
@@ -10,8 +13,7 @@
         }
     }
     .middleContainer{
-        display: flex;
-        padding-left: 100px;
+        display: flex; 
         
     }
     .reasonTextSide{
@@ -24,7 +26,7 @@
     }
     .footerContainer{
         padding-left: 30%;
-        padding-top: 3%;
+        
 
     }
 }

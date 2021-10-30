@@ -1,0 +1,28 @@
+.imageContainer{
+    /* Image Button */
+    .imageButton {
+        display: flex;
+        width: 225.86px;
+        height: 49.69px;
+        background-color: var(--c-frame-background);
+        color: var(--c-btn-background);
+        align-items: center;
+        justify-content: center;
+
+        /* Text inside Button */
+        .imageButtonText{
+            font-size: 14px;
+            padding-left: 10px;
+             }
+             /* Image Inside Button */
+        .imageImage{
+            width: 24px;
+            height: 24px;
+        }
+    }
+    /* Image hover */
+    .imageButton:hover{
+        color: var(--c-frame-background);
+        background-color: var(--c-btn-background);
+    }
+}

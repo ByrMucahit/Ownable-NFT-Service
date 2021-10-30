@@ -1,0 +1,27 @@
+.container{
+    padding-left: 30px;
+    
+    div+div{
+        padding-left: 20px;
+    }
+    .name{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .passwords{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .media{
+        .Input{
+            width: 225.86px;
+            height: 49.69px;
+        }
+        .cost{
+            font-size: 15px;
+            color: var(--c-color-alternative);
+        }
+    }
+}

@@ -1,16 +1,17 @@
 .footerContainer{
     background-color: var(--c-frame-background);
-
-    grid-template-areas: 'left right';
-    grid-template-columns: 1200px 1fr;
-    
-    min-height: 350px;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    height: 350px;
+    max-height: 350px;
 
         /* CSS from left side of footer */
     .leftSideOfContainer{
         color: white;
-        padding: 20px;
         position: relative;
+        padding: 20px;
         .Icons{
             svg+svg{
                 padding-left: 10px;
@@ -19,20 +20,28 @@
                 width: 29px;
                 height: 29px;
              }
-        }    
-       .copyText{
-           color: var(--c-btn-background); 
-       }
+        }  
+    }  
         .copy{
             position: absolute;
-            bottom: 20px;
+            bottom: 10px;
+            .copyText{
+                color: var(--c-btn-background);  
+            }
         }
+
+     /* CSS from right side of footer */
+     .rightSideOfContainer{
+        transform: translateY(10%);
+        padding-right: 40px;
+            }
     }
-    /* CSS from right side of footer */
-    .rightSideOfContainer{
-        text-align: left;
-        top: 30%;
-        -ms-transform: translateY(20%);
-        transform: translateY(20%);
-    }
-}
+   
+    /*
+    Documents:
+    ----------
+
+    flex-direction: The flex-direction CSS property sets how flex items are placed in the flex container defining the main
+    axis and the direction.(Options're row, row-reverse, column, column-reverse)
+    
+    */

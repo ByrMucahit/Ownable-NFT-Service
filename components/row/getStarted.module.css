@@ -1,7 +1,9 @@
 .getStartedContainer{
-
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding-left: 10%;
+    min-height: 312.969px;
     .getStartedTextSide{
         text-align: center;
         div+div{
@@ -17,5 +19,7 @@
         
     
     }
-    
+    .ImageSide{
+        padding-left: 87px;
+    }
 }
