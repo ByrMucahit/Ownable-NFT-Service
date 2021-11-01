@@ -1,27 +1,78 @@
 .container{
-    padding-left: 30px;
-    
-    div+div{
-        padding-left: 20px;
+      /* All Container */
+      padding-left: 246px;
+      margin-top: 40px;
+    input[type='text']{
+        outline: 0;
+        border-width: 0 0 1px;
+        border-color: var(--c-color-alternative);
     }
+  
+
+    /* İf input comes next to input */
+   input + input {
+       margin-left: 40px;
+   }
+
+   /* İf div would comes next to div */
+   div+div{
+       padding-top: 67px;
+   }
+
+   /* Log Link */
+   .link{
+    font-size: 20px;
+}
+
+   /* Personel Description inputs is on same line */
     .name{
         display: flex;
         flex-direction: row;
-    }
+         }
 
+    /* Password inputs is on same line */
     .passwords{
         display: flex;
         flex-direction: row;
     }
 
+    /* Media Side */
     .media{
+
+        /* Input Size at Media Side */
         .Input{
             width: 225.86px;
             height: 49.69px;
         }
+
+        /* Cost Side */
         .cost{
             font-size: 15px;
             color: var(--c-color-alternative);
+        }
+
+        /* Sub Warning */
+        .subWarning{
+            font-size: 12px;
+        }
+    }
+
+    /* Check Button Side */
+    .checkButton{
+        .checkBtn{
+            font-size:20px;
+        }
+    }
+
+    /* Mint Button */
+    .mintNFT{
+        .nftButton{
+            color: var(--c-icon-color);
+            background-color: var(--c-disabled-color-12);
+            border-color: var(--c-disabled-color-12);
+            width: 338.45px;
+            height: 38.01px;
+            font-size: 13px;
         }
     }
 }

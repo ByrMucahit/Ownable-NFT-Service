@@ -1,17 +1,23 @@
 import React from "react";
 import styles from './text.module.css'
 
-function Small({placeholder, ...props}){
+function Small(){
    return(
-        <input type='text' className={styles.smalltextInput} placeholder={placeholder} required></input>
-
+      
+            <input type='text' className={styles.smalltextInput} required></input>
+     
+        
    ) 
 }
 
 
 function Big({...props}){
    return(
-      <input type='text' className={styles.bigtextInput}  {...props} required></input>
+      
+         <input type='text' className={styles.bigtextInput}  {...props} required></input>
+     
+
+      
 
  ) 
 }
@@ -19,7 +25,7 @@ function Big({...props}){
 function Button({big=false}){
    const Comp = big ? Big: Small
    return(
-      <Comp/>
+      <Comp/> 
    )
 }
 

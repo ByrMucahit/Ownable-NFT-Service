@@ -3,6 +3,8 @@ import React from "react";
 import styles from './style.module.css'
 import Navigation from "../../navigation/navigation";
 import HeadTitle from "../../text/head-title";
+import MakeNFTForm from "../../form/makeNFT/NonAccount";
+import Footer from '../../footer/index'
 
 function Layout(){
     return(
@@ -24,6 +26,13 @@ function Layout(){
                     </div>
                    
                 </div>
+                <div className={styles.form}>
+                    <MakeNFTForm/>
+                </div>
+            </div>
+            {/* Container */}
+            <div className={styles.Footer}>
+                <Footer />
             </div>
         </div>
     )
