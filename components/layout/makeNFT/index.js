@@ -18,11 +18,11 @@ function Layout(){
             <div className={styles.formContainer}>
                 {/* Header inside Container */}
                 <div className={styles.headerSide}>
-                    <div>
-                        <HeadTitle size='30px' bold>Mint NFT</HeadTitle>
+                    <div className={styles.headers}>
+                        <HeadTitle className={styles.header}  bold>Mint NFT</HeadTitle>
                     </div>
-                    <div>
-                        <HeadTitle>Fungible and non-fungible tokens</HeadTitle>
+                    <div className={styles.marks}>
+                        <HeadTitle className={styles.mark}>Fungible and non-fungible tokens</HeadTitle>
                     </div>
                    
                 </div>

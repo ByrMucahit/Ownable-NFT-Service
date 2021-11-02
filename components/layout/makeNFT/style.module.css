@@ -1,4 +1,22 @@
 .layout{
+    .formContainer{
+        color: var(--c-text-color-70);
+        .headerSide{
+            text-align: start;
+            padding-left:246px;
+            padding-top: 40px;
+            .headers{                
+                .header{
+                  font-size: 30px !important;
+                }
+            }
+            .marks{
+                .mark{
+                    font-size: 15px !important;
+                }
+            }
+        }
+    }
     .Footer{
         padding-top: 30px;
     }

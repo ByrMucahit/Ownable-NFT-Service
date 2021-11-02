@@ -1,7 +1,7 @@
 import React from "react";
-import Check from '../components/input/check'
-import TextInput from '../components/input/text'
-import DropDownMenu from '../components/button/dropdown/index'
+import Check from '../components/input/check/index'
+import TextInput from '../components/input/text/text'
+import DropDownMenu from '../components/input/dropdown/index'
 export  default{
     title: 'inputs'
 };

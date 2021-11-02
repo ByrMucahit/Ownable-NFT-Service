@@ -2,10 +2,10 @@ import React from "react";
 import HeadTitle from "../../../text/head-title";
 
 import styles from './style.module.css'
-import Input from '../../../input/text'
-import CheckInput from '../../../input/check'
+import Input from '../../../input/text/text'
+import CheckInput from '../../../input/check/index'
 import ImageButton from "../../../button/base/image"
-import DropDownInput from '../../../button/dropdown/index'
+import DropDownInput from '../../../input/dropdown/index'
 import Button from "../../../button/base/index";
 
 function MakeNFTForm(){
@@ -68,7 +68,7 @@ function MakeNFTForm(){
                 </div>
                 {/* Type Of Transaction */}
                 <div className={styles.typeOfProcess}>
-                    <DropDownInput/>
+                    <DropDownInput header='What type of asset is this?'/>
                 </div>
                 {/* Description Input */}
                 <div className={styles.description}>

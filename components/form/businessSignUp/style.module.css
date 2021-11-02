@@ -1,0 +1,7 @@
+.container{
+    input[type='text']{
+        outline: 0;
+        border-width: 0 0 1px;
+        border-color: var(--c-color-alternative);
+    }
+}
