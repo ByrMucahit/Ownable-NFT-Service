@@ -1,0 +1,10 @@
+.messageArea{
+    width: 549.792px;
+    height: 255.556px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border: 2px solid var(--c-border-color);
+    border-radius: 4px;
+    font-size: 20px;
+    resize: none;  
+}

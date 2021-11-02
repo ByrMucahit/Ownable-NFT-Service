@@ -5,9 +5,15 @@
 
 .options{
     outline: 0;
-    border-width: 0 0 1px;
-    width: 1388.84px;
-    height: 36.75px;
+   
+}
+
+.medium{
+    width: 549.732px;
+    height: 35.972px;
+}
+.big{
+
 }
 
 .option{

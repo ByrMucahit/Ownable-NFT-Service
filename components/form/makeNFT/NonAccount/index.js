@@ -68,7 +68,7 @@ function MakeNFTForm(){
                 </div>
                 {/* Type Of Transaction */}
                 <div className={styles.typeOfProcess}>
-                    <DropDownInput header='What type of asset is this?'/>
+                    <DropDownInput className={styles.dropdownSelector} header='What type of asset is this?'/>
                 </div>
                 {/* Description Input */}
                 <div className={styles.description}>

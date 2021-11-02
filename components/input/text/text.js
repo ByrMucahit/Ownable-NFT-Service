@@ -1,31 +1,11 @@
 import React from "react";
 import styles from './text.module.css'
-
-function Small(){
-   return(
-      
-            <input type='text' className={styles.smalltextInput} required></input>
-     
-        
-   ) 
-}
+import cn from 'classnames'
 
 
-function Big({...props}){
-   return(
-      
-         <input type='text' className={styles.bigtextInput}  {...props} required></input>
-     
-
-      
-
- ) 
-}
-
-function Button({big=false}){
-   const Comp = big ? Big: Small
-   return(
-      <Comp/> 
+function Button({medium=false, big=false, small=false,...props}){
+  return(
+      <input type='text' className={cn([medium && styles.medium, big && styles.big, styles.small ])}  {...props} required></input>
    )
 }
 
