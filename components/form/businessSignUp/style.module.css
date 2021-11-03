@@ -1,24 +1,65 @@
 .form{
+    /* General Form */
     display: block;
     text-align: center;
-.container{
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    input[type='text']{
-        outline: 0;
-        border-width: 0 0 1px;
-        border-color: var(--c-color-alternative);
-    }
 
-    div+div{
-        padding-top:20px;
-    }
-    .headers{
-        .header{
-            font-size: 20px;
+    /* Container */
+    .container{
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        /* Input which have type that is text */
+        input[type='text']{
+            outline: 0;
+            border-width: 0 0 1px;
+            border-color: var(--c-color-alternative);
         }
-    }
+        /*  If div would be exist after div */
+        div+div{
+            padding-top:20px;
+        }
+        /* Header Side */
+        .headers{
+            /* Header Content */
+            .header{
+                font-size: 20px;
+            }
+        }
+        /* Submit Btn */
+        .submitBtn{
+            padding-top: 25px;
+            padding-bottom: 20px;
+            /* Btn */
+            .btn{
+                border-radius: 3px;
+                width: 151.528px;
+                height: 48.767px;
+                background-color: var(--c-frame-background);
+                color: var(--c-btn-background);
+                border-color: var(--c-frame-background);
+                /* Content of Btn */
+                .btnText{
+                    font-size: 14px !important;
+                }
+        }
+        /* Btn Hover */
+        .btn:hover{
+           background-color: var(--c-btn-background);
+           color: var(--c-frame-background);
+        }
+     }
+     /* Adress container */
+     .contact{
+         padding-bottom: 64px;
+         /* Content Of Address */
+         .content{
+             color: var(--c-border-color);
+             font-size: 16px !important;
+             span{
+                 font-weight: bold;
+             }
+         }
+     }
 }
 }

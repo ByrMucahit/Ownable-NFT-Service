@@ -1,5 +1,16 @@
 .container{
+  
    .form{
     padding-top: 30px;
+  
    }
+  
+      .contact{
+         text-align: center;
+
+         .content{
+            display: inline-block;
+            text-align: left;
+         }
+      }
 }
