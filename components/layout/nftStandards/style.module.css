@@ -1,0 +1,43 @@
+.container{
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    .textContainer{ 
+        box-sizing:inherit;
+        font-weight: 400;
+        line-height: 1.43;
+        color: var(--c-nft-standards-color);
+        padding-bottom: 134px;
+        -webkit-text-size-adjust: 100%;
+        .mainHeader{
+            font-size: 30px !important;
+        }
+        .problems{
+            font-size: 20px !important;
+        }
+        .asks{
+            font-size: 18px !important;
+        }
+        span{
+            font-weight: bold;
+        }
+        p{
+            font-size: 18px;
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+        *+*{
+            padding-top:18px;
+        }
+        padding-top: 30px;
+        max-width: 880px;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+   
+    }
+}
