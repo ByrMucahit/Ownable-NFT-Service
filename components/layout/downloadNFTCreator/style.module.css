@@ -1,0 +1,50 @@
+.container{
+    .body{
+        display: flex;
+        flex-direction: row;
+
+        .leftSide{
+            padding-top: 50px;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+
+            @media(--m){
+                flex: 1 1 0%;
+                border-right: 1px solid var(--c-alternative-border-color);
+                -webkit-box-align: center;
+                align-items: center;
+                height: 100vh;
+                position: sticky;
+                top: 0px;
+            }
+           
+        }
+        .rightSide{
+            flex: 1 1 0%;
+            .rightSideContainer{
+                font-size: 16px !important;
+                line-height: 25px;
+                width: 80%;
+                padding: 50px 0px;
+                margin: 0px auto;
+
+                .topTextContainer{
+                    *+*{
+                        padding-top: 30px;
+                    }
+                }
+
+                .middleImageContainer{
+                    
+                    .appStore {
+                        width: 240px !important;
+                        height: 71.094px;
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}
