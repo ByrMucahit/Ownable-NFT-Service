@@ -4,7 +4,9 @@ import styles from './style.module.css'
 import Navigator from '../../navigation/navigation'
 import HeadTitle from "../../text/head-title";
 import TextTitle from "../../text/text-title";
-import {AppStore, GooglePlayStore} from '../../icons'
+import GooglePlayStore from '../../../Photos/google-play-store.png'
+import AppStore from '../../../Photos/app-store.png'
+import Image from 'next/image'
 
 function Layout(){
     return(
@@ -41,20 +43,34 @@ function Layout(){
                             </TextTitle>
                         </div>
                         <div className={styles.middleImageContainer}>
-                            <AppStore className={styles.appStore} />
-                            <GooglePlayStore className={styles.googlePlayStore} />
+                            <a>
+                                <Image
+                                       src={GooglePlayStore}
+                                       alt='googlePlayStore'
+                                       height={71.009}
+                                       width={240}
+                                       />
+                            </a>
+                            <a>
+                                <Image
+                                       src={AppStore}
+                                       alt='googlePlayStore'
+                                       height={71.009}
+                                       width={240}
+                                       />
+                            </a>
                         </div>
                         <div className={styles.bottomTextContainer}>
-                            <TextTitle><span>Ownerfy NFT Creator</span>
+                            <TextTitle><span>Ownerfy NFT Creator </span>
                                 mobile app allows you to:
                             </TextTitle>
-
-                            <ul>
+                           
+                            <ul className={styles.mobileAppList}>
                                 <li>Create an inventory of your digital and physical items</li>
                                 <li>Preserve the creator information and the ownership history</li>
                                 <li>Validate authenticity of merchandise by checking its source</li>
                                 <li>Supports digital assets created on other platforms like:
-                                    <ul>
+                                    <ul className={styles.platformList}>
                                         <li>OpenSea</li>
                                         <li>MLB Digital Collectibles</li>
                                         <li>Enjin Assets</li>
@@ -67,6 +83,7 @@ function Layout(){
                                     </ul>
                                 </li>
                             </ul>
+                            
                             <div className={styles.features}>
                                 <TextTitle><span>Ownerfy NFT Generator</span>features:</TextTitle>
                                 <ul>

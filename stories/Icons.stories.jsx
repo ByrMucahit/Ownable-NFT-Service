@@ -26,7 +26,5 @@ export const Icon= () => (
         <Icons.SmartContractİcon/>
         <Icons.Twitter/>
         <Icons.Youtube/>
-        <Icons.AppStore/>
-        <Icons.GooglePlayStore/>
     </div>
 )
