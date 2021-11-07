@@ -1,11 +1,13 @@
+/* General Container */
 .container{
+    /* Body layout */
     .body{
         display: flex;
         flex-direction: row;
         span{
             font-weight: bold;
         }
-
+        /* Left side at containner */
         .leftSide{
             padding-top: 50px;
             display: flex;
@@ -21,22 +23,23 @@
                 top: 0px;
             }
         }
-
+        /* Right Side at container */
         .rightSide{
             flex: 1 1 0%;
+             /* Right Side at container */
             .rightSideContainer{
                 font-size: 16px !important;
                 line-height: 25px;
                 width: 80%;
                 padding: 50px 0px;
                 margin: 0px auto;
-
+                /* Text at Top */
                 .topTextContainer{
                     *+*{
                         padding-top: 30px;
                     }
                 }
-
+                /* Image Container */
                 .middleImageContainer{
                     display: flex;
                     flex-direction: column;
@@ -44,15 +47,17 @@
                     align-items: center;
                     margin-bottom: 20px;
                     margin-top: 30px;
-                    
+                /* Link */
                 a{
                     cursor: pointer;
+                    /* Image inside link*/
                     img{
                         width: 100%;
                         max-width: 100%;
                     }
                 }
                 }
+                /* Text Container at bottom */
                 .bottomTextContainer{
                     lu{
                         list-style-type: disc;

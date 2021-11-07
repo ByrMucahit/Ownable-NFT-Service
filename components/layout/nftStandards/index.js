@@ -8,12 +8,17 @@ import TextTitle from "../../text/text-title";
 
 function NftStandards(){
     return(
+        /* Container */
         <div className={styles.container}>
+            {/* Navigator */}
             <div className={styles.navigator}>
                 <Navigator />
             </div>
+            {/* Text Container */}
             <div className={styles.textContainer}>
+                {/* Main Header */}
                 <HeadTitle className={styles.mainHeader} bold>NFT Community Standards </HeadTitle>
+                    {/* Content */}
                     <TextTitle className={styles.content}>
                         While blockchain records such as NFTs are nearly impossible to forge, there are many properties of NFTs that 
                         easily make them confusing and open for misinterpretation. Without standards, the industry is open to abuse of
@@ -300,6 +305,7 @@ function NftStandards(){
                                 </TextTitle>
 
             </div>
+            {/* Footer */}
             <div className={styles.footer}>
                 <Footer/>
             </div>

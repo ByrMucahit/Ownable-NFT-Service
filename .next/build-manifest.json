@@ -29,10 +29,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/businessSignUp": [
+    "/downloadNFTCreator": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/businessSignUp.js"
+      "static/chunks/pages/downloadNFTCreator.js"
     ]
   },
   "ampFirstPages": []

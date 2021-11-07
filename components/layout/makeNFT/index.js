@@ -24,7 +24,6 @@ function Layout(){
                     <div className={styles.marks}>
                         <HeadTitle className={styles.mark}>Fungible and non-fungible tokens</HeadTitle>
                     </div>
-                   
                 </div>
                 <div className={styles.form}>
                     <MakeNFTForm/>

@@ -60,3 +60,59 @@ export const INFO = [
         mark: true
     }
 ]
+
+
+
+export const FOOTERMENU = [
+    {   
+        key: 'privacyPolicy',
+        title:'Privacy Policy'
+
+    },
+    {
+        key: 'tos',
+        title: 'TOS',
+
+    },
+    {
+        key: 'myCollection',
+        title: 'My Collection'
+    },
+    {
+        key: 'contact',
+        title: 'Contact'
+    }
+]
+
+export const MENU = [
+    {
+        key: 'make-an-nft',
+        icon: '',
+        title: 'Make an NFT',
+        href: '/makeNft'
+    },
+    {
+        key: 'business-signup',
+        icon: '',
+        title: 'Business Signup',
+        href: '/businessSignUp'
+    },
+    {
+        key: 'Subscribe-for-upcoming-drops',
+        icon: '',
+        title: 'Subscribe for Upcoming Drops',
+        href: '/subscribeForUpcomingDrops'
+    },
+    {
+        key: 'nft-standards',
+        icon: '',
+        title: 'NFT Standards',
+        href: '/nftStandards'
+    },
+    {
+        key: 'download-nft-creator',
+        icon: '',
+        title: 'Download NFT Creator',
+        href: '/downloadNFTCreator'
+    }
+]

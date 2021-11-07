@@ -5,10 +5,12 @@ import styles from './businessSide.module.css'
 
 function BusinessSide(){
     return(
+        /* Business Side Container */
         <div className={styles.businessContainer}>
+            {/* Header */}
             <HeadTitle className={styles.businessText} 
-            size='33px' 
             bold>
+                 {/* Ownable NS */}
                 <span className={styles.Span}>Ownable-NS </span> 
                 for Business
             </HeadTitle>

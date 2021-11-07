@@ -11,20 +11,16 @@ function Exhibition({ Header, Text, Owner, src="https://ownerfy.com/jpandfriends
             {/* Text Side From Exhibition side */}
             <div className={styles.advert}>  
                     {/* Header Side */}
-                
                     <HeadTitle className={styles.advertHeader} size='33px' bold>CA$H Cows</HeadTitle>
                     <hr className={styles.borderLine}/>
                
                     {/* Text Side */}
-                
                     <a>
                     <HeadTitle className={styles.subText}  size='22px' >Now Minting: Chic-A-Dees,First NFTs to Generate EGGS Tokens</HeadTitle>
                     </a>
                
                     {/* Button Side */}
-                
-                    <MintButton className={styles.mintButton}>MINT CHIC-A-DEE NFT</MintButton>
-                
+                    <MintButton className={styles.mintButton}>MINT CHIC-A-DEE NFT</MintButton>  
             </div>
 
             {/* Photos Side */}

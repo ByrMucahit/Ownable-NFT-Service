@@ -15,12 +15,13 @@
         }
 
     a{
-            color: var( --c-alternative-background-color);
-            text-decoration: none;
+        color: var( --c-alternative-background-color);
+        text-decoration: none;
         }
     a:hover{
         color: var(--c-btn-background) ;
     }
+    
     /* Navigator Button */
     .navBtn{
         display: flex;
@@ -36,7 +37,6 @@
             transition: 0.3s;
         }
         
-       
         a + a {
         padding-left: 20px; 
         }

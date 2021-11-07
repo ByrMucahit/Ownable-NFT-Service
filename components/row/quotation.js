@@ -6,7 +6,6 @@ import styles from './quotation.module.css'
 import HeadTitle from "../text/head-title";
 
 function Quotation(){
-
     return (
         <div className={styles.quo}> 
             <div className={styles.quoHeader}>

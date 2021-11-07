@@ -6,18 +6,18 @@
     min-height: 312.969px;
     .getStartedTextSide{
         text-align: center;
+        -webkit-transform: translateY(25%);
+        color: var(--c-color-alternative);
+
         div+div{
             padding-top: 20px;
         }
-        -webkit-transform: translateY(25%);
-        color: var(--c-color-alternative);
+
         .getStartedHeaderText{  
             .Span {
                 font-weight: bold;
             }
-        }
-        
-    
+        } 
     }
     .ImageSide{
         padding-left: 87px;

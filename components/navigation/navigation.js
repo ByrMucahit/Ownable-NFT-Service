@@ -1,46 +1,10 @@
 import React from "react";
 import styles from './navigation.module.css'
 import cn from 'classnames'
-
 import NavigationButton from './button'
-import TextTitle from '../text/text-title'
-import HeadTitle from '../text/head-title'
 import FrameButton from "../frame/frameButton";
-
+import {MENU} from '../../constant'
 import {HomepageOption} from '../icons'
-
-const MENU = [
-    {
-        key: 'make-an-nft',
-        icon: '',
-        title: 'Make an NFT',
-        href: '/makeNft'
-    },
-    {
-        key: 'business-signup',
-        icon: '',
-        title: 'Business Signup',
-        href: '/businessSignUp'
-    },
-    {
-        key: 'Subscribe-for-upcoming-drops',
-        icon: '',
-        title: 'Subscribe for Upcoming Drops',
-        href: '/subscribeForUpcomingDrops'
-    },
-    {
-        key: 'nft-standards',
-        icon: '',
-        title: 'NFT Standards',
-        href: '/nftStandards'
-    },
-    {
-        key: 'download-nft-creator',
-        icon: '',
-        title: 'Download NFT Creator',
-        href: '/downloadNFTCreator'
-    }
-]
 
 function Navigation({flat=false}){
     return (
@@ -65,7 +29,7 @@ function Navigation({flat=false}){
                 ) })
         }
         </div>
-
+        {/* Login Button */}
         <div className={styles.loginButton}>
             <FrameButton>Login</FrameButton>
         </div>

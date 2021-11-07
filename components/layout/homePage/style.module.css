@@ -1,9 +1,7 @@
+/* Layout Container */
 .layout{
-min-height: 640px;
-display: block;
-.getStarted{
+    min-height: 640px;
     display: block;
-}
 }
 
 

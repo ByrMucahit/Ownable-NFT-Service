@@ -11,27 +11,36 @@ import Image from 'next/image'
 function Layout(){
     return(
         <div className={styles.container}>
+            {/* Navigator */}
             <div className={styles.navigation}>
                 <Navigator/>
             </div>
-            
+            {/* Body Side */}
             <div className={styles.body}>
+                {/* Left Side */}
                 <div className={styles.leftSide}>
+                    {/* Header */}
                     <HeadTitle bold>
                         Download Ownable-NS NFT<br/>
                         Creator
                     </HeadTitle>
                 </div>
+                {/* Right Side */}
                 <div className={styles.rightSide}>
+                    {/* Container */}
                     <div className={styles.rightSideContainer}>
-                        <div className={styles.topTextContainer}>
-                            <TextTitle><span>Ownable-NS</span>
+                        {/* Top Side Container */}
+                        <div className={styles.topTextContainer}>   
+                            {/* Ownable NS description */}
+                            <TextTitle><span>Ownable-NS </span>
                                 Mobile App is used to create and view Semi-Fungible NFTs for artwork, 
                                 merchandise, tickets, coupons, and more! All accounts are exportable to MetaMask wallet.
                             </TextTitle>
+                            {/* Note*/}
                             <TextTitle><span>Note:</span>
                                 Some functionality is only available to Android users
                             </TextTitle>
+                            {/* NFT Description */}
                             <TextTitle>
                                 The NFTs you generate are authentication and ownership records for your digital creations
                                 and physical goods like paintings or designer shoes. Records are backed up on the 
@@ -42,34 +51,44 @@ function Layout(){
                                 NFTs today:
                             </TextTitle>
                         </div>
+                        {/* Center container */}
                         <div className={styles.middleImageContainer}>
-                            <a>
+                            {/* Google Play Store */}
+                            <a className={styles.googlePlayStoreLink}>
+                                {/* Google Play Store Image */}
                                 <Image
                                        src={GooglePlayStore}
                                        alt='googlePlayStore'
+                                       className={styles.googlePlayStoreImage}
                                        height={71.009}
                                        width={240}
                                        />
                             </a>
-                            <a>
+                            {/* App Store */}
+                            <a className={styles.appStoreLink}>
+                                {/* App Store Image */}
                                 <Image
                                        src={AppStore}
-                                       alt='googlePlayStore'
+                                       alt='appStore'
+                                       className={styles.appStoreImage}
                                        height={71.009}
                                        width={240}
                                        />
                             </a>
                         </div>
+                        {/* Bottom Side Container */}
                         <div className={styles.bottomTextContainer}>
-                            <TextTitle><span>Ownerfy NFT Creator </span>
+                            {/* Ownabler NS Creator */}
+                            <TextTitle><span>Ownable NFT Creator </span>
                                 mobile app allows you to:
                             </TextTitle>
-                           
+                           {/* Efficient Attribute List*/}
                             <ul className={styles.mobileAppList}>
                                 <li>Create an inventory of your digital and physical items</li>
                                 <li>Preserve the creator information and the ownership history</li>
                                 <li>Validate authenticity of merchandise by checking its source</li>
                                 <li>Supports digital assets created on other platforms like:
+                                    {/* Playform list */}
                                     <ul className={styles.platformList}>
                                         <li>OpenSea</li>
                                         <li>MLB Digital Collectibles</li>
@@ -83,9 +102,9 @@ function Layout(){
                                     </ul>
                                 </li>
                             </ul>
-                            
+                            {/* Ownable NS NFT Generator attribute*/}
                             <div className={styles.features}>
-                                <TextTitle><span>Ownerfy NFT Generator</span>features:</TextTitle>
+                                <TextTitle><span>Ownable NS NFT Generator</span>features:</TextTitle>
                                 <ul>
                                     <li>Support for ERC721 or ERC1155 digital assets</li>
                                     <li>Ownership integrity - you, the creator, own your private keys</li>
