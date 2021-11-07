@@ -13,37 +13,44 @@ const MENU = [
     {
         key: 'make-an-nft',
         icon: '',
-        title: 'Make an NFT'
+        title: 'Make an NFT',
+        href: '/makeNft'
     },
     {
         key: 'business-signup',
         icon: '',
-        title: 'Business Signup'
+        title: 'Business Signup',
+        href: '/businessSignUp'
     },
     {
         key: 'Subscribe-for-upcoming-drops',
         icon: '',
-        title: 'Subscribe for Upcoming Drops'
+        title: 'Subscribe for Upcoming Drops',
+        href: '/subscribeForUpcomingDrops'
     },
     {
         key: 'nft-standards',
         icon: '',
-        title: 'NFT Standards'
+        title: 'NFT Standards',
+        href: '/nftStandards'
     },
     {
         key: 'download-nft-creator',
         icon: '',
-        title: 'Download NFT Creator'
+        title: 'Download NFT Creator',
+        href: '/downloadNFTCreator'
     }
 ]
 
 function Navigation({flat=false}){
     return (
+        /* Navigator */
     <nav className={styles.navigator}>
+        {/* Mark Side */}
         <div className={cn(styles.mark)}>
-            <HeadTitle>Ownable-NS</HeadTitle> 
+        <NavigationButton href='/'>Ownable-NS</NavigationButton>
         </div>
-
+        {/* Link Side */}
         <div className={styles.navBtn}>
         { 
             MENU.map((menu) => {
@@ -51,8 +58,9 @@ function Navigation({flat=false}){
                     <NavigationButton
                     className={styles.subBtn}
                     key= {menu.key}
+                    href={menu.href}
                     >
-                    {!flat &&<TextTitle> {menu.title} </TextTitle>}
+                    {!flat && menu.title }
                     </NavigationButton>
                 ) })
         }

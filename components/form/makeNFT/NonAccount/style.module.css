@@ -8,7 +8,6 @@
         border-color: var(--c-color-alternative);
     }
   
-
     /* İf input comes next to input */
    input + input {
        margin-left: 40px;
@@ -22,13 +21,13 @@
    /* Log Link */
    .link{
     font-size: 20px;
-}
+    }
 
    /* Personel Description inputs is on same line */
     .name{
         display: flex;
         flex-direction: row;
-         }
+    }
 
     /* Password inputs is on same line */
     .passwords{
@@ -38,7 +37,6 @@
 
     /* Media Side */
     .media{
-
         /* Input Size at Media Side */
         .Input{
             width: 225.86px;

@@ -31,7 +31,7 @@
         }    
     }
     
-    .linkContainer:hover{
+    .links:hover{
         color:var(--c-frame-background);
     }
 

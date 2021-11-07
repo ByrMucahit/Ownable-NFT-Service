@@ -4,7 +4,7 @@ import HeadTitle from "../../../text/head-title";
 import styles from './style.module.css'
 import Input from '../../../input/text/text'
 import CheckInput from '../../../input/check/index'
-import ImageButton from "../../../button/base/image"
+import ImageButton from "../../../button/image/index"
 import DropDownInput from '../../../input/dropdown/index'
 import Button from "../../../button/base/index";
 

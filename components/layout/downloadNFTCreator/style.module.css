@@ -2,17 +2,15 @@
     .body{
         display: flex;
         flex-direction: row;
-
-
         span{
             font-weight: bold;
         }
+
         .leftSide{
             padding-top: 50px;
             display: flex;
             -webkit-box-pack: center;
             justify-content: center;
-
             @media(--m){
                 flex: 1 1 0%;
                 border-right: 1px solid var(--c-alternative-border-color);
@@ -22,8 +20,8 @@
                 position: sticky;
                 top: 0px;
             }
-           
         }
+
         .rightSide{
             flex: 1 1 0%;
             .rightSideContainer{
@@ -54,7 +52,6 @@
                         max-width: 100%;
                     }
                 }
-               
                 }
                 .bottomTextContainer{
                     lu{
@@ -66,7 +63,6 @@
                         }
                 }
             }
-            
         }
     }
 }

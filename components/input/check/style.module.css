@@ -1,7 +1,9 @@
-.checkBox {
-    background-color: yellow;
-}
-
-.container input:checked ~ .checMark{
-    background-color: var(--c-btn-background);
+/* Check box attribute */
+.container{
+    .checkBox {
+        background-color: yellow;
+    }
+    .container input:checked ~ .checMark{
+        background-color: var(--c-btn-background);
+    }
 }

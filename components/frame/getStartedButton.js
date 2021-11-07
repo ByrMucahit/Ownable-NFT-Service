@@ -8,7 +8,7 @@ function GetStartedButton({children}){
         <Button className={styles.getStartedButton} 
         border>
             <HeadTitle 
-            size='14px'  
+            className={styles.btnText} 
             bold>
                 Get Started
             </HeadTitle>

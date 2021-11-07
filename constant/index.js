@@ -37,3 +37,26 @@ export const BUSINESS = [
       
     }
 ]
+
+export const INFO = [
+    {
+        title: 'Claim Ownership',
+        mark: true
+    },
+    {
+        title: 'Prove Exitence',
+        mark: true
+    },
+    {
+        title: 'Verify Authenticity',
+        mark: true
+    },
+    {
+        title: 'Privately Connect with the Owner',
+        mark: true
+    },
+    {
+        title: 'Secure Digital Assets',
+        mark: true
+    }
+]

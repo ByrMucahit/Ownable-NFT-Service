@@ -14,11 +14,19 @@
             max-height: 95px;
         }
 
+    a{
+            color: var( --c-alternative-background-color);
+            text-decoration: none;
+        }
+    a:hover{
+        color: var(--c-btn-background) ;
+    }
     /* Navigator Button */
     .navBtn{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
         @media (--t){
             position: fixed;
             top: 5rem;
@@ -28,7 +36,8 @@
             transition: 0.3s;
         }
         
-        button + button {
+       
+        a + a {
         padding-left: 20px; 
         }
 

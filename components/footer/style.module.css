@@ -7,7 +7,7 @@
     height: 350px;
     max-height: 350px;
 
-        /* CSS from left side of footer */
+    /* CSS from left side of footer */
     .leftSideOfContainer{
         color: white;
         position: relative;
@@ -15,13 +15,13 @@
         .Icons{
             svg+svg{
                 padding-left: 10px;
-            } 
+                    } 
             svg{
                 width: 29px;
                 height: 29px;
-             }
+                 }
+            }  
         }  
-    }  
         .copy{
             position: absolute;
             bottom: 10px;
@@ -29,13 +29,13 @@
                 color: var(--c-btn-background);  
             }
         }
-
-     /* CSS from right side of footer */
-     .rightSideOfContainer{
+    }
+    
+    /* CSS from right side of footer */
+    .rightSideOfContainer{
         transform: translateY(10%);
         padding-right: 40px;
             }
-    }
    
     /*
     Documents:

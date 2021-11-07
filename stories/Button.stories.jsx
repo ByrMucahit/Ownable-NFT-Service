@@ -8,7 +8,7 @@ import FrameButton from '../components/frame/frameButton'
 import MintButton from "../components/frame/mintButton";
 import GetStarted from '../components/frame/getStartedButton'
 import FooterNavigation from "../components/footer/index";
-import ImageButton from "../components/button/base/image";
+import ImageButton from "../components/button/image/index";
 
 export default {
     title: 'Buttons'

@@ -1,21 +1,18 @@
+/* Headers */
 .header{
     font-size: 15px;
     color: var(--c-color-alternative);
 }
-
+/* Options */
 .options{
     outline: 0;
-   
 }
-
+/* Medium */
 .medium{
     width: 549.732px;
     height: 35.972px;
 }
-.big{
-
-}
-
+/* Option */
 .option{
     font-size: 15px;
 }

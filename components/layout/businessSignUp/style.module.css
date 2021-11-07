@@ -1,16 +1,17 @@
+/* Container */
 .container{
-  
+   /* Form */
    .form{
     padding-top: 30px;
   
    }
-  
-      .contact{
-         text-align: center;
-
-         .content{
+   /* Contact */
+   .contact{
+      text-align: center;
+      /* Content */
+      .content{
             display: inline-block;
             text-align: left;
-         }
       }
+   }
 }
