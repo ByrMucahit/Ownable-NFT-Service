@@ -6,7 +6,8 @@
         justify-content: space-between;
         text-align: center;
         align-items: center;
-        padding:  1rem 1.5rem;
+        min-height: 75px;
+        
         /* Navigator Media */
         @media (--d){           
             max-width: 1270;
@@ -17,17 +18,23 @@
     a{
         color: var( --c-alternative-background-color);
         text-decoration: none;
+
         }
     a:hover{
         color: var(--c-btn-background) ;
     }
+
+    a + a {
+        padding-left: 20px; 
+        }
+
     
     /* Navigator Button */
     .navBtn{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+        font-size: 12px !important;
         @media (--t){
             position: fixed;
             top: 5rem;
@@ -37,13 +44,13 @@
             transition: 0.3s;
         }
         
-        a + a {
-        padding-left: 20px; 
-        }
-
         .navItem{
             margin-left: 5rem;
-    }}
+    }
+    .subBtn{
+            font-size: 13px !important;
+    }
+}
 
     /* Mark */
     .mark{
@@ -62,9 +69,13 @@
     .loginButton{
         padding-right: 20px;
         @media(--t){
-            display: inline-block;
-            text-align: right;
-    }}}
+            float: right;
+    }}
+
+    .homepageOption{
+        padding-right: 10px;
+    }
+}
 
 
 

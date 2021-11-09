@@ -4,6 +4,7 @@
         background-color: transparent;
         display: inline-block;
         border:none;  
+        border-radius: 3px;
     }
 
     /* While hovering on buttons of navigation, text will have been yellow. */

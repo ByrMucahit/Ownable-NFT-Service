@@ -1,33 +1,52 @@
 .container{
-    display: grid;
-    grid-template-areas: 'Advert Photos';
-    grid-template-columns: 700px 1fr;
+    padding-top: 32px;
+    padding-bottom: 32px;
     background-color: var(--c-frame-background);
-    color: white;
-    width: 1730px;
-    max-height: 426.26px;
-    align-items: center;
-    /*Advert Side */
-    .advert{
-        grid-area: Advert;
-        text-align: start;
-        position: absolute;
-        padding: 70px;
-        
-        @media(--t){
-            left: 35%;
-        }
-       
-        .borderLine{
-            line-height: 22.88px;
-            opacity: 0.4;
-            }  
+    color:white;
 
-        .subText{
-            margin-top: 25px;
-        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            max-width: none;
+            @media(--m){
+                flex-direction: row;
+                align-items: flex-start;
+                padding-right: 0px !important;
+            }
+
+            .advert{
+               display: flex;
+               flex-direction: column;
+               -webkit-box-pack: center;
+               justify-content: center;
+               align-items: flex-start;
+               
+               width: 90%;
+               padding-bottom: 50px;
+                @media(--m){
+                    align-items: flex-start;
+                    width: 600px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    padding-right: 83px;    
+                            }
+                }
+            
+                .photoExhibition{
+                    text-align: center;  
+                    a + a {
+                        padding-left: 30px;
+                    }   
+                }
         }
     
+
+    align-items: center;
+    /*Advert Side */
     .mintButton{
             margin-top: 32px;
     }  
