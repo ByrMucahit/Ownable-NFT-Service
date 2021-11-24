@@ -12,16 +12,16 @@ function Exhibition(){
                 <div className={styles.row}>
                     <div className={styles.advert}>  
                         {/* Header Side */}
-                        <HeadTitle className={styles.advertHeader} size='33px' bold>CA$H Cows</HeadTitle>
+                        <HeadTitle className={styles.advertHeader} bold>CA$H Cows</HeadTitle>
                         <hr className={styles.borderLine}/>
                
                         {/* Text Side */}
-                        <a>
+                        <a className={styles.subHeaderLink}>
                         <HeadTitle className={styles.subText}  size='22px' >Now Minting: Chic-A-Dees,First NFTs to Generate EGGS Tokens</HeadTitle>
                         </a>
                
                         {/* Button Side */}
-                        <MintButton className={styles.mintButton}>MINT CHIC-A-DEE NFT</MintButton>  
+                        <MintButton className={styles.mintButton}>MINT </MintButton>  
                     </div>
 
                     {/* Photos Side */}

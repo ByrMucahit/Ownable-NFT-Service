@@ -11,8 +11,7 @@ function BusinessSide(){
             <HeadTitle className={styles.businessText} 
             bold>
                  {/* Ownable NS */}
-                <span className={styles.Span}>Ownable-NS </span> 
-                for Business
+               
             </HeadTitle>
         </div>
         

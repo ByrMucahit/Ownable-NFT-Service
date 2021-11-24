@@ -2,7 +2,7 @@ import React from "react";
 import styles from './style.module.css'
 import * as Icon from '../../icons'
 import {INFO} from '../../../constant'
-import HeadTitle from '../../text/head-title'
+import TextTittle from '../../text/text-title'
 
 function ReasonSideForm(){
     return (
@@ -12,7 +12,7 @@ function ReasonSideForm(){
                     {/* Icon Side*/}
                     <Icon.CheckSquare/>
                     {/* Reason Side */}
-                    <HeadTitle size='18px' opacity='0.8'>{info.title}</HeadTitle>
+                    <TextTittle className={styles.text}>{info.title}</TextTittle>
                 </div>     
             )  
         })

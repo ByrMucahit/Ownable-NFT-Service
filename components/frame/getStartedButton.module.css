@@ -1,17 +1,26 @@
     /* Button Container */
 .getStartedButton{
-    width: 192.934px;
-    height: 48.437;
-    border-color: var(--c-frame-background);
+    display: inline-block;
     background-color: var(--c-frame-background);
+    padding: 17px 48px;
+    margin-top: 26px;
+    font-family: 'Work Sans';
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.11px;
+    line-height: 15px;
+    text-align: center;
+    border:1px solid var(--c-frame-background);
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     color: var(--c-btn-background);
-    /* While cursor hovering */
-    &:hover{
-        background-color: var(--c-btn-background);
-        color: var(--c-frame-background);
-    }
-    /* Btn attribute */
-    .btnText{
-        font-size: 14px;
-    }
+
+    
+}
+
+.getStartedButton:hover{
+    color: var(--c-frame-background);
+    background-color: var(--c-btn-background);
 }

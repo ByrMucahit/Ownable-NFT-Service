@@ -1,29 +1,71 @@
 .reasonContainer{
-    color: var(--c-color-alternative);
-    padding-left: 150px;
-    min-height: 362.802px;
-    
-    .reasonHeader{
-        -webkit-transform: translateY(45%);
-        .Span{
-            color: var(--c-btn-background);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    .content{
+        width: 100%;
+        max-width: 1535px;
+        padding-left: 20px;
+        padding-right: 20px;
+        @media(--m){
+            max-width: 1795px;
+            padding-left: 150px;
+            padding-right: 150px;
         }
-        .Line{
-            opacity: 0.30;
+        @media(--o){
+            padding-left: 75px;
+            padding-right: 75px;
+            max-width: 1645px;
         }
-    }
-    .middleContainer{
-        display: flex; 
-        
-    }
-    .reasonTextSide{
-        padding-top: 56px;
-    }
 
-    .reastImageSide{
-             
-    
+
+        .reasonHeader{
+            .reasonHeaderText{
+                margin: 0px;
+                font-weight: 600px;
+                font-size: 20px !important;
+                letter-spacing: 0.15px;
+                line-height: 27px;
+            }
+            hr{
+                
+                margin-top: 7px;
+                height: 1px;
+            }
+        }
+        .middleContainer{
+            display: flex; 
+            flex-direction: column;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 63px;
+
+            @media(--m){
+                flex-direction: row;
+                align-items: flex-start;
+                padding-top: 45px;
+            }
+
+            .reasonTextSide{
+                @media(--m){
+                    margin-bottom: 0px;
+                    margin-right: 32px;
+                }
+                margin-top: 7px;
+                margin-bottom: 40px;
+            } 
+            
+        }
     }
+    
+    
+  
+   
     .footerContainer{
         padding-left: 30%;
         

@@ -4,43 +4,45 @@ import styles from './getStarted.module.css'
 import GetStartedButton from '../frame/getStartedButton'
 import SuitCase from '../../Photos/suitcase.jpg'
 import Photo from "../photo";
+import TextTitle from "../text/text-title";
 
 function GetStarted(){
 
     return (
         /* Container */ 
         <div className={styles.getStartedContainer}>
-            {/* Container Text Side*/ }
+            <TextTitle className={styles.header}>
+                <span>Ownable-NS </span> 
+                for Business
+            </TextTitle>
            
+            <div className={styles.content}>
+
+             {/* Image */}
+            <Photo className={styles.Image} src="https://ownerfy.com/img/home/suitcase.jpg" width='345px' height='207.986' />
+
+            {/* Container Text Side*/ }
             <div className={styles.getStartedTextSide}>
-                {/* Header */}
-                <div className={styles.getStartedHeaderText}>
-                    <HeadTitle opacity='0.8' size='26px'><span className={styles.Span}>NFT QR codes </span> 
+                    {/* Header */}
+                    <TextTitle  className={styles.nftExplain}><span className={styles.Span}>NFT QR codes </span> 
                     authenticate, add value and prevent <br/> 
-                    counterfitting of goods.</HeadTitle>
-                </div>
-                {/* Text */}
-                <div className={styles.getStartedMainText}>
-                    <HeadTitle size='20px' opacity='0.8'>Create NFTs for your business or customer at scale</HeadTitle>
-                </div>
-                {/* Button */}
-                <div className={styles.getStartedButtonContainer}>
-                    <GetStartedButton className={styles.getStartedButton} 
+                    counterfitting of goods.</TextTitle>
+               
+                    <TextTitle className={styles.nftCreator}>Create NFTs for your business, large or small.</TextTitle>
+               
+                    {/* Button */}
+                    <GetStartedButton 
+                    className={styles.getStartedButton} 
                     border
                     >
                         <HeadTitle className={styles.GetStartedButtonText} 
                         bold
                         >
-                        GET STARTED
+                            GET STARTED
                         </HeadTitle>
                     </GetStartedButton>
                 </div>
-            </div>
-            {/* Image Side */}
-            <div className={styles.ImageSide}>
-                <Photo className={styles.Image} src="https://ownerfy.com/img/home/suitcase.jpg" width='345px' height='207.986' />
-            
-            </div>
+                </div>
         </div>
     )
 }

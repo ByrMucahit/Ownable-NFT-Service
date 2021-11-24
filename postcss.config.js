@@ -11,6 +11,9 @@ module.exports = {
         },
         {
           customMedia: {'--m': '(min-width: 960px)'}
+        },
+        {
+          customMedia: {'--o': '(max-width: 600px)'}
         }
       ]
     }

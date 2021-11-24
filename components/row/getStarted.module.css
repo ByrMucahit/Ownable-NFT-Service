@@ -1,25 +1,78 @@
 .getStartedContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 10%;
-    min-height: 312.969px;
-    .getStartedTextSide{
+    .header{
+        color: var(--c-uninspiring-text);
+        margin: 0px;
+        font-weight: 600px;
+        font-size: 33px;
+        line-height: 45px;
+        letter-spacing: 0.25px;
+        padding: 22px 0px;
         text-align: center;
-        -webkit-transform: translateY(25%);
-        color: var(--c-color-alternative);
+        background-color: var(--c-smooth-dark-background-color);
+    }
+    .content{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-top: 33px;
+    padding-bottom: 50px;
 
-        div+div{
-            padding-top: 20px;
+    @media(--m){
+        flex-direction: row;
+        -webkit-box-pack: center;
+        justify-content: center;
+        align-items: flex-start;
+        padding-bottom: 92px;
+    }
+
+    .Image{
+        width: 345px;
+        height: 208px;
+        order: 1;
+        margin-bottom: 20px;
+
+        @media(--m){
+            order:2;
+            margin-bottom: 0px;
+        }
+    }
+    .getStartedTextSide{
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-top: 8px;
+        max-width: 626px;
+        margin-right: 0px;
+        order: 2;
+
+        @media(-m){
+            order: 1;
+            margin-right: 87px;
+        }
+        .nftExplain{
+            color: var(--c-uninspiring-text);
+            margin: 0px;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 36px;
+            letter-spacing: 0.2px;
+            text-align: center;
+
         }
 
-        .getStartedHeaderText{  
-            .Span {
-                font-weight: bold;
-            }
-        } 
+        .nftCreator{
+            color: var(--c-uninspiring-text);
+            margin:10px 0px 0px;
+            font-weight: 500px;
+            font-size: 20px;
+            line-height: 27px;
+            letter-spacing: 0.15px;
+            text-align: center;
+        }
     }
-    .ImageSide{
-        padding-left: 87px;
-    }
+}
 }

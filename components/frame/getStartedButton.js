@@ -5,14 +5,10 @@ import HeadTitle from "../text/head-title";
 
 function GetStartedButton({children}){
     return(
-        <Button className={styles.getStartedButton} 
+        <a className={styles.getStartedButton} 
         border>
-            <HeadTitle 
-            className={styles.btnText} 
-            bold>
                 Get Started
-            </HeadTitle>
-        </Button>
+        </a>
     )
 }
 

@@ -1,33 +1,63 @@
 .quo{
-    padding-top: 40px;
-    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
     background-color: var(--c-background-alternative-color);
-    min-height: 214.72px;
+    
+    .content{
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
 
-    .quoMiddleText {
-        color: var(--c-color-alternative);
-    }
-    .quoFooterText{
-        color: var(--c-color-alternative);
-    }
+        .marketPlaceSide{
+            width: 100%;
+            max-width: 1535px;
+            padding-left: 20px;
+            padding-right: 20px;
+            @media(--m){
+                max-width: 1795px;
+                padding-left: 150px;
+                padding-right: 150px;
+            }
 
-    div + div{
-        padding-top: 20px;
-    }
+            @media(--o){
+                padding-left: 75px;
+                padding-right: 75px;
+                max-width: 1645px;
+            }
 
-    .quoOpensea{
-        padding-left: 20px;
+            .placeSide{
+                text-align: center;
+                display: flex;
+                -webkit-box-alig: center;
+                align-items: center;
+                flex-direction: column;
+
+                .quoHeader{
+                    .quoHeaderText{
+                        margin: 0px;
+                        font-size: 26px !important;
+                        line-height: 36px;
+                        letter-spacing: 0.2px;
+                    }
+                }
+                .quoMiddle{
+                    .quoMiddleText{
+                        margin: 23px 0px 0px;
+                        font-weight: 400px;
+                        font-size: 16px !important;
+                        line-height: 22px;
+                        letter-spacing: 0.12px;
+                        max-width: 588px;
+                    }
+                }
+                .quoIcons{
+                    margin-top: 23px;
+                    display: flex;
+                }
+            }
+        }
     }
-    .Span{
-        color: var(--c-btn-background);
-    }
-    .quoRarible{
-        width: 25px;
-        height: 25px;
-    }
-    .quoOpensea{
-        width: 25px;
-        height: 25px;
-    }
-   
 }

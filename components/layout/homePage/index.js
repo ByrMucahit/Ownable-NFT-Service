@@ -32,10 +32,6 @@ function Layout() {
                 <div className={styles.reasonSide}>
                     <ReasonSide/>
                 </div>
-                {/* Business */}
-                <div className={styles.business}>
-                  <BusinessSide />
-                </div>
                 {/* Get Started */}
                 <div className={styles.getStarted}>
                   <GetStartedSide />

@@ -1,7 +1,18 @@
 .reasonSideContainer{
     display: flex;
-    padding-top: 10px;
-    svg + h1 {
-        padding-left: 10px;
+    align-items: flex-start;
+    margin-bottom: 21px;
+    svg{
+        margin-top: 4px;
+        width: 18px;
+        height: 18px;
     }
+    p{
+        margin: 0px 0px 0px 20px;
+        font-weight: 500;
+        font-size: 18px !important;
+        line-height: 25px;
+        letter-spacing: 0.14px;
+    }
+ 
 }
