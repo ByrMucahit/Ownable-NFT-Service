@@ -7,7 +7,7 @@ function FooterNavigation(){
     return(
         FOOTERMENU.map((menu)=>{
            return(
-               <HeadTitle className={styles.Nav} size='14px'>{menu.title}</HeadTitle>
+               <a className={styles.Nav} size='14px'>{menu.title}</a>
            )
        })
     )

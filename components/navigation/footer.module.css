@@ -1,6 +1,9 @@
 .Nav{
-    color: var(--c-btn-background); 
-}
-.Nav+.Nav{
-    padding-top: 25px;
+    text-decoration: none;
+    color:var( --c-btn-background);
+    font-size: 14px;
+    letter-spacing: 0.09px;
+    line-height: 20px;
+    padding: 14px 0px;
+    transition: opacity 150ms linear 0s, color 150ms linear 0s, background 150ms linear 0s;
 }

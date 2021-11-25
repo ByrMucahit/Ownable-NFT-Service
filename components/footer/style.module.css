@@ -1,34 +1,81 @@
 .footerContainer{
-    background-color: var(--c-frame-background);
-    display: flex;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    height: 350px;
-    max-height: 350px;
+    background-color: var(--c-footer-background);
+    padding-top: 40px;
+    padding-bottom: 40px;
 
-    /* CSS from left side of footer */
-    .leftSideOfContainer{
-        color: white;
-        position: relative;
-        padding: 20px;
-        .Icons{
-            svg+svg{
-                padding-left: 10px;
-                    } 
-            svg{
-                width: 29px;
-                height: 29px;
-                 }
-            }  
-        }  
-        .copy{
-            position: absolute;
-            bottom: 10px;
-            .copyText{
-                color: var(--c-btn-background);  
+    @media(--m){
+        height: 350px;
+    }
+    @media(--n){
+       height: 250px;
+    }
+
+    .content{
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+        .mainContainer{
+            width: 100%;
+            max-width: 1535px;
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 100%;
+
+            @media(--m){
+                max-width: 1795px;
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+
+            @media(--n){
+                padding-left: 75px;
+                padding-right: 75px;
+                max-width: 1645px;
+            }
+
+            .container{
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                .leftSideOfContainer{
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+
+                    @media(--n){
+                        flex-direction: row;
+                        -webkit-box-pack: justify;
+                        justify-content: space-between;
+                    }
+
+                    .footerMenu{
+                        display: flex;
+                        flex-direction: column;
+                        margin: 24px 0px;
+
+                        @media(--n){
+                            margin: 0px;
+                        }
+                    }
+
+                    .copyText{
+                        color: var(--c-quotation-color);
+                        margin: 0px;
+                        font-size: 12px;
+                        letter-spacing: 0.09px;
+                        line-height: 16px;
+                        flex: 1 1 0%;
+                        display: flex;
+                        align-items: flex-end;
+                    }
+                }
             }
         }
+    }
     }
     
     /* CSS from right side of footer */

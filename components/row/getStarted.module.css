@@ -2,13 +2,16 @@
     .header{
         color: var(--c-uninspiring-text);
         margin: 0px;
-        font-weight: 600px;
+        font-weight: bold;
         font-size: 33px;
         line-height: 45px;
         letter-spacing: 0.25px;
         padding: 22px 0px;
         text-align: center;
         background-color: var(--c-smooth-dark-background-color);
+    }
+    .span{
+        color: var(--c-btn-background);
     }
     .content{
     display: flex;
@@ -31,7 +34,7 @@
         height: 208px;
         order: 1;
         margin-bottom: 20px;
-
+        margin-right: 50px;
         @media(--m){
             order:2;
             margin-bottom: 0px;
