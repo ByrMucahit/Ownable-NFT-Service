@@ -7,7 +7,7 @@ module.exports = {
           customMedia: {'--t': '(max-width: 943px)' }
         },
         {
-          customMedia: {'--d': '(min-width: 1270px)'}
+          customMedia: {'--d': '(min-width: 600px)'}
         },
         {
           customMedia: {'--m': '(min-width: 960px)'}
@@ -15,9 +15,7 @@ module.exports = {
         {
           customMedia: {'--o': '(max-width: 600px)'}
         },
-        {
-          customMedia: {'--n': '(min-width: 600px)'}
-        }
+        
       ]
     }
   },

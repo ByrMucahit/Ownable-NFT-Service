@@ -7,9 +7,9 @@ import Navigation from "../../navigation/navigation"
 import ExhibitionSide from '../../row/exhibitionSide'
 import Quotation from "../../row/quotation"
 import ReasonSide from "../../row/reasonSide"
-import BusinessSide from "../../row/businessSide"
 import GetStartedSide from "../../row/getStarted"
 import FooterSide from "../../footer/index"
+ 
 function Layout() {
     const size = useWindowSize()
     return (
@@ -41,9 +41,9 @@ function Layout() {
                   {/* There having main side */}
                 </div>
                       {/* Footer Side */}
-                <div>
+                
                     <FooterSide />
-                </div>
+               
            
                
                 

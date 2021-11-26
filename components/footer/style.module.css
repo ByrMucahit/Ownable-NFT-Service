@@ -6,7 +6,7 @@
     @media(--m){
         height: 350px;
     }
-    @media(--n){
+    @media(--d){
        height: 250px;
     }
 
@@ -24,16 +24,16 @@
             padding-right: 20px;
             height: 100%;
 
+            @media(--d){
+                padding-left: 75px;
+                padding-right: 75px;
+                max-width: 1645px;
+            }
+
             @media(--m){
                 max-width: 1795px;
                 padding-left: 150px;
                 padding-right: 150px;
-            }
-
-            @media(--n){
-                padding-left: 75px;
-                padding-right: 75px;
-                max-width: 1645px;
             }
 
             .container{
@@ -46,7 +46,7 @@
                     flex-direction: column;
                     height: 100%;
 
-                    @media(--n){
+                    @media(--d){
                         flex-direction: row;
                         -webkit-box-pack: justify;
                         justify-content: space-between;
@@ -57,7 +57,7 @@
                         flex-direction: column;
                         margin: 24px 0px;
 
-                        @media(--n){
+                        @media(--d){
                             margin: 0px;
                         }
                     }
