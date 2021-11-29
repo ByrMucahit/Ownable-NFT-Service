@@ -32,7 +32,7 @@ function Footer(){
                         </div>
                     </div>
                     {/* Copy from left side */}
-                    <p className={styles.copyText} size='12px'>Copyright © 2021 Ownable-NS</p>
+                    <p className={styles.copyText}>Copyright © 2021 Ownable-NS</p>
                 </div>
             </div>
         </div>

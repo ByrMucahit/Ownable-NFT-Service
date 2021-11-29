@@ -11,7 +11,11 @@ function FrameButton ({children}) {
                 type="button"
                 border
                 >
-                <TextTitle>{children}</TextTitle>
+                <p>
+                    <span>
+                        {children}
+                    </span>        
+                </p>
             </Button>
     ) 
 }

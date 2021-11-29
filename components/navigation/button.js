@@ -1,13 +1,15 @@
 import React from "react"
 import styles from './button.module.css'
-import Button from '../button/base/index'
 
-function NavigationButton ({ children, ...props}) {
+
+function NavigationLink ({ children, ...props}) {
     return (
-    <Button className={styles.nav} {...props}>
-        {children}
-    </Button>
+        <div className={styles.menu}>
+                <a className={styles.nav} {...props}>
+                    {children}
+                </a>
+        </div>
     )
 }
 
-export default NavigationButton
+export default NavigationLink

@@ -14,4 +14,7 @@
     --c-smooth-dark-backgroundColor: rgb(250, 250, 250);
     --c-footer-background: rgb(49, 55, 57);
     --c-quotation-color: rgb(168, 177, 181);
+    --c-shadow-color: #ededed;
+    --c-navigation-font-color: #313739;
+    --c-quotates-font-color: rgb(37, 37, 42);
 }

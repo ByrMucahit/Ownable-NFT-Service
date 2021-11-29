@@ -11,33 +11,21 @@ function Quotation(){
             <div className={styles.content}>
                 <div className={styles.marketPlaceSide}>
                     <div className={styles.placeSide}>
-                        <div className={styles.quoHeader}>
-                            <TextTittle 
+                            <p 
                                 className={styles.quoHeaderText} 
                                 bold
-                                >Trade  
+                                >Trade   
                                 <span className={styles.Span}>
-                                     Ownable-NS 
+                                       Ownable-NS 
                                 </span>
                                 created on marketplace platforms.
-                            </TextTittle>
-                        </div>
+                            </p>
 
-                        <div className={styles.quoMiddle}>
-                            <TextTittle className={styles.quoMiddleText} >
+                            <p className={styles.quoMiddleText} >
                                 Trade Ownable-NS created on marketplace platforms.
-                            </TextTittle>
+                            </p>
                         </div>
-
-                        <div className={styles.quoFooter}>
-                            <TextTittle 
-                            className={styles.quoFooterText} 
-                            >
-                                You,the creator, own your private keys, therefore own your assets and are free to,<br/>
-                                transfer, sell or trade NFTs anywhere on the digital marketplace.
-                            </TextTittle>
-                        </div>
-
+                    
                         <div className={styles.quoIcons}>
                             <Icon.RaribleLogo className={styles.quoRarible}/>
                             <Icon.OpenseaLogo className={styles.quoOpensea}/>
@@ -45,7 +33,7 @@ function Quotation(){
                     </div>
                 </div>
             </div>  
-        </div>
+       
     )
 }
 

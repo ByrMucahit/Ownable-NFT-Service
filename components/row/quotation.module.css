@@ -1,7 +1,7 @@
 .quo{
     padding-top: 50px;
     padding-bottom: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     background-color: var(--c-background-alternative-color);
     
     .content{
@@ -35,15 +35,14 @@
                 align-items: center;
                 flex-direction: column;
 
-                .quoHeader{
-                    .quoHeaderText{
-                        margin: 0px;
-                        font-size: 26px !important;
-                        line-height: 36px;
-                        letter-spacing: 0.2px;
-                    }
+                .quoHeaderText{
+                    color: var(--c-quotates-font-color);
+                    margin: 0px;
+                    font-weight: 600px;
+                    font-size: 26px;
+                    line-height: 36px;
+                    letter-spacing: 0.2px;
                 }
-                .quoMiddle{
                     .quoMiddleText{
                         margin: 23px 0px 0px;
                         font-weight: 400px;
@@ -51,11 +50,15 @@
                         line-height: 22px;
                         letter-spacing: 0.12px;
                         max-width: 588px;
-                    }
+                
                 }
                 .quoIcons{
                     margin-top: 23px;
                     display: flex;
+                    svg{
+                        width: 26px;
+                        margin-right: 16px;
+                    }
                 }
             }
         }

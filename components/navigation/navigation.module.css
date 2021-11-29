@@ -1,68 +1,34 @@
 /* Navigator */
-.navigator {
-        border: 1px solid;
-        border-color: #9E9E9E;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        align-items: center;
-        min-height: 75px;
-        
-        /* Navigator Media */
-        @media (--d){           
-            max-width: 1270;
-            height: 71px;
-            max-height: 95px;
-        }
 
-    a{
-        color: var( --c-alternative-background-color);
-        text-decoration: none;
+.header{
+    position: relative;
+    background: var(--c-icon-color);
+    box-shadow: none;
+    padding-top: 22px;
+    padding-left: 20px;
+    border-bottom: 1px solid var(--c-shadow-color);
+    padding-right: 20px;
+    flex-direction: row;
+    padding-bottom: 22px;
 
-        }
-    a:hover{
-        color: var(--c-btn-background) ;
+    @media(--d){
+        padding-left: 60px;
+        padding-right: 60px;
+
     }
-
-    a + a {
-        padding-left: 20px; 
-        }
+    .navigator {
+       flex:1;
+       display: flex;
 
     
-    /* Navigator Button */
-    .navBtn{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 12px !important;
-        @media (--t){
-            position: fixed;
-            top: 5rem;
-            flex-direction: column;
-            width: 100%;
-            display: center;
-            transition: 0.3s;
-        }
-        
-        .navItem{
-            margin-left: 5rem;
-    }
-    .subBtn{
-            font-size: 13px !important;
-    }
-}
+
 
     /* Mark */
     .mark{
-        padding-left: 10px;
-        .mark svg{
-            font-size: 30px;
-            
-        }
-        @media(--t){
-            display: inline-block;
-            text-align: left;
-        }
+        display: flex;
+        margin-left: auto;
+        margin-right: 0;
+       
 
     /* .navBtn and .mark has the same display, because both of them is in different div, and those two div must be same row.*/
     }
@@ -75,7 +41,16 @@
     .homepageOption{
         padding-right: 10px;
     }
+
+    .comp{
+        @media(--d){
+            margin-right: 30px;
+        }
+        display: flex;
+        text-decoration: none;
+
+    }
 }
 
-
+}
 

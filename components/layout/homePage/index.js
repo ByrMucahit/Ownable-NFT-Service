@@ -37,19 +37,11 @@ function Layout() {
                   <GetStartedSide />
                 </div>
                 <div>
-                  <span className={styles.sizing} >{JSON.stringify(size)}</span>
                   {/* There having main side */}
                 </div>
                       {/* Footer Side */}
                 
-                    <FooterSide />
-               
-           
-               
-                
-                
-            
-               
+                    <FooterSide /> 
         </div>)
 }
 
