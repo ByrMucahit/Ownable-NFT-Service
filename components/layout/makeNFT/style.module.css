@@ -1,23 +1,277 @@
 .layout{
     .formContainer{
-        color: var(--c-text-color-70);
+        
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
         .headerSide{
-            text-align: start;
-            padding-left:246px;
-            padding-top: 40px;
-            .headers{                
-                .header{
-                  font-size: 30px !important;
+            padding-left: 3%;
+            padding-right: 3%;
+            flex: 1;
+            display: flex;
+            min-height: 200px;
+            flex-direction: column;
+            padding-bottom: 64px;
+
+            .container{
+                display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+
+                .details{
+                    @media(--d){
+                        padding-left: 75px;
+                        padding-right: 75px;
+                        max-width: 1645px;
+                    }
+
+                    width: 100%;
+                    max-width: 1535px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+
+                    .header{
+                        @media(--t){
+                            font-size: 25px;
+                            margin-top: 30px;
+                        }
+
+                        font-size: 30px;
+                        margin-top: 40px;
+                        font-weight: 700px;
+                        line-height: 55px;
+                        margin-bottom: 0px;
+                    }
+
+                    .subText{
+                        color:var(--c-text-color-87);
+                        margin: 0;
+                        font-size: 15px;
+                        margin-top: 3px;
+                        text-align: left;
+                        font-family: "Nunito Sans",sans-serif;
+                        font-weight: 400px;
+                        line-height: 28px;
+                    }
+
+                    .inputContainer{
+                        .accountLink{
+                            margin-top: 40px;
+                            font-size: 20px;
+                            font-family: "Nunito Sans",sans-serif;
+                            font-weight: 700;
+                            line-height: 32px;
+                            margin: 0;
+
+                            .login{
+                                text-decoration: underline;
+                                cursor: pointer;
+                                color: inherit;
+                            }
+                        }
+
+                        .firstNameInput{
+                            margin-right: 20px;
+                            .firstNameLabel{
+                                transition: color 200ms
+                                cubic-bezier(0.0, 0, 0.2, 1) 0ms transform 200 ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+                            }
+
+                            .multiInputLabel{
+                                top: 0;
+                                left: 0;
+                                position: absolute;
+                                transform: translate(0, 28px) scale(1);
+                            }
+                            
+                            .multiInputLabelRoot{
+                                display: block;
+                                transform-origin: top left;
+                            }
+                            .multiFormLabelRoot{
+                                color:var(--c-label-color);
+                                padding: 0;
+                                font-size: 20px;
+                                font-family: "Nunito Sans",sans-serif;
+                                font-weight: 400;
+                                line-height: 2px;
+                            }
+
+                            
+                                
+                            .MuiInput{
+                                font-size: 20px;
+                                font-family: "Nunito Sans",sans-serif;
+                                line-height: 24px;
+                            }
+
+                            .MuiInputBaseInput{
+                                font: inherit;
+                                color: currentColor;
+                                width: 100%;
+                                border: 0;
+                                height: 1.876em;
+                                margin:0;
+                                display: block;
+                                padding: 6px 0 7px;
+                                min-width: 0;
+                                background: none;
+                                box-sizing: content-box;
+                                animation-name: mui-auto-fill-cancel;
+                                letter-spacing: inherit;
+                                animation-duration: 10ms;
+                                -webkit-tap-highlight-color: transparent;
+                            }
+                            input{
+                                overflow: visible;
+                                -webkit-writing-mode: horizontal-tb !important;
+                                text-rendering: auto;
+                                color: -internal-light-dark(black, white);
+                                letter-spacing: normal;
+                                word-spacing: normal;
+                                line-height: normal;
+                                text-transform: none;
+                                text-indent: 0px;
+                                text-shadow: none;
+                                display: inline-block;
+                                text-align: start;
+                                appearance: auto;
+                                -webkit-rtl-ordering: logical;
+                                cursor: text;
+                                background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+                                margin: 0em;
+                                padding: 1px 2px;
+                                border-width: 2px;
+                                border-style: inset;
+                                border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+                                border-image: initial;
+                                }
+
+                                .muiFormHelperTextRoot, .muiError{
+                                    color: var(--c-error-color);
+                                }
+
+                                .muiFormerHelperTextRoot{
+                                    color: var(--c-text-color-87);
+                                    margin:0;
+                                    font-size: 15px;
+                                    margin-top: 3px;
+                                    text-align: left;
+                                    font-family: "Nunito Sans", sans-serif;
+                                    font-weight: 400;
+                                    line-height: 28px;
+                                }
+
+                                button, input, select{
+                                    margin:0;
+                                }
+                                input[type="text"]{
+                                    padding: 1px 2px;
+                                }
+
+                              
+                           
+                            .muiInputUnderline:before{
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                content: "\00a0";
+                                position: absolute;
+                                transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+                                pointer-events: none;
+                            }
+
+                            .muiInputUnderline, .muiError:after{
+                                transform: scaleX(1);
+                                border-bottom-color: var(--c-error-color);
+                            }
+
+                            .muiInputUnderline:after{
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                content:"";
+                                position: absolute;
+                                transform: scaleX(0);
+                                transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+                                border-bottom: 2px solid var(--c-btn-background);
+                                pointer-events: none;
+                            }
+
+                            *,*::before, *::after{
+                                box-sizing: inherit;
+                            }
+
+                            label + .multiInputFormControl{
+                                margin-top: 16px;
+                            }
+
+                            .BaseInput{
+                                margin-top: 0;
+                            }
+
+                            .MuiInputRoot{
+                                position: relative;
+                            }
+
+                            .MuiInputBaseRoot{
+                                color: var(--c-text-color-87);
+                                cursor: text;
+                                display: inline-flex;
+                                position: relative;
+                                font-size: 16px;
+                                box-sizing: border-box;
+                                align-items: center;
+                                font-family: "Nunito Sans", sans-serif;
+                                font-weight: 400;
+                                line-height: 1.1876em;
+                            }
+                        }
+                        .muiFormControlRoot{
+                                border: 0;
+                                margin: 0;
+                                display: inline-flex;
+                                padding: 0;
+                                position: relative;
+                                min-width: 0;
+                                margin-top: 20px;
+                                flex-direction: column;
+                                vertical-align: top;
+
+                                .muiInputLabelAnimated{
+                                    transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+                                }
+
+                                .muiInputLabelFormControl{
+                                    top: 0;
+                                    left: 0;
+                                    position: absolute;
+                                    transform: translate(0, 28px) scale(1);
+                                }
+
+                                .multiInputLabelRoot{
+                                    display: block;
+                                    transform-origin: top left;
+                                }
+
+                                .muiFormLabelRoot{
+                                    color: var(--c-label-color);
+                                    padding: 0;
+                                    font-size: 20px;
+                                    font-family: "Nunito Sans", sans-serif;
+                                    font-weight: 400;
+                                    line-height: 2px;
+                                }
+                        }
+
+                    }
                 }
             }
-            .marks{
-                .mark{
-                    font-size: 15px !important;
-                }
-            }
+
         }
-    }
-    .Footer{
-        padding-top: 30px;
     }
 }

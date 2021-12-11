@@ -11,13 +11,73 @@ function Layout(){
         /* Layout in Make NFT Page */
         <div className={styles.layout}>
             {/* Navigator */}
-            <div className={styles.navigator}>
                 <Navigation />
-            </div>
             {/* Center Container */}
             <div className={styles.formContainer}>
                 {/* Header inside Container */}
                 <div className={styles.headerSide}>
+                    <div className={styles.container}>
+                        <div className={styles.details}>
+                            <h1 className={styles.header}>Mint NFT</h1>
+                            <p className={styles.subText}>Fungible and non-fungible tokens</p>
+                            <div className={styles.inputContainer}>
+                                <h3 className={styles.accountLink}>Already have an account? <span className={styles.login}>(Log in here)</span></h3>
+
+                                <div className={styles.firstNameInput}>
+                                    <label className=
+                                    {`${styles.multiFormLabelRoot} 
+                                    ${styles.multiInputLabelRoot} 
+                                    ${styles.multiInputLabel} 
+                                    ${styles.firstNameLabel}`}
+                                    data-shrink = "false"
+                                    name="firstName"
+                                    placeholder="Enter First Name"
+                                    >
+                                    </label>
+                                    <div className={
+                                        `${styles.input}
+                                        ${styles.MuiInputRoot}
+                                        ${styles.MuiInputBaseRoot}
+                                        ${styles.muiInputUnderline}
+                                        ${styles.BaseInput}
+                                        ${styles.multiInputFormControl}
+                                        `}
+                                        style={{"marginRight":"20px;"}}>
+                                        <input aria-invalid="fallse"
+                                               name="firstName"
+                                               placeholder="Enter first name"
+                                               type="text"
+                                               className={
+                                                   `${styles.MuiInputBaseInput}
+                                                    ${styles.MuiInput}`
+                                               }
+                                               ></input>
+                                    </div>
+                                    <p
+                                        className={`${styles.muiFormHelperTextRoot}
+                                                    ${styles.muiError}`}
+                                        name="firstName"
+                                        placeholder="Enter First Name"
+                                        style={{"marginRight":"20px;"}}
+                                        >Provide your first time</p>
+                                </div>
+                                <div className={styles.muiFormControlRoot}>
+                                    <label className={
+                                        `${styles.muiFormLabelRoot}
+                                        ${styles.muiInputLabelRoot}
+                                        ${styles.muiInputLabelFormControl}
+                                        ${styles.muiInputLabelAnimated}`}
+                                        data-shrink="false"
+                                        name="lastName"
+                                        placeholder="Enter Last Name"></label>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
                     <div className={styles.headers}>
                         <HeadTitle className={styles.header}  bold>Mint NFT</HeadTitle>
                     </div>

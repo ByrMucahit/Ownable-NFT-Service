@@ -1,6 +1,10 @@
 /* Navigator */
 
 .header{
+    @media(--t){
+        align-items: initial;
+    }
+    
     position: relative;
     background: var(--c-icon-color);
     box-shadow: none;
@@ -11,6 +15,7 @@
     flex-direction: row;
     padding-bottom: 22px;
 
+   
     @media(--d){
         padding-left: 60px;
         padding-right: 60px;

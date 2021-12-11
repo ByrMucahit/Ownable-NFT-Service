@@ -25,9 +25,9 @@ function Layout() {
                     <ExhibitionSide/>
                 </div>
                 {/* Qutation */}
-                <div className={styles.quotation}>
+               
                   <Quotation />
-                </div>  
+               
                 {/* Reason */}
                 <div className={styles.reasonSide}>
                     <ReasonSide/>

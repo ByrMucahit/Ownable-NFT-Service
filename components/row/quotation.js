@@ -1,7 +1,9 @@
 import React from "react";
 import cn from 'classnames'
 import * as Icon from '../icons'
-
+import Image from 'next/image'
+import Opensea from "../../Photos/opensea-logo.svg"
+import Rariable from "../../Photos/rarible-logo.svg"
 import styles from './quotation.module.css'
 import TextTittle from "../text/text-title";
 
@@ -14,11 +16,9 @@ function Quotation(){
                             <p 
                                 className={styles.quoHeaderText} 
                                 bold
-                                >Trade   
-                                <span className={styles.Span}>
-                                       Ownable-NS 
-                                </span>
-                                created on marketplace platforms.
+                                > 
+                                <span className={styles.Span}>Ownable-NS </span>
+                                 NFTs are traded on the largest NFT marketplaces
                             </p>
 
                             <p className={styles.quoMiddleText} >
@@ -26,9 +26,8 @@ function Quotation(){
                             </p>
                         </div>
                     
-                        <div className={styles.quoIcons}>
-                            <Icon.RaribleLogo className={styles.quoRarible}/>
-                            <Icon.OpenseaLogo className={styles.quoOpensea}/>
+                        <div className={styles.quoHeaderText}>
+                           
                         </div>
                     </div>
                 </div>

@@ -2,8 +2,8 @@
     padding-top: 50px;
     padding-bottom: 50px;
     margin-bottom: 60px;
-    background-color: var(--c-background-alternative-color);
-    
+    background-color: var(--c-smooth-dark-backgroundColor);
+
     .content{
         display: flex;
         -webkit-box-pack: center;
@@ -12,26 +12,21 @@
         width: 100%;
 
         .marketPlaceSide{
-            width: 100%;
-            max-width: 1535px;
-            padding-left: 20px;
-            padding-right: 20px;
-            @media(--m){
-                max-width: 1795px;
-                padding-left: 150px;
-                padding-right: 150px;
-            }
-
-            @media(--o){
+            @media(--d){
                 padding-left: 75px;
                 padding-right: 75px;
                 max-width: 1645px;
             }
+          
+            width: 100%;
+            max-width: 1535px;
+            padding-left: 20px;
+            padding-right: 20px;
 
             .placeSide{
                 text-align: center;
                 display: flex;
-                -webkit-box-alig: center;
+                -webkit-box-align: center;
                 align-items: center;
                 flex-direction: column;
 
@@ -42,21 +37,36 @@
                     font-size: 26px;
                     line-height: 36px;
                     letter-spacing: 0.2px;
+
+                    .Span{
+                        color: var(--c-btn-background);
+                    }
                 }
-                    .quoMiddleText{
-                        margin: 23px 0px 0px;
-                        font-weight: 400px;
-                        font-size: 16px !important;
-                        line-height: 22px;
-                        letter-spacing: 0.12px;
-                        max-width: 588px;
-                
+
+                .quoMiddleText{
+                    color: var(--c-quotates-text-font-color);
+                    margin:23px 0px 0px;
+                    font-weight: 400px;
+                    font-size: 16px;
+                    line-height: 22px;
+                    letter-spacing: 0.12px;
+                    max-width: 588px;
                 }
+
+                .rariable{
+                    width: 26px ; 
+                    margin-right: 16px;
+                }
+
                 .quoIcons{
                     margin-top: 23px;
                     display: flex;
-                    svg{
-                        width: 26px;
+                    .rariable{
+                        width: 26px ; 
+                        margin-right: 16px;
+                    }
+                    img{
+                        width: 26px ; 
                         margin-right: 16px;
                     }
                 }

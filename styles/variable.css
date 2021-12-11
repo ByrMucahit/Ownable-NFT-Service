@@ -17,4 +17,7 @@
     --c-shadow-color: #ededed;
     --c-navigation-font-color: #313739;
     --c-quotates-font-color: rgb(37, 37, 42);
+    --c-quotates-text-font-color: rgb(77, 81, 83);
+    --c-label-color: #9e9e9e;
+    --c-error-color: #f44336;
 }
