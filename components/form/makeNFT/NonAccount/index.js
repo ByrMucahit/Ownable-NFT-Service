@@ -2,6 +2,7 @@ import React from "react";
 import HeadTitle from "../../../text/head-title";
 
 import styles from './style.module.css'
+import * as Icon from '../../../icons'
 import Input from '../../../input/text/text'
 import CheckInput from '../../../input/check/index'
 import ImageButton from "../../../button/image/index"
@@ -291,10 +292,110 @@ function MakeNFTForm(){
                                     ${styles.muiCheckBoxColorSecondary}
                                     ${styles.muiIconButtonColorSecondary}`}
                                     aria-disabled="false"
-                                    ></span>
+                                    >
+                                        <span className={styles.muiIconButtonLabel}>
+                                            <input className={styles.cssCheckBox} name="toCheckbox" required type="checkbox" data-indeterminate="false" value></input>
+                                            <Icon.İconmonstrCheckbox6 className={styles.muiSvgIconRoot}/>
+                                        </span>
+
+                                        <span className={`
+                                        ${styles.muiTypographyRoot} 
+                                        ${styles.muiFormControlLabelLabel} 
+                                        ${styles.muiTypographyBody1}`}
+                                        >
+                                            <p>I have read and agree to the 
+                                                <a className={`
+                                                ${styles.muiTypographyRoot} 
+                                                ${styles.muiLinkRoot} 
+                                                ${styles.muiLinkUnderLineHover} 
+                                                ${styles.muiTypographyColorPrimary}`}
+                                                target="tos">terms of service</a>
+                                                .
+                                            </p>
+                                        </span>
+                                    </span>
                                 </label>
                             </div>
                         </div>
+
+                        <form className={styles.cssForm}>
+                            <div className={`${styles.muiFormControlRoot} ${styles.muiFormControlFullWidth}`}>
+                                <label className={`
+                                ${styles.muiFormLabelRoot} 
+                                ${styles.muiInputLabelRoot} 
+                                ${styles.muiInputLabelFormControl}
+                                ${styles.muiInputLabelAnimated}`}></label>
+                                <div className={`
+                                ${styles.muiInputBaseRoot} 
+                                ${styles.muiInputRoot} 
+                                ${styles.muiInputUnderline} 
+                                ${styles.cssInput} 
+                                ${styles.muiInputBaseFullWidth}
+                                ${styles.muiInputFullWidth}
+                                ${styles.muiInputBaseFormControl}
+                                ${styles.muiInputFormControl}`}>
+                                    <input 
+                                    aria-invalid="false" 
+                                    name="tokenName" 
+                                    placeholder="Enter Token Name" 
+                                    type="text" 
+                                    className={`
+                                    ${styles.muiInputBaseInput} 
+                                    ${styles.muiInputInput}`} >
+
+                                    </input>
+                                </div>
+                            </div>
+
+                            <div className={`${styles.muiFormControlRoot} ${styles.cssMedia}`}>
+                                <label className={`${styles.muiFormLabelRoot} 
+                                ${styles.muiInputLabelRoot} 
+                                ${styles.muiInputLabelFormControl} 
+                                ${styles.muiInputLabelAnimated}`}
+                                data-shrink="false"
+                                style={{"position":"relative;","marginTop":"30px;","top":"-35px;","marginBottom":"10px;"}}>Media</label>
+                                <div>
+                                    <label className={
+                                        `${styles.muiButtonBaseRoot} 
+                                    ${styles.muiButtonRoot} 
+                                    ${styles.muiButtonContained} 
+                                    ${styles.muiButtonContainedPrimary}`}
+                                    >
+                                        <span className={styles.muiButtonLabel}>
+                                            <span className={styles.cssMediaContent}>
+                                                <Icon.Upload className={`${styles.muiSvgIconRoot} ${styles.cssSvg}`}/>
+                                            </span>
+                                            <input accept="image/*" className={styles.cssSvgContent} id="icon-button-photo" type="file"></input>
+                                        </span>
+                                    </label>
+                                    <p className={styles.muiFormHelperTextRoot}>Any image file or animated gif accepted up to 10mb file size.</p>
+                                </div>
+                            </div>
+                            <div className={styles.muiFormControlRoot}>
+                                <label className={`
+                                ${styles.muiFormControlRoot} 
+                                ${styles.muiInputLabelRoot} 
+                                ${styles.muiInputLabelFormControl} 
+                                ${styles.muiInputLabelAnimated}
+                                ${styles.muiInputLabelShrink}
+                                ${styles.muiInputLabelFilled}`}
+                                data-shrink="true"></label>
+                                <div className={`
+                                ${styles.muiInputBaseRoot} 
+                                ${styles.muiInputRoot} 
+                                ${styles.muiInputUnderline} 
+                                ${styles.muiInputBaseFormControl} 
+                                ${styles.muiInputFormControl}`}>
+                                    <div className={`
+                                    ${styles.muiSelectRoot} 
+                                    ${styles.muiSelectSelect} 
+                                    ${styles.muiSelectSelectMenu} 
+                                    ${styles.muiInputBaseInput} 
+                                    ${styles.muiInputInput}`}>NFT (Non Fungible Token)</div>
+                                    <input name="assetType" aria-hidden="true" tabIndex={"-1"} className={styles.muiSelectNativeInput}></input>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
