@@ -103,6 +103,14 @@ function MakeNFTForm(){
 
                                     </input>
                                 </div>
+                                <p className={`
+                                ${styles.muiFormHelperTextRoot} 
+                                ${styles.muiError}`}
+                                name="firstName"
+                                placeholder="Enter Last Name"
+                                style={{"marginRight":"20px;"}}>
+                                    Provide Your Last Name
+                                </p>
                             </div>
 
                             <div className={`${styles.muiFormControlRoot} ${styles.muiFormControlFullWidth}`}>
