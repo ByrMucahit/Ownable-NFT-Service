@@ -1,6 +1,6 @@
 import React from "react";
 import HeadTitle from "../../../text/head-title";
-
+import MintBtn from "../../../button/mint/index";
 import styles from './style.module.css'
 import * as Icon from '../../../icons'
 import Input from '../../../input/text/text'
@@ -392,9 +392,79 @@ function MakeNFTForm(){
                                     ${styles.muiSelectSelectMenu} 
                                     ${styles.muiInputBaseInput} 
                                     ${styles.muiInputInput}`}>NFT (Non Fungible Token)</div>
-                                    <input name="assetType" aria-hidden="true" tabIndex={"-1"} className={styles.muiSelectNativeInput}></input>
+                                    <input name="assetType" aria-hidden="true" tabIndex={"-1"} className={styles.muiSelectNativeInput}/>
+                                    <Icon.DownArrow className={`${styles.muiSvgIconRoot} ${styles.muiSelectIcon}`}/>
+                                </div>
+                                <p className={`${styles.muiFormHelperTextRoot} ${styles.muiFormHelperTextFilled}`}>
+                                    NFT's (Non fungible tokens) represent things that are wholly owned by one person like art or merchandise.
+                                </p>
+                            </div>
+
+                            <div className={`${styles.muiFormControlRoot} ${styles.muiFormControlFullWidth}`}>
+                                <label className={`
+                                ${styles.muiFormLabelRoot} 
+                                ${styles.muiInputLabelRoot} 
+                                ${styles.muiInputLabelFormControl}
+                                ${styles.muiInputLabelAnimated}`}
+                                data-shrink="false"
+                                name="description"
+                                placeholder="Enter description"></label>
+                                
+                                <div className={`
+                                ${styles.muiInputBaseRoot} 
+                                ${styles.muiInputRoot} 
+                                ${styles.muiInputUnderline} 
+                                ${styles.cssInput} 
+                                ${styles.muiInputBaseFullWidth}
+                                ${styles.muiInputFullWidth}
+                                ${styles.muiInputBaseFormControl}
+                                ${styles.muiInputFormControl}
+                                ${styles.muiInputBaseMultiLine}
+                                ${styles.muiInputMultiLine}`}>
+                                    <textarea 
+                                    rows={"1"} 
+                                    aria-onInvalid={"false"} 
+                                    name="description" 
+                                    placeholder="Enter description"
+                                    className={`
+                                    ${styles.muiInputBaseInput} 
+                                    ${styles.muiInputInput} 
+                                    ${styles.muiInputBaseInputMultiLine} 
+                                    ${styles.muiInputInputMultiLine}`}
+                                    style={{"height":"30px;", "overflow":"hidden;"}}></textarea>
+                                    <textarea 
+                                    aria-hidden="true" 
+                                    className={`
+                                    ${styles.muiInputBaseInput} 
+                                    ${styles.muiInputInput} 
+                                    ${styles.muiInputBaseInputMultiLine}
+                                    ${styles.muiInputInputMultiLine}`}
+                                    readOnly tabIndex={"-1"}
+                                    style={{
+                                        "visibility":"hidden",
+                                        "position":"absolute",
+                                        "overflow":"hidden",
+                                        "height":"0px",
+                                        "height":"0px;",
+                                        "top":"0px",
+                                        "left":"0px",
+                                        "transform":"translateZ(0px)",
+                                        "width":"734.652px"}}></textarea>
                                 </div>
                             </div>
+
+                            <div className={styles.muiFormControlRoot}>
+                                <label className={`
+                                ${styles.muiFormLabelRoot} 
+                                ${styles.muiInputLabelRoot} 
+                                ${styles.muiInputLabelFormControl} 
+                                ${styles.muiInputLabelAnimated}`}
+                                data-shrink="false"
+                                style={{"position":"relative","marginTop":"30px","top":"-40px"}}
+                                >NFT Minting Fee</label>
+                                $114.95
+                            </div>
+                            <MintBtn/>
                         </form>
                     </div>
                 </div>

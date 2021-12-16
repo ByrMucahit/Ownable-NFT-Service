@@ -1,6 +1,7 @@
 export { default as AppStore } from './AppStore'
 export { default as CheckSquare } from './CheckSquare'
 export { default as Discord } from './Discord'
+export { default as DownArrow } from './DownArrow'
 export { default as DropDownİcon } from './DropDownİcon'
 export { default as DropDown } from './DropDown'
 export { default as EthLogo } from './EthLogo'

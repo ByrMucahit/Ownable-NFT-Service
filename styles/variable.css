@@ -22,4 +22,7 @@
     --c-label-color: #9e9e9e;
     --c-error-color: #f44336;
     --c-Icon-Button-Color-Secondary: #585958;
+    --c-disabled-Button : rgb(89 88 90 / 12%);
+    --c-disabled-Button-26: rgba(0, 0, 0, 0.26);
+    --c-disabled-Button-12: rgba(0, 0, 0, 0.12);
 }
