@@ -108,7 +108,7 @@ function MakeNFTForm(){
                                 ${styles.muiError}`}
                                 name="firstName"
                                 placeholder="Enter Last Name"
-                                style={{"marginRight":"20px;"}}>
+                                >
                                     Provide Your Last Name
                                 </p>
                             </div>
@@ -211,11 +211,13 @@ function MakeNFTForm(){
                                     ${styles.muiInputInput}`}
                                     ></input>
                                 </div>
-                                <p className={styles.muiFormHelperTextRoot}
-                                name="phone"
-                                placeholder="Enter Phone Number"
-                                type="text"
-                                value inputMode="numeric">If provided text messages will be sent here for security.</p>
+                                    <p className={styles.muiFormHelperTextRoot}
+                                    name="phone"
+                                    placeholder="Enter Phone Number"
+                                    type="text"
+                                    value inputMode="numeric">If provided text messages will be sent here for security.</p>
+                                
+                               
                             </div>
 
                             <div className={`${styles.muiBoxRoot} ${styles.cssPasswordContent}`}>
@@ -237,15 +239,14 @@ function MakeNFTForm(){
                                     ${styles.muiInputRoot} 
                                     ${styles.muiInputUnderline} 
                                     ${styles.cssInput} 
-                                    ${styles.muiInputBaseFullWidth}
-                                    ${styles.muiInputFullWidth}
                                     ${styles.muiInputBaseFormControl}
                                     ${styles.muiInputFormControl}
-                                    `}>
+                                    `}
+                                    style={{"marginRight":"20px"}}>
                                         <input 
                                         aria-invalid="false" 
                                         name="username" 
-                                        placeholder="Enter Username" 
+                                        placeholder="Enter Password" 
                                         type="text"
                                         className={`
                                         ${styles.muiInputBaseInput}
@@ -263,8 +264,8 @@ function MakeNFTForm(){
                                     data-shrink="false"
                                     name="confirmPassword"
                                     style="password"
-                                    placeholder="Enter Password"
-                                    style={{"marginRight":"20px;"}}
+                                    placeholder="Confirm Password"
+                                    style={{"marginRight":""}}
                                     >
                                     </label>
                                     <div className={`
@@ -272,15 +273,13 @@ function MakeNFTForm(){
                                     ${styles.muiInputRoot} 
                                     ${styles.muiInputUnderline} 
                                     ${styles.cssInput} 
-                                    ${styles.muiInputBaseFullWidth}
-                                    ${styles.muiInputFullWidth}
                                     ${styles.muiInputBaseFormControl}
                                     ${styles.muiInputFormControl}
                                     `}>
                                         <input 
                                         aria-invalid="false" 
                                         name="confirmPassword" 
-                                        placeholder="Enter password" 
+                                        placeholder="Confirm password" 
                                         type="password"
                                         className={`
                                         ${styles.muiInputBaseInput}
@@ -302,11 +301,11 @@ function MakeNFTForm(){
                                     aria-disabled="false"
                                     >
                                         <span className={styles.muiIconButtonLabel}>
-                                            <input className={styles.cssCheckBox} name="toCheckbox" required type="checkbox" data-indeterminate="false" value></input>
-                                            <Icon.İconmonstrCheckbox6 className={styles.muiSvgIconRoot}/>
+                                            <input className={styles.cssCheckBox} name="tosCheckbox" required type="checkbox" data-indeterminate="false" value/>
+                                            <Icon.İconmonstrCheckbox6 className={styles.muiSvgIconRoot} focusable="false"/>
                                         </span>
-
-                                        <span className={`
+                                    </span>
+                                    <span className={`
                                         ${styles.muiTypographyRoot} 
                                         ${styles.muiFormControlLabelLabel} 
                                         ${styles.muiTypographyBody1}`}
@@ -321,7 +320,6 @@ function MakeNFTForm(){
                                                 .
                                             </p>
                                         </span>
-                                    </span>
                                 </label>
                             </div>
                         </div>

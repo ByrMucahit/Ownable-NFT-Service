@@ -104,7 +104,7 @@
                     transform: translate(0, 28px) scale(1);
                 }
                 .muiInputLabelAnimated{
-                    transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms, transform 200 ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+                    transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms, transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
                 }
 
                 label + .muiInputFormControl{
@@ -122,9 +122,14 @@
                     box-sizing: border-box;
                     align-items: center;
                     font-family: "Nunito Sans", sans-serif;
-                    font-weight: 400px;
+                    font-weight: 400;
                     line-height: 1.1876em;
                 }
+
+                
+            .muiInputBaseFullWidth{
+                width: 100%;
+            }
 
                 
                 .muiInputRoot{
@@ -187,6 +192,12 @@
                     border-bottom: 2px solid var(--c-btn-background);
                     pointer-events: none;
                 }
+
+                .muiInputUnderline .muiError::after{
+                    transform: scaleX(1);
+                    border-bottom-color: var(--c-error-color);
+                }
+
                 .muiFormHelperTextRoot{
                     color: var(--c-text-color-87);
                     margin: 0;
@@ -207,13 +218,6 @@
                 width: 100%
             }
 
-            label + .muiInputFormControl{
-                margin-top: 16px;
-            }
-
-            .muiInputBaseFullWidth{
-                width: 100%;
-            }
             .cssPasswordContent{
                 display: flex;
             }
@@ -230,28 +234,6 @@
                     vertical-align: middle;
                     -webkit-tap-highlight-color: transparent;
 
-                    .muiCheckBoxRoot{
-                        color:var(--c-text-color-54);
-                    }
-
-                    .cssButtonContent{
-                        padding: 9px;
-                    }
-
-                    .muiIconButtonColorSecondary{
-                        color: var( --c-Icon-Button-Color-Secondary);
-                    }
-
-                    .muiIconButtonRoot{
-                        flex: 0 0 auto;
-                        color:var(--c-text-color-54);
-                        padding: 12px;
-                        overflow: visible;
-                        font-size: 1.7142857142857142rem;
-                        text-align: center;
-                        transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-                        border-radius: 50%;
-                    }
 
                     .muiButtonBaseRoot{
                         color: inherit;
@@ -274,6 +256,29 @@
                         -webkit-tap-highlight-color: transparent;
                     }
 
+                    
+                    .muiIconButtonRoot{
+                        flex: 0 0 auto;
+                        color:var(--c-text-color-54);
+                        padding: 12px;
+                        overflow: visible;
+                        font-size: 1.7142857142857142rem;
+                        text-align: center;
+                        transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                        border-radius: 50%;
+                    }
+
+                    .muiIconButtonColorSecondary{
+                        color: var( --c-Icon-Button-Color-Secondary);
+                    }
+
+                    .cssButtonContent{
+                        padding: 9px;
+                    }
+
+                    .muiCheckBoxRoot{
+                        color:var(--c-text-color-54);
+                    }
                     .muiIconButtonLabel{
                         width: 100%;
                         display: flex;
@@ -293,14 +298,22 @@
                             position: absolute;
                         }
 
-                        .muiSvgIconRoot, .muiCheckBoxRoot{
+                        .muiSvgIconRoot{
+                            width: 25px;
+                            height: auto;
+                        }
+                        
+                        .muiCheckBoxRoot{
                             width: 25px;
                             height: auto;
                         }
 
-                        svg:not(:root){
-                            overflow: hidden;
-                        }
+
+
+                    }
+
+                    .muiTypographyRoot{
+                        margin: 0;
                     }
 
                     .muiTypographyBody1{
@@ -308,10 +321,6 @@
                         font-family: "Nunito Sans", sans-serif;
                         font-weight: 400;
                         line-height: 1.5;
-                    }
-
-                    .muiTypographyRoot{
-                        margin: 0;
                     }
 
                     .muiLinkUnderLineHover{
@@ -432,9 +441,7 @@
         background-color: var(--c-btn-background);
     }
 
-    .muiInputLabelAnimated{
-        transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
-    }
+ 
    .muiButtonRoot{
        color: var(--c-text-color-87);
        padding: 17px 48px;
@@ -451,26 +458,7 @@
        text-transform: uppercase;
        text-decoration: none;
    }
-   .muiButtonBaseRoot{
-       color: inherit;
-       border: 0;
-       cursor: pointer;
-       margin: 0;
-       display: inline-flex;
-       outline: 0;
-       padding: 0;
-       position: relative;
-       align-items: center;
-       user-select: none;
-       border-radius: 0;
-       vertical-align: middle;
-       -moz-appearance: none;
-       justify-content: center;
-       text-decoration: none;
-       background-color: transparent;
-       -webkit-appearance: none;
-       -webkit-tap-highlight-color: transparent;
-   }
+ 
 
    .muiButtonLabel{
        width: 100%;
@@ -492,4 +480,5 @@
            }
        }
    }
+   
 }
