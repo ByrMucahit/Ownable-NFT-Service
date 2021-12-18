@@ -9,16 +9,28 @@ import {HomepageOption} from '../icons'
 function Navigation({flat=false}){
     return (
         /* Navigator */
-    <header className={styles.header}>  
+    <header className={`
+    ${styles.muiPaperRoot} 
+    ${styles.muiAppBarRoot} 
+    ${styles.muiAppBarPositionAbsolute} 
+    ${styles.muiAppBarColorDefault} 
+    ${styles.cssHeader} 
+    ${styles.muiPaperElevation}`}>  
+        
         <div className={styles.navigator}>
             <NavigationButton href='/' className={styles.comp}>Ownable-NS</NavigationButton>
-        {/* Mark Side */}
-        <div className={cn(styles.mark)}>   
-            {/* Link Side */}
-            { 
+            {/* Mark Side */}
+            <div className={styles.cssNavigator}>   
+                {/* Link Side */}
+                { 
                 MENU.map((menu) => {
                     return (
-                       
+                       <div className={`
+                       ${styles.muiButtonBaseRoot} 
+                       ${styles.muiListItemRoot} 
+                       ${styles.cssNavigatorContent} 
+                       ${styles.muiListItemGutters} 
+                       ${styles.muiListItemButton}`}>
                             <NavigationButton
                                 className={styles.subBtn}
                                 key= {menu.key}
@@ -26,6 +38,7 @@ function Navigation({flat=false}){
                                 >
                                     {!flat && menu.title }
                             </NavigationButton>
+                        </div>
                        
                     ) })
             }
