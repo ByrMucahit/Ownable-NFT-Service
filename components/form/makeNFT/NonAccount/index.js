@@ -144,6 +144,9 @@ function MakeNFTForm(){
                                     ${styles.muiInputInput}`}
                                     ></input>
                                 </div>
+                                <div className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} name="email" placeholder="Enter Email">
+                                        Provide the email
+                                    </div>
                             </div>
 
 
@@ -178,6 +181,7 @@ function MakeNFTForm(){
                                     ${styles.muiInputInput}`}
                                     ></input>
                                 </div>
+                                <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} name="username" placeholder="Enter Username">Provide a username</p>
                             </div>
 
                             <div className={`${styles.muiFormControlRoot} ${styles.muiFormControlFullWidth}`}>
@@ -253,6 +257,11 @@ function MakeNFTForm(){
                                         ${styles.muiInputInput}`}
                                         ></input>
                                     </div>
+                                    <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} 
+                                    name="password" 
+                                    type="password" 
+                                    placeholder="Enter Password"
+                                    style={{"marginRight":"20px"}}>Provide your password</p>
                                 </div>
 
                                 <div className={styles.muiFormControlRoot}>
@@ -286,6 +295,11 @@ function MakeNFTForm(){
                                         ${styles.muiInputInput}`}
                                         ></input>
                                     </div>
+                                    <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} 
+                                    name="confirmPassword" 
+                                    type="password" 
+                                    placeholder="Enter Password"
+                                    style={{"marginRight":"20px"}}>Confirm your password</p>
                                 </div>
                             </div>
 
@@ -301,8 +315,8 @@ function MakeNFTForm(){
                                     aria-disabled="false"
                                     >
                                         <span className={styles.muiIconButtonLabel}>
-                                            <input className={styles.cssCheckBox} name="tosCheckbox" required type="checkbox" data-indeterminate="false" value/>
-                                            <Icon.İconmonstrCheckbox6 className={styles.muiSvgIconRoot} focusable="false"/>
+                                            <input  className={styles.cssCheckBox} type="checkbox" value="true"   name="tosCheckbox" required value/>
+                                            <Icon.İconmonstrCheckbox6 className={`${styles.muiSvgIconRoot} ${styles.muiCheckBoxRoot}`} focusable="false"/>
                                         </span>
                                     </span>
                                     <span className={`
@@ -316,7 +330,7 @@ function MakeNFTForm(){
                                                 ${styles.muiLinkRoot} 
                                                 ${styles.muiLinkUnderLineHover} 
                                                 ${styles.muiTypographyColorPrimary}`}
-                                                target="tos">terms of service</a>
+                                                target="tos"> terms of service</a>
                                                 .
                                             </p>
                                         </span>
@@ -330,7 +344,9 @@ function MakeNFTForm(){
                                 ${styles.muiFormLabelRoot} 
                                 ${styles.muiInputLabelRoot} 
                                 ${styles.muiInputLabelFormControl}
-                                ${styles.muiInputLabelAnimated}`}></label>
+                                ${styles.muiInputLabelAnimated}
+                                ${styles.muiError}
+                                ${styles.muiError}`}></label>
                                 <div className={`
                                 ${styles.muiInputBaseRoot} 
                                 ${styles.muiInputRoot} 
@@ -351,6 +367,11 @@ function MakeNFTForm(){
 
                                     </input>
                                 </div>
+                                <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} 
+                                    name="tokenName" 
+                                    type="text" 
+                                    placeholder="Enter Token Name"
+                                    style={{"marginRight":"20px"}}>Token name is required</p>
                             </div>
 
                             <div className={`${styles.muiFormControlRoot} ${styles.cssMedia}`}>
@@ -361,8 +382,8 @@ function MakeNFTForm(){
                                 data-shrink="false"
                                 style={{"position":"relative;","marginTop":"30px;","top":"-35px;","marginBottom":"10px;"}}>Media</label>
                                 <div>
-                                    <label className={
-                                        `${styles.muiButtonBaseRoot} 
+                                    <label className={`
+                                    ${styles.muiButtonBaseRoot} 
                                     ${styles.muiButtonRoot} 
                                     ${styles.muiButtonContained} 
                                     ${styles.muiButtonContainedPrimary}`}
@@ -370,6 +391,7 @@ function MakeNFTForm(){
                                         <span className={styles.muiButtonLabel}>
                                             <span className={styles.cssMediaContent}>
                                                 <Icon.Upload className={`${styles.muiSvgIconRoot} ${styles.cssSvg}`}/>
+                                                UPLOAD FILE
                                             </span>
                                             <input accept="image/*" className={styles.cssSvgContent} id="icon-button-photo" type="file"></input>
                                         </span>
@@ -379,13 +401,13 @@ function MakeNFTForm(){
                             </div>
                             <div className={styles.muiFormControlRoot}>
                                 <label className={`
-                                ${styles.muiFormControlRoot} 
+                                ${styles.muiFormLabelRoot} 
                                 ${styles.muiInputLabelRoot} 
                                 ${styles.muiInputLabelFormControl} 
                                 ${styles.muiInputLabelAnimated}
                                 ${styles.muiInputLabelShrink}
                                 ${styles.muiInputLabelFilled}`}
-                                data-shrink="true"></label>
+                                data-shrink="true">What type of asset is this?</label>
                                 <div className={`
                                 ${styles.muiInputBaseRoot} 
                                 ${styles.muiInputRoot} 
@@ -399,7 +421,7 @@ function MakeNFTForm(){
                                     ${styles.muiInputBaseInput} 
                                     ${styles.muiInputInput}`}>NFT (Non Fungible Token)</div>
                                     <input name="assetType" aria-hidden="true" tabIndex={"-1"} className={styles.muiSelectNativeInput}/>
-                                    <Icon.DownArrow className={`${styles.muiSvgIconRoot} ${styles.muiSelectIcon}`}/>
+                                    <Icon.DownArrow className={`${styles.muiSvgIconRoot} ${styles.muiSelectIcon} ${styles.muiSelectIconOpen}`}/>
                                 </div>
                                 <p className={`${styles.muiFormHelperTextRoot} ${styles.muiFormHelperTextFilled}`}>
                                     NFT's (Non fungible tokens) represent things that are wholly owned by one person like art or merchandise.

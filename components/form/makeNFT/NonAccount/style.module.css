@@ -82,6 +82,11 @@
                 vertical-align: top;
             }
 
+            
+            .cssMedia{
+                margin-bottom: 20px;
+            }
+
             .muiFormControlRoot{
 
                 .muiFormLabelRoot{
@@ -102,6 +107,11 @@
                     left: 0;
                     position: absolute;
                     transform: translate(0, 28px) scale(1);
+                }
+
+                .muiInputLabelShrink{
+                    transform: translate(0, 1.5px) scale(0.75);
+                    transform-origin: top left;
                 }
                 .muiInputLabelAnimated{
                     transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms, transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
@@ -126,12 +136,13 @@
                     line-height: 1.1876em;
                 }
 
-                
-            .muiInputBaseFullWidth{
-                width: 100%;
-            }
-
-                
+                  
+                .muiInputBaseMultiLine{
+                    padding: 6px 0 7px;
+                }
+                .muiInputBaseFullWidth{
+                    width: 100%;
+                }
                 .muiInputRoot{
                     position: relative;
                 }
@@ -170,6 +181,7 @@
                     animation-duration: 10ms;
                     -webkit-tap-highlight-color: transparent;
                 }
+            
 
                 .muiInputInput{
                     font-size: 20px;
@@ -177,8 +189,38 @@
                     line-height: 24px;
                 }
 
+            .muiSelectSelect{
+                cursor: pointer;
+                min-width: 16px;
+                user-select: none;
+                border-radius: 0;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+            }
+
+                .muiSelectSelectMenu{
+                    height: auto;
+                    overflow: hidden;
+                    min-height: 1.1876em;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                 }
+                
+                .muiSelectSelect , .muiSelectSelect{
+                     padding-right: 24px;
+                }
+
                 input{
                     overflow: visible;
+                }
+
+                .muiSelectNativeInput{
+                    left: 0;
+                    width: 100%;
+                    bottom: 0;
+                    opacity: 0;
+                    position: absolute;
+                    pointer-events: none;
                 }
 
                 .muiInputUnderline::after{
@@ -299,8 +341,14 @@
                         }
 
                         .muiSvgIconRoot{
-                            width: 25px;
-                            height: auto;
+                            fill: currentColor;
+                            width: 1em;
+                            height: 1em;
+                            display: inline-block;
+                            font-size: 1.7142857142857142rem;
+                            transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                            flex-shrink: 0;
+                            user-select: none;
                         }
                         
                         .muiCheckBoxRoot{
@@ -342,41 +390,6 @@
         display: flex;
         flex-direction: column;
 
-        .muiInputLabelShrink{
-            transform: translate(0, 1.5px) scale(0.75);
-            transform-origin: top left;
-        }
-
-        .muiSelectSelect , .muiSelectSelect{
-            padding-right: 24px;
-        }
-
-        .muiSelectSelectMenu{
-            height: auto;
-            overflow: hidden;
-            min-height: 1.1876em;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-
-        .muiSelectSelect{
-            cursor: pointer;
-            min-width: 16px;
-            user-select: none;
-            border-radius: 0;
-            -moz-appearance: none;
-            -webkit-appearance: none;
-        }
-
-        .muiSelectNativeInput{
-            left: 0;
-            width: 100%;
-            bottom: 0;
-            opacity: 0;
-            position: absolute;
-            pointer-events: none;
-        }
-
         .muiSelectIcon{
             top: calc(50% - 12px);
             color: var(--c-text-color-54);
@@ -407,10 +420,6 @@
             line-height: 28px;
         }
 
-       .muiInputBaseMultiLine{
-           padding: 6px 0 7px;
-       }
-
        .muiInputInputMultiLine{
            min-height: 1.1875em;
            line-height: 30px;
@@ -425,25 +434,9 @@
       
     }
 
-    .cssMedia{
-        margin-bottom: 20px;
-    }
-
-    .muiButtonContainedPrimary{
-        color: var(--c-icon-color);
-        background-color: var(--c-btn-background);
-    }
-
-    .muiButtonContained{
-        color: var(--c-icon-color) !important;
-        border: 1px solid var(--c-btn-background);
-        box-shadow: none;
-        background-color: var(--c-btn-background);
-    }
-
- 
    .muiButtonRoot{
        color: var(--c-text-color-87);
+       height: 51px;
        padding: 17px 48px;
        font-size: 14px;
        min-width: 64px;
@@ -458,6 +451,19 @@
        text-transform: uppercase;
        text-decoration: none;
    }
+
+   
+   .muiButtonContained{
+    color: var(--c-icon-color) !important;
+    border: 1px solid var(--c-btn-background);
+    box-shadow: none;
+    background-color: var(--c-btn-background);
+}
+
+   .muiButtonContainedPrimary{
+    color: var(--c-icon-color);
+    background-color: var(--c-btn-background);
+}
  
 
    .muiButtonLabel{
@@ -474,11 +480,33 @@
            .cssSvg{
                margin-right: 10px;
            }
-
-           .cssSvgContent{
-               display: none;
-           }
        }
+       .cssSvgContent{
+        display: none;
+    }
    }
+
    
 }
+
+.muiButtonBaseRoot{
+    color: inherit;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    display: inline-flex;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    align-items: center;
+    user-select: none;
+    border-radius: 0;
+    vertical-align: middle;
+    -moz-appearance: none;
+    justify-content: center;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
