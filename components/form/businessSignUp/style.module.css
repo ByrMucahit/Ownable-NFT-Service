@@ -1,65 +1,105 @@
 .form{
-    /* General Form */
-    display: block;
-    text-align: center;
+    flex: 1;
+    display: flex;
+    min-height: 200px;
+    flex-direction: column;
+    padding-bottom: 64px;
+    background-color: var(--c-icon-color);
 
-    /* Container */
     .container{
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
-        /* Input which have type that is text */
-        input[type='text']{
-            outline: 0;
-            border-width: 0 0 1px;
-            border-color: var(--c-color-alternative);
-        }
-        /*  If div would be exist after div */
-        div+div{
-            padding-top:20px;
-        }
-        /* Header Side */
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
         .headers{
-            /* Header Content */
-            .header{
-                font-size: 20px;
+            width: 100%;
+            max-width: 1535px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            @media(--d){
+                padding-left: 75px;
+                padding-right: 75px;
+                max-width: 1645px;
             }
-        }
-        /* Submit Btn */
-        .submitBtn{
-            padding-top: 25px;
-            padding-bottom: 20px;
-            /* Btn */
-            .btn{
-                border-radius: 3px;
-                width: 151.528px;
-                height: 48.767px;
-                background-color: var(--c-frame-background);
-                color: var(--c-btn-background);
-                border-color: var(--c-frame-background);
-                /* Content of Btn */
-                .btnText{
-                    font-size: 14px !important;
+
+            @media(--t){
+                max-width: 1795px;
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+
+
+            .muiContainerRoot{
+                width: 100%;
+                display: block;
+                box-sizing: border-box;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 16px;
+                padding-right: 16px;
+                @media(--d){
+                    padding-left: 24px;
+                    padding-right: 24px;
                 }
+            }
+
+            .muiContainerMaxWidthSm{
+                @media(--d){
+                    max-width: 600px;
+                }
+            }
+            
+            h1{
+                font-size: 2em;
+                margin:0.67em 0;
+            }
+
+            .muiTypographyRoot{
+                margin:0;
+            }
+            .muiTypographyH5{
+                font-size: 20px;
+                font-family: Nunito Sans, sans-serif;
+                font-weight: 600;
+                line-height: 15px;
+            }
+
+            .cssHeader{
+                margin-top: 30px;
+            }
+
+        
         }
-        /* Btn Hover */
-        .btn:hover{
-           background-color: var(--c-btn-background);
-           color: var(--c-frame-background);
+
+        .cnnSelectionInput{
+            margin-top: 30px;
         }
-     }
-     /* Adress container */
-     .contact{
-         padding-bottom: 64px;
-         /* Content Of Address */
-         .content{
-             color: var(--c-border-color);
-             font-size: 16px !important;
-             span{
-                 font-weight: bold;
-             }
-         }
-     }
-}
+        .cssSelectionInputContainer{
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .cssControl{
+            -webkit-box-align: center;
+            align-items: center;
+            background-color: var(--c-signUp-background);
+            border-color: var(--c-signUp-borderColor);
+            border-radius: 4px;
+            border-style: solid;
+            border-width: 1px;
+            cursor: default;
+            display: flex;
+            flex-wrap: wrap;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            min-height: 30px;
+            position: relative;
+            transition: all 100ms ease 0s;
+            box-sizing: border-box;
+            outline: 0px !important;
+        }
+    }
 }

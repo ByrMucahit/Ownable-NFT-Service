@@ -10,42 +10,47 @@ function BusinessSignUp(){
         /* Business Sign Up Form */
         <div className={styles.form}>
             {/* Container */}
-            <form className={styles.container}>
+            <div className={styles.container}>
                 {/* Header Side */}
                 <div className={styles.headers}>
-                    <HeadTitle className={styles.header} bold>Contact us</HeadTitle>
-                </div>
-                {/* Category Of Business */}
-                <div className={styles.categoryOfBusiness}>
-                    <DropDownMenu medium business/>
-                </div>
-                {/* Email Input*/}
-                <div className={styles.emailInput}>
-                    <TextInput medium/>
-                </div>
-                {/* Messages Area */}
-                <div className={styles.messageArea}>
+                    <main className={`${styles.muiContainerRoot} ${styles.muiContainerMaxWidthSm}`}>
+                        <h1 className={`${styles.muiTypographyRoot} ${styles.cssHeader} ${styles.muiTypographyH5}`} bold>Contact us</h1>
+                        <form>
+                            <div className={`${styles.cnnSelectionInput} ${styles.cssSelectionInputContainer}`}>
+                                <div className={`${styles.cssControl}`}>
+                                    <input name="subject" type={"hidden"} value={"business"}></input>
+                                </div>
+                            </div>
+                                <TextInput/>
+
+                                  {/* Messages Area */}
                     <MessagesArea className={styles.message}/>
-                </div>
-                {/* Submit Btn */}
-                <div className={styles.submitBtn}>
+
+                    {/* Submit Btn */}
                     <Button className={styles.btn}border>
                         <HeadTitle className={styles.btnText} 
                         bold
                         >
-                            SUBMIT
+                        SUBMIT
                         </HeadTitle>
                     </Button>
+{/* Contact */}
+<div>
+    Mail To:
+    <br/>
+    <b>Ownable-NS</b>
+    <br/>
+    <b>2633 Lincoln Blvd Suite #710</b>
+    <br/>
+    <b>Santa Monica, CA 90405</b>
+   
+</div>
+                        </form>
+                    </main>
                 </div>
-                {/* Contact */}
-                <div className={styles.contact}>
-                    <HeadTitle className={styles.content}>Mail to:<br/>
-                        <span>Ownable-NS</span>
-                        <p>2633 Lincoln Blvd Suite #710</p>
-                        <p>Santa Monica, CA 90405</p>
-                    </HeadTitle>
-                </div>
-            </form>
+        
+              
+            </div>
         </div>
     )
 }

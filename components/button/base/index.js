@@ -17,11 +17,16 @@ function frameButton ({border=false, children, className ,...props}) {
             className={cn(
                 [styles.baseBtn ,
                 border && styles.FrameBorder,
-                className
+                styles.muiButtonBaseRoot,
+                styles.muiButtonRoot,
+                styles.muiButtonContained,
+                styles.cssBorderButton,
+                styles.muiButtonContainedPrimary
             ])} 
                 type="button"
             > 
-                {children} 
+                <span className={styles.muiButtonLabel}>{children} </span>
+                
             </button>
     ) 
 }
