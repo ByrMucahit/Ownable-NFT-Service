@@ -29,10 +29,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/makeNft": [
+    "/businessSignUp": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/makeNft.js"
+      "static/chunks/pages/businessSignUp.js"
     ]
   },
   "ampFirstPages": []

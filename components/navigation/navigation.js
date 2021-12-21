@@ -5,6 +5,7 @@ import NavigationButton from './button'
 import FrameButton from "../frame/frameButton";
 import {MENU} from '../../constant'
 import {HomepageOption} from '../icons'
+import IconButton from "../button/icon/index"
 
 function Navigation({flat=false}){
     return (
@@ -43,14 +44,15 @@ function Navigation({flat=false}){
                     ) })
             }
             </div>
-            {/* Login Button */}
-            <div className={styles.loginButton}>
-                <FrameButton>Login</FrameButton>
-            </div>
-      
-        
-            {flat && <HomepageOption className={styles.homepageOption}/>}
     </div>
+    <div>
+        <FrameButton>Login</FrameButton>
+    </div>
+            
+    <div className={styles.iconButtonContent}>
+        <IconButton/>
+    </div>       
+            
     </header>
     )
 }

@@ -57,6 +57,9 @@
     .navigator{
         flex: 1;
         display: flex;
+        a:hover{
+            color: var(--c-btn-background);
+        }
 
         .cssNavigator{
             display: flex;
@@ -123,5 +126,11 @@
         }
     }
     
+}
+
+
+.iconButtonContent{
+    display: flex;
+    margin-left: 12px;
 }
 

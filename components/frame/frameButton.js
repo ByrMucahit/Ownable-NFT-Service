@@ -7,15 +7,17 @@ import TextTitle from "../text/text-title";
 function FrameButton ({children}) {
     return (
             <Button  
-                className={styles.frameBtn}
+                className={`
+                ${styles.muiButtonBaseRoot} 
+                ${styles.muiButtonRoot} 
+                ${styles.muiButtonOutlined} 
+                ${styles.cssButtonContent}`}
                 type="button"
                 border
                 >
-                <p>
-                    <span>
+                    <span className={styles.muiButtonLabel}>
                         {children}
                     </span>        
-                </p>
             </Button>
     ) 
 }
