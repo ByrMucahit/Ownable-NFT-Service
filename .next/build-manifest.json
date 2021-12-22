@@ -28,6 +28,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/businessSignUp.js"
+    ],
+    "/nftStandards": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/nftStandards.js"
     ]
   },
   "ampFirstPages": []

@@ -100,6 +100,77 @@
             transition: all 100ms ease 0s;
             box-sizing: border-box;
             outline: 0px !important;
+
+            .cssInputContainer{
+                -webkit-box-align: center;
+                align-items: center;
+                display: flex;
+                flex: 1 1 0%;
+                flex-wrap: wrap;
+                padding: 2px 8px;
+                position: relative;
+                overflow: hidden;
+                box-sizing: border-box;
+
+                .cssInputContentSingleValue{
+                    color: rgb(51,51,51);
+                    margin-left: 2px;
+                    margin-right: 2px;
+                    max-width: calc(100% - 8px);
+                    overflow: hidden;
+                    position: absolute;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    box-sizing: border-box;
+                }
+
+                .cssGooi{
+                    margin: 2px;
+                    padding-bottom: 2px;
+                    padding-top: 2px;
+                    visibility: visible;
+                    color: rgb(51,51,51);
+                    box-sizing: border-box;
+                }
+            }
         }
     }
+
+    .cssArrow{
+        -webkit-box-align: center;
+        align-items: center;
+        align-self: stretch;
+        display: flex;
+        flex-shrink: 0;
+        box-sizing: border-box;
+
+        .cssIndicatorSeperator{
+            align-self: stretch;
+            background-color: var(--c-signUp-borderColor);
+            margin-bottom: 8px;
+            margin-top: 8px;
+            width: 1px;
+            box-sizing: border-box;
+        }
+    
+        .cssIndicatorContainer{
+            color: var(--c-signUp-borderColor);
+            display: flex;
+            padding: 8px;
+            transition: color 150ms ease 0s;
+            box-sizing: border-box;
+        }
+
+        .cssSvg{
+            display: inline-block;
+            fill: currentColor;
+            line-height: 1;
+            stroke: currentColor;
+            stroke-width: 0;
+        }
+    }
+
+    
 }
