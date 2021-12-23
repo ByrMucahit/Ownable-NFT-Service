@@ -11,3 +11,17 @@
         display: inline;
     }
 }
+
+
+.markLink{
+    max-width: 240px;
+    width: 70%;
+    color: var(--c-btn-background);
+    text-decoration: none;
+   
+    .Mark img{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+

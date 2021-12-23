@@ -1,73 +1,120 @@
-/* General Container */
 .container{
-    /* Body layout */
-    .body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    .cssConteiner{
+        flex: 1;
         display: flex;
-        flex-direction: row;
-        span{
-            font-weight: bold;
-        }
-        /* Left side at containner */
-        .leftSide{
-            padding-top: 50px;
+        flex-direction: column;
+
+        .cssContainerContent{
+            flex:1;
             display: flex;
-            -webkit-box-pack: center;
-            justify-content: center;
-            @media(--m){
-                flex: 1 1 0%;
-                border-right: 1px solid var(--c-alternative-border-color);
-                -webkit-box-align: center;
-                align-items: center;
-                height: 100vh;
-                position: sticky;
-                top: 0px;
-            }
-        }
-        /* Right Side at container */
-        .rightSide{
-            flex: 1 1 0%;
-             /* Right Side at container */
-            .rightSideContainer{
-                font-size: 16px !important;
-                line-height: 25px;
-                width: 80%;
-                padding: 50px 0px;
-                margin: 0px auto;
-                /* Text at Top */
-                .topTextContainer{
-                    *+*{
-                        padding-top: 30px;
-                    }
+            min-height: 200px;
+            flex-direction: column;
+            padding-bottom: 64px;
+            background-color: var(--c-icon-color);
+
+            .cssDivision{
+                @media(--t){
+                    flex-direction: row;
                 }
-                /* Image Container */
-                .middleImageContainer{
+
+                display: flex;
+                flex-direction: column;
+
+               
+
+                .cssDivisionContent{
+                    @media(--d){
+                        flex: 1 1 0%;
+                        border-right: 1px solid var(--c-border-line);
+                        -webkit-box-align: center;
+                        align-items: center;
+                        height: 100vh;
+                        position: sticky;
+                        top: 0px;
+                    }
+
+                    padding-top: 50px;
                     display: flex;
-                    flex-direction: column;
-                    -webkit-box-align: center;
-                    align-items: center;
-                    margin-bottom: 20px;
-                    margin-top: 30px;
-                /* Link */
-                a{
-                    cursor: pointer;
-                    /* Image inside link*/
-                    img{
-                        width: 100%;
-                        max-width: 100%;
-                    }
-                }
-                }
-                /* Text Container at bottom */
-                .bottomTextContainer{
-                    lu{
-                        list-style-type: disc;
-                    }
-                        li{
-                            display: list-item;
-                            text-align: -webkit-match-parent;
+                    -webkit-box-pack: center;
+                    justify-content: center;
+
+                    .cssLeftSide{
+                        color: var(--c-footer-background);
+                        margin: 0px;
+                        font-family: Nunito Sans, sans-serif;
+                        font-weight: bold;
+                        font-size: 50px;
+                        line-height: 50px;
+                        text-align: center;
+                        width: 70%;
+
+                        @media(--h){
+                            font-size: 60px;
+                            line-height: 72px;
+                            margin-top: -160px;
                         }
+                    }
+
+              
                 }
             }
         }
     }
+    strong,b{
+        font-weight: 700;
+    }
+   
+}
+
+.rightSide{
+                        
+    @media(--t){
+        flex: 1 1 0%;
+    }
+
+    .cssRightSide{
+        width: 80%;
+        padding: 50px 0px;
+        margin: 0px auto;
+
+        @media(--t){
+            padding:100px 0px;
+            width: 70%;
+        }
+    }
+
+    .cssIconApp{
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    ::marker{
+        unicode-bidi: isolate;
+        font-variant-numeric: tabular-nums;
+        text-transform: none;
+        text-indent: 0px !important;
+        text-align: start !important;
+        text-align-last: start !important;
+    }
+}
+
+.cssRightSide p, .cssRightSide li{
+    line-height: 25px;
+}
+
+.cssRightSide p, .cssRightSide ul{
+    margin-bottom: 30px;
+}
+
+
+.cssMarkLink img{
+    width: 70%;
+    max-width: 240px;
 }

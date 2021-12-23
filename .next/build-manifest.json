@@ -14,6 +14,11 @@
     "static/development/_ssgManifest.js"
   ],
   "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -24,15 +29,25 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/businessSignUp": [
+    "/downloadNFTCreator": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/businessSignUp.js"
+      "static/chunks/pages/downloadNFTCreator.js"
+    ],
+    "/makeNft": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/makeNft.js"
     ],
     "/nftStandards": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/nftStandards.js"
+    ],
+    "/subscribeForUpcomingDrops": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/subscribeForUpcomingDrops.js"
     ]
   },
   "ampFirstPages": []
