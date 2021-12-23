@@ -6,7 +6,7 @@ import TextTitle from "../text/text-title";
 
 function FrameButton ({children}) {
     return (
-            <Button  
+            <button  
                 className={`
                 ${styles.muiButtonBaseRoot} 
                 ${styles.muiButtonRoot} 
@@ -18,7 +18,7 @@ function FrameButton ({children}) {
                     <span className={styles.muiButtonLabel}>
                         {children}
                     </span>        
-            </Button>
+            </button>
     ) 
 }
 

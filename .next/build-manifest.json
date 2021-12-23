@@ -33,21 +33,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/downloadNFTCreator.js"
-    ],
-    "/makeNft": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/makeNft.js"
-    ],
-    "/nftStandards": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/nftStandards.js"
-    ],
-    "/subscribeForUpcomingDrops": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/subscribeForUpcomingDrops.js"
     ]
   },
   "ampFirstPages": []

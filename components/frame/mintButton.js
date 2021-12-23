@@ -8,9 +8,9 @@ import TextTitle from '../text/text-title'
 
 function MintButton ({ children, className}) {
     return (
-    <Button  className={cn(styles.mintButton, className)} border>
-            <TextTitle bold>{children}</TextTitle>
-    </Button>
+    <a  className={styles.cssMint} border>
+            {children}
+    </a>
     )}
 
 export default MintButton

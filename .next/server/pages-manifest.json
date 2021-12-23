@@ -3,8 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/downloadNFTCreator": "pages/downloadNFTCreator.js",
-  "/": "pages/index.js",
-  "/makeNft": "pages/makeNft.js",
-  "/nftStandards": "pages/nftStandards.js",
-  "/subscribeForUpcomingDrops": "pages/subscribeForUpcomingDrops.js"
+  "/": "pages/index.js"
 }
