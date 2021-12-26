@@ -8,8 +8,49 @@ import CheckInput from '../../../input/check/index'
 import ImageButton from "../../../button/image/index"
 import DropDownInput from '../../../input/dropdown/index'
 import Button from "../../../button/base/index";
+import {useState} from 'react';
+
+
+
 
 function MakeNFTForm(){
+
+
+    const [query, setQuery] = useState({
+        name: "",
+        lastName: "",
+        email: "",
+        userName: "",
+        phoneNumber: "",
+        password: "",
+        confirmPassword: "",
+        tokenName: "",
+        typeOfAsset: "",
+        description: "",
+        nftMiningFee: "417",
+        image:""
+    })
+
+
+
+    const handleFileChange = () => (e) => {
+        setQuery((prevState) => ({
+            ...prevState,
+            image: e.target.files[0]
+        }));
+        
+    }
+
+    const handleChange = () => (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+
+        setQuery((prevState) => ({
+            ...prevState,
+            [name]: value
+        }));
+    }
+
     return(
         <div className={styles.container}>
             <div className={`${styles.tempContext} ${styles.iterContext}`}>
@@ -59,6 +100,8 @@ function MakeNFTForm(){
                                     className={`
                                     ${styles.muiInputBaseInput}
                                     ${styles.muiInputInput}`}
+                                    onChange={(e) => setNewName(e.target.value)}
+                                    onClick={() => console.log(newName+" "+"from first Name field")}
                                     >
                                     </input>
                                 </div>
@@ -99,6 +142,8 @@ function MakeNFTForm(){
                                     className={`
                                     ${styles.muiInputBaseInput} 
                                     ${styles.muiInputInput}`}
+                                    onChange={(e) => setNewLastName(e.target.value)}
+                                    onClick={() => console.log(newLastName+" "+"from last name field")}
                                     >
 
                                     </input>
@@ -142,7 +187,9 @@ function MakeNFTForm(){
                                     className={`
                                     ${styles.muiInputBaseInput}
                                     ${styles.muiInputInput}`}
-                                    ></input>
+                                    onChange={(e) => setNewEmail(e.target.value)}
+                                    onClick={() => console.log(newEmail+" "+"from email field.")}
+                                    />
                                 </div>
                                 <div className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} name="email" placeholder="Enter Email">
                                         Provide the email
@@ -179,7 +226,9 @@ function MakeNFTForm(){
                                     className={`
                                     ${styles.muiInputBaseInput}
                                     ${styles.muiInputInput}`}
-                                    ></input>
+                                    onChange={(e) => setNewUserName(e.target.value)}
+                                    onClick={() => console.log(newUserName+" "+"from username field")}
+                                    />
                                 </div>
                                 <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} name="username" placeholder="Enter Username">Provide a username</p>
                             </div>
@@ -213,7 +262,9 @@ function MakeNFTForm(){
                                     className={`
                                     ${styles.muiInputBaseInput}
                                     ${styles.muiInputInput}`}
-                                    ></input>
+                                    onChange={(e) => setNewPhoneNumber(e.target.value)}
+                                    onClick={()=> console.log(newPhoneNumber+" "+"from phone number field")}
+                                    />
                                 </div>
                                     <p className={styles.muiFormHelperTextRoot}
                                     name="phone"
@@ -255,7 +306,9 @@ function MakeNFTForm(){
                                         className={`
                                         ${styles.muiInputBaseInput}
                                         ${styles.muiInputInput}`}
-                                        ></input>
+                                        onChange={(e) => setNewPassword(e.target.value)}
+                                        onClick={() => console.log(newPassword+" "+"from password field.")}
+                                        />
                                     </div>
                                     <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} 
                                     name="password" 
@@ -293,7 +346,9 @@ function MakeNFTForm(){
                                         className={`
                                         ${styles.muiInputBaseInput}
                                         ${styles.muiInputInput}`}
-                                        ></input>
+                                        onChange={(e) => setNewConfirmPassword(e.target.value)}
+                                        onClick={()=> console.log(newConfirmPassword+" "+"from confirm password field.")}
+                                        />
                                     </div>
                                     <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} 
                                     name="confirmPassword" 
@@ -363,9 +418,10 @@ function MakeNFTForm(){
                                     type="text" 
                                     className={`
                                     ${styles.muiInputBaseInput} 
-                                    ${styles.muiInputInput}`} >
-
-                                    </input>
+                                    ${styles.muiInputInput}`} 
+                                    onChange={(e) => setNewTokenName(e.target.value)}
+                                    onClick={()=> console.log(newTokenName+" "+"from new token name field.")}
+                                    />
                                 </div>
                                 <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} 
                                     name="tokenName" 
@@ -393,7 +449,14 @@ function MakeNFTForm(){
                                                 <Icon.Upload className={`${styles.muiSvgIconRoot} ${styles.cssSvg}`}/>
                                                 UPLOAD FILE
                                             </span>
-                                            <input accept="image/*" className={styles.cssSvgContent} id="icon-button-photo" type="file"></input>
+                                            <input 
+                                            accept="image/*" 
+                                            className={styles.cssSvgContent} 
+                                            id="icon-button-photo" 
+                                            type="file"
+                                            name="file"
+                                            onChange={handleFileChange()}
+                                            />
                                         </span>
                                     </label>
                                     <p className={styles.muiFormHelperTextRoot}>Any image file or animated gif accepted up to 10mb file size.</p>
@@ -420,7 +483,13 @@ function MakeNFTForm(){
                                     ${styles.muiSelectSelectMenu} 
                                     ${styles.muiInputBaseInput} 
                                     ${styles.muiInputInput}`}>NFT (Non Fungible Token)</div>
-                                    <input name="assetType" aria-hidden="true" tabIndex={"-1"} className={styles.muiSelectNativeInput}/>
+                                    <input 
+                                    name="assetType" 
+                                    aria-hidden="true" 
+                                    tabIndex={"-1"} 
+                                    className={styles.muiSelectNativeInput}
+                                    onChange={(e) => setNewTypeOfAsset('NFT')}
+                                    onClick={()=> console.log(newTypeOfAsset+" "+"from asset type field.")}/>
                                     <Icon.DownArrow className={`${styles.muiSvgIconRoot} ${styles.muiSelectIcon} ${styles.muiSelectIconOpen}`}/>
                                 </div>
                                 <p className={`${styles.muiFormHelperTextRoot} ${styles.muiFormHelperTextFilled}`}>
@@ -459,7 +528,10 @@ function MakeNFTForm(){
                                     ${styles.muiInputInput} 
                                     ${styles.muiInputBaseInputMultiLine} 
                                     ${styles.muiInputInputMultiLine}`}
-                                    style={{"height":"30px;", "overflow":"hidden;"}}></textarea>
+                                    style={{"height":"30px;", "overflow":"hidden;"}}
+                                    onChange={(e) => setNewDescription(e.target.value)}
+                                    onClick={() => console.log(newDescription+" "+"from description field.")}
+                                    />
                                     <textarea 
                                     aria-hidden="true" 
                                     className={`

@@ -6,9 +6,9 @@ import Button from '../button/base/index'
 import TextTitle from '../text/text-title'
 
 
-function MintButton ({ children, className}) {
+function MintButton ({ children, className, href}) {
     return (
-    <a  className={styles.cssMint} border>
+    <a  className={styles.cssMint} border href={href}>
             {children}
     </a>
     )}

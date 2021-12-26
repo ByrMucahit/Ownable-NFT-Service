@@ -21,7 +21,7 @@ function Exhibition(){
                         </a>
                
                         {/* Button Side */}
-                        <MintButton className={styles.mintButton}>MINT </MintButton>  
+                        <MintButton className={styles.mintButton} href={"/makeNft"}>MINT </MintButton>  
                     </div>
 
                     {/* Photos Side */}
