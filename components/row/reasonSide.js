@@ -3,7 +3,7 @@ import HeadTitle from "../text/head-title";
 import TextTittle from "../text/text-title";
 import styles from './reasonSide.module.css'
 import Photo from '../photo/index'
-import Reason from '../form/reasonSide/index'
+
 
 function ReasonSide() {
 
@@ -19,7 +19,7 @@ function ReasonSide() {
                     {/* Reason Side */}
                     <div className={styles.middleContainer}>
                         <div className={styles.reasonTextSide}>
-                            <Reason/>
+                            {/*<Reason/>*/}
                         </div>
                         {/* Image Side */}
                         <div className={styles.reastImageSide}>
