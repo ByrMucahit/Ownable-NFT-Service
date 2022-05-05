@@ -4,7 +4,6 @@ import TextTittle from "../text/text-title";
 import styles from './reasonSide.module.css'
 import Photo from '../photo/index'
 import Reason from '../form/reasonSide/index'
-import ReasonImage from '../../Photos/reasonSidePhoto.png'
 
 function ReasonSide() {
 
