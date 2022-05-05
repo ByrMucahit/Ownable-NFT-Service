@@ -1,21 +1,35 @@
-
-
-
-
-
-
-
-
-
-
-
-.muiButtonLabel{
+/*.muiButtonLabel{
     width: 100%;
     display: inherit;
     align-items: inherit;
     line-height: 1;
     justify-content: inherit;
 }
+
+
+
+
+
+.muiInputBaseRoot, .muiDisabled{
+    cursor: default;
+    pointer-events: none;
+}
+
+
+.muiButtonRoot, .muiDisabled{
+    color: var(--c-disabled-Button-26);
+}
+
+.muiButtonContained, .muiDisabled{
+    color: var(--c-disabled-Button-26);
+    box-shadow: none;
+    background-color: var(--c-disabled-Button-12);
+}
+
+.muiButtonContained, .muiDisabled{
+    border: 1px solid var(--c-disabled-Button);
+}
+*/
 
 .muiInputBaseRoot{
     color: inherit;
@@ -58,6 +72,8 @@
     text-decoration: none;
 }
 
+
+
 .muiButtonContained{
     color: var(--c-icon-color) !important;
     border: 1px solid var(--c-btn-background);
@@ -65,32 +81,14 @@
     background-color: var(--c-btn-background);
 }
 
+
 .muiButtonContainedPrimary{
     color: var(--c-icon-color);
     background-color: var(--c-btn-background);
 }
 
+
 .cssButton{
     align-self: flex-start;
     margin-top: 40px;
-}
-
-.muiInputBaseRoot, .muiDisabled{
-    cursor: default;
-    pointer-events: none;
-}
-
-
-.muiButtonRoot, .muiDisabled{
-    color: var(--c-disabled-Button-26);
-}
-
-.muiButtonContained, .muiDisabled{
-    color: var(--c-disabled-Button-26);
-    box-shadow: none;
-    background-color: var(--c-disabled-Button-12);
-}
-
-.muiButtonContained, .muiDisabled{
-    border: 1px solid var(--c-disabled-Button);
 }

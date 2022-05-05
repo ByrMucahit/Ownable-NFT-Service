@@ -1,6 +1,6 @@
 import React from'react';
 
-import Layout from '../components/layout/HomePage/index'
+import Layout from '../components/layout/homePage/index'
 
 function HomePage() {
     return (

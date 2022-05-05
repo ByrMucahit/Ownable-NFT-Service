@@ -9,10 +9,10 @@ function mintBtn(){
         ${styles.muiButtonContained} 
         ${styles.cssButton} 
         ${styles.muiButtonContainedPrimary}
-        ${styles.muiDisabled}`}
-        tabIndex={"-1"}
+        `}
+        
         type="submit"
-        disabled>
+        >
             <span className={styles.muiButtonLabel}>Mint NFT</span>
         </button>
     )
