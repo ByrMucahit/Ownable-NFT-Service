@@ -4,7 +4,7 @@ import styles from './frameButton.module.css'
 import Button from '../button/base/index'
 import TextTitle from "../text/text-title";
 
-function FrameButton ({children}) {
+function FrameButton ({children, onClick}) {
     return (
             <button  
                 className={`
@@ -13,6 +13,7 @@ function FrameButton ({children}) {
                 ${styles.muiButtonOutlined} 
                 ${styles.cssButtonContent}`}
                 type="button"
+                onClick={onClick}
                 border
                 >
                     <span className={styles.muiButtonLabel}>

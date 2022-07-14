@@ -1,4 +1,3 @@
-import React from "react";
 import styles from './navigation.module.css'
 import cn from 'classnames'
 import NavigationButton from './button'
@@ -6,8 +5,30 @@ import FrameButton from "../frame/frameButton";
 import {MENU} from '../../constant'
 import {HomepageOption} from '../icons'
 import IconButton from "../button/icon/index"
+import React, { useState } from 'react';
+import 'antd/dist/antd.css';
+import { Button, Modal, Input, Tooltip, Space } from 'antd';
+import { InfoCircleOutlined, UserOutlined, EyeInvisibleOutlined, EyeTwoTone  } from '@ant-design/icons';
+import SignUpForm from "../form/auth/signUp";
+import ModalComponent from '../modal/index'
 
 function Navigation({flat=false}){
+    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [show, setShow] = useState(false);
+
+    const showModal = () => {
+        setShow(true)
+    };
+
+    const handleOk = () => {
+        setIsModalVisible(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
+
+
     return (
         /* Navigator */
     <header className={`
@@ -46,7 +67,17 @@ function Navigation({flat=false}){
             </div>
     </div>
     <div>
-        <FrameButton>Login</FrameButton>
+        <Button onClick={showModal}>Login</Button>
+      {/*  <Modal title="Login" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+            <SignUpForm/>
+        </Modal>*/}
+
+        <ModalComponent
+            title={'Sign Up'}
+            type={'signUp'}
+            children={'please fill in the blank'}
+            show={show}
+            onClose={() => setShow(false)}/>
     </div>
             
     <div className={styles.iconButtonContent}>

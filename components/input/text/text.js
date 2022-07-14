@@ -3,7 +3,7 @@ import styles from './text.module.css'
 import cn from 'classnames'
 
 
-function Button({medium=false, big=false, small=false,...props}){
+function Button({medium=false, big=false, small=false, ...props}){
   return(
       <div className={`${styles.muiFormControlRoot} ${styles.muiFormControlFullWidth}`}>
          <label className={`
@@ -28,7 +28,7 @@ function Button({medium=false, big=false, small=false,...props}){
             <input 
                aria-invalid="false"
                name="email"
-               placeholder="Enter Email"
+
                type="text" 
                className={cn([
                medium && styles.medium, 

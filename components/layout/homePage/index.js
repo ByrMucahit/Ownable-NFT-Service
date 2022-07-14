@@ -9,7 +9,7 @@ import Quotation from "../../row/quotation"
 import ReasonSide from "../../row/reasonSide"
 import GetStartedSide from "../../row/getStarted"
 import FooterSide from "../../footer/index"
- 
+
 function Layout() {
     const size = useWindowSize()
     return (
