@@ -2,12 +2,18 @@ import React, {useEffect} from "react";
 import {Button} from "antd";
 import {ModalWrapper} from './module.style'
 import SignUpForm from "../form/auth/signUp";
-
+import SignIn from "../form/auth/signIn";
 
 
 function SignUpFormModal() {
     return(
         <SignUpForm/>
+    )
+}
+
+function SignInFormModal() {
+    return(
+        <SignIn/>
     )
 }
 
@@ -33,7 +39,7 @@ export default function Modal({...props}) {
         }
     })
 
-    const Comp = props.type == "signUp" ? SignUpFormModal: null;
+    const Comp = props.type == "signUp" ? SignUpFormModal: SignInFormModal;
 
 
 

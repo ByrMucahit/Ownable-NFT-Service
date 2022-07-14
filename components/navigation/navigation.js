@@ -74,7 +74,7 @@ function Navigation({flat=false}){
 
         <ModalComponent
             title={'Sign Up'}
-            type={'signUp'}
+            type={'signIn'}
             children={'please fill in the blank'}
             show={show}
             onClose={() => setShow(false)}/>

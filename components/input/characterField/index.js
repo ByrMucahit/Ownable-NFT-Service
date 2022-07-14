@@ -18,9 +18,7 @@ function LargeInput ({size, content, onChange, prefixes}) {
 }
 
 function prefixFinder(prefix) {
-    if(prefix == 'email') {
-        return <UserOutlined/>;
-    }
+
 }
 
 export default function CharacterField({size, content="Text", onChange, type}) {
