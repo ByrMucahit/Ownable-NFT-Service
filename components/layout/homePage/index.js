@@ -9,6 +9,7 @@ import Quotation from "../../row/quotation"
 import ReasonSide from "../../row/reasonSide"
 import GetStartedSide from "../../row/getStarted"
 import FooterSide from "../../footer/index"
+import {Main} from '../../../context/AuthProvider'
 
 function Layout() {
     const size = useWindowSize()
@@ -19,6 +20,9 @@ function Layout() {
                 <div className={styles.navigation}>
                     {size.width < CONST.TABLET_SIZE ? 
                       <Navigation  flat/> : <Navigation />}
+                </div>
+                <div>
+                    <Main />
                 </div>
                 {/* Exhibition */}
                 <div className={styles.exhibition}>
