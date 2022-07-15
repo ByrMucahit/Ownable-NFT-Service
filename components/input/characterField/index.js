@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import style from './style.module.css'
 import {LargeButtonWrapper} from './module.style'
 import {prefixes} from "next/dist/build/output/log";
-function LargeInput ({size, content, onChange, prefixes}) {
+function LargeInput ({size, content, onChange, prefixes, value}) {
+    console.log('value from input: ', value);
     return (
         <LargeButtonWrapper>
             <Input
@@ -12,7 +13,8 @@ function LargeInput ({size, content, onChange, prefixes}) {
                 size={size}
                 onChange={onChange}
                 placeholder={content}
-                prefix={prefixes} />
+                prefix={prefixes}
+            value={value}/>
         </LargeButtonWrapper>
     )
 }
@@ -21,11 +23,11 @@ function prefixFinder(prefix) {
 
 }
 
-export default function CharacterField({size, content="Text", onChange, type}) {
+export default function CharacterField({size, content="Text", onChange, type, value}) {
 
     return (
         <>
-            <LargeInput size={size} content={content} onChange={onChange} prefixes={prefixFinder(type)}/>
+            <LargeInput size={size} content={content} value={value} onChange={onChange} prefixes={prefixFinder(type)}/>
         </>
     )
 }

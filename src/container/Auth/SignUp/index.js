@@ -1,18 +1,48 @@
-
-import Password from '../../../input/password/index'
-import InputComp from '../../../input/characterField/index'
+import axios from "axios";
+import Password from '../../../../components/input/password/index'
+import InputComp from '../../../../components/input/characterField/index'
 import { useForm, Controller } from 'react-hook-form';
 import {Col, Row} from "antd";
-import style from './style.module.css'
+import 'antd/dist/antd.css';
 import {useState} from "react";
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Alert, Form, Input, message } from 'antd';
 
 export default function SignUpForm() {
 
     const { control, watch, errors, handleSubmit } = useForm({mode: 'onChange'},);
+    const {firstName, setFirstName} = useState(null);
+    const [form] = Form.useForm();
+
+    const  register = (request)=> {
+        console.log('request: ', request);
+        const ins = axios.create({
+            baseURL: 'http://localhost:8080',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+            },
+        });
+
+        ins.post('/api/auth/signup', request).then((response)=>{
+            console.log('auth response: ', response);
+            if(response.status==200 || response.status==201) {
+                console.log('here');
+                message.success('This is a success message');
+            }
+
+        }).catch((e)=>{
+            console.log('response error: ', e?.response);
+        });
+    }
+
+    const onChange = (values) => {
+        console.log('changes: ', values);
+    }
 
     const onFinish = (values) => {
         console.log('Success:', values);
+        register(values);
     };
 
     const onFinishFailed = (errorInfo) => {
@@ -34,10 +64,9 @@ export default function SignUpForm() {
             initialValues={{
                 remember: true,
             }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-            autoComplete="off"
-            onSubmitCapture={handleSubmit(onSubmit)}
+            onFinish={register}
+            form={form}
+
         >
             <Form.Item
                 label="First Name"
@@ -50,7 +79,6 @@ export default function SignUpForm() {
                 ]}
             >
                 <InputComp
-                    onChange={(value) => console.log('value', value.target.value)}
                     content={'Name'}
                     size={'large'}
                     type={'name'}
@@ -68,7 +96,6 @@ export default function SignUpForm() {
                 ]}
             >
                 <InputComp
-                    onChange={(value) => console.log('value', value.target.value)}
                     content={'Surname'}
                     size={'large'}
                     type={'surname'}
@@ -86,7 +113,6 @@ export default function SignUpForm() {
                 ]}
             >
                 <InputComp
-                    onChange={(value) => console.log('value', value.target.value)}
                     content={'Email'}
                     size={'large'}
                     type={'email'}
@@ -106,12 +132,12 @@ export default function SignUpForm() {
                 <Password
                     content={'Enter password'}
                     size={'large'}
-                    onChange={(value) => console.log('password: ', value.target.value)}/>
+            />
             </Form.Item>
 
             <Form.Item
                 label="Password"
-                name="password"
+                name="confirmPassword"
                 rules={[
                     {
                         required: true,
@@ -122,8 +148,12 @@ export default function SignUpForm() {
                 <Password
                     content={'Enter password Again'}
                     size={'large'}
-                    onChange={(value) => console.log('password: ', value.target.value)}/>
+
+                />
             </Form.Item>
+            <Button type="primary" htmlType="submit">
+                Submit
+            </Button>
         </Form>
 
     )

@@ -8,6 +8,8 @@ import { Button, Checkbox, Form, Input } from 'antd';
 
 export default function SignUpForm() {
 
+    const [firstName, setFirstName] = useState(null);
+
     const onFinish = (values) => {
         console.log('Success:', values);
     };
@@ -15,6 +17,8 @@ export default function SignUpForm() {
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
     };
+
+
     return(
         <Form
             name="basic"
@@ -42,10 +46,10 @@ export default function SignUpForm() {
                 ]}
             >
                 <InputComp
-                    onChange={(value) => console.log('value', value.target.value)}
                     content={'Name'}
                     size={'large'}
                     type={'name'}
+                    value={firstName}
                 />
             </Form.Item>
 
@@ -60,7 +64,6 @@ export default function SignUpForm() {
                 ]}
             >
                 <InputComp
-                    onChange={(value) => console.log('value', value.target.value)}
                     content={'Surname'}
                     size={'large'}
                     type={'surname'}
@@ -78,7 +81,7 @@ export default function SignUpForm() {
                 ]}
             >
                 <InputComp
-                    onChange={(value) => console.log('value', value.target.value)}
+
                     content={'Email'}
                     size={'large'}
                     type={'email'}
@@ -103,7 +106,7 @@ export default function SignUpForm() {
 
             <Form.Item
                 label="Password"
-                name="password"
+                name="confirmPassword"
                 rules={[
                     {
                         required: true,
@@ -115,6 +118,14 @@ export default function SignUpForm() {
                     content={'Enter password Again'}
                     size={'large'}
                     onChange={(value) => console.log('password: ', value.target.value)}/>
+            </Form.Item>
+            <Form.Item
+                wrapperCol={{
+                    offset: 8,
+                    span: 16,
+                }}
+            >
+
             </Form.Item>
         </Form>
 

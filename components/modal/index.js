@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {Button} from "antd";
 import {ModalWrapper} from './module.style'
-import SignUpForm from "../form/auth/signUp";
+import SignUpForm from "../../src/container/Auth/SignUp";
 import SignIn from "../form/auth/signIn";
 
 
