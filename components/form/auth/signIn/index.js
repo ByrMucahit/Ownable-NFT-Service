@@ -2,9 +2,14 @@ import React from "react";
 import {Form} from "antd";
 import InputComp from "../../../input/characterField";
 import Password from "../../../input/password";
+import style from './style.module.css'
 
 
-export  default function SignIn() {
+export default function SignIn() {
+
+    const showModal = () => {
+
+    }
 
     const onFinish = (values) => {
         console.log('Success:', values);
@@ -14,7 +19,9 @@ export  default function SignIn() {
         console.log('Failed:', errorInfo);
     };
     return (
-        <p>
+        <div className={style.formContainer}>
+
+
             <Form
                 name="basic"
                 labelCol={{
@@ -65,7 +72,10 @@ export  default function SignIn() {
                 </Form.Item>
 
             </Form>
+            <div>
+                <a className={style.link} onClick={showModal()}>Haven't you ever been registered yet?</a>
+            </div>
 
-        </p>
+        </div>
     )
 }

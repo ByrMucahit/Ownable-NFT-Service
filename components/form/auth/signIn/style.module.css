@@ -1,0 +1,14 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+
+    .link {
+    color: var(--c-text-color-87);
+    }
+
+    .link:hover {
+        color: var( --c-link-hover-color);
+    }
+
+}
+
