@@ -11,6 +11,10 @@ import GetStartedSide from "../../row/getStarted"
 import FooterSide from "../../footer/index"
 
 function Layout() {
+
+    const makeSomething = () => {
+        console.log("Hello World");
+    }
     const size = useWindowSize()
     return (
                 /* Layout */
@@ -19,6 +23,10 @@ function Layout() {
                 <div className={styles.navigation}>
                     {size.width < CONST.TABLET_SIZE ? 
                       <Navigation  flat/> : <Navigation />}
+                </div>
+
+                <div>
+                    <button onClick={() => makeSomething() }>makes something</button>
                 </div>
 
                 {/* Exhibition */}

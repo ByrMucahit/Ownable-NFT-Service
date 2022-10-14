@@ -3,13 +3,11 @@ import React from "react";
 import Layout from '../components/layout/makeNFT/index'
 
 
-function makeNFT(){
+function makenft(){
     return(
-        <Layout>
-            
-        </Layout>
+        <Layout/>
     )
 }
 
 
-export default makeNFT
+export default makenft

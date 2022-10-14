@@ -1,19 +1,19 @@
-import { createContext, useEffect, useState } from 'react'
-import { Cookies } from 'react-cookie'
+import {createContext, useEffect, useState} from 'react'
+import {Cookies} from 'react-cookie'
 import axios from 'axios'
 import jwt_decode from 'jwt-decode'
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
 
 export const AuthContext = createContext('unknow')
 const AuthProvider = (props) => {
     const [username, setUsername] = useState('John Smith')
-    const [user, setUser] = useState(null)
-    const [loggedIn, setLoggedIn] = useState(null)
+    const [user, setUser] = useState('initial')
+    const [loggedIn, setLoggedIn] = useState("init")
 
     const Router = useRouter()
 
     const getUser = () => {
-        var cookies = new Cookies()
+        let cookies = new Cookies()
 
         if (!cookies.get('_login_user')) {
             setUser({
@@ -35,7 +35,7 @@ const AuthProvider = (props) => {
             setLoggedIn(false)
             getUser()
         } else {
-            let decodedToken = jwt_decode(storedJWT, { header: true })
+            let decodedToken = jwt_decode(storedJWT, {header: true})
             let currentDate = new Date()
 
             if (decodedToken.exp * 1000 < currentDate.getTime()) {
@@ -91,9 +91,9 @@ const AuthProvider = (props) => {
                     setUser(user)
                     setLoggedIn(true)
                     cookies.set('_login_user', JSON.stringify(user))
-                    cookies.set('_aybekler_token', r?.data?.token, { path: '/' })
+                    cookies.set('_aybekler_token', r?.data?.token, {path: '/'})
                     localStorage.setItem('LS_LOGIN', 'true')
-                    Router.push('/')
+                    await Router.push('/')
                 }
             })
     }
@@ -107,7 +107,7 @@ const AuthProvider = (props) => {
     }
 
     return (
-        <AuthContext.Provider value={{ username, signIn }}>
+        <AuthContext.Provider value={{username, signIn}}>
             {props.children}
         </AuthContext.Provider>
     )

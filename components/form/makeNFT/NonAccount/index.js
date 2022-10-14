@@ -10,7 +10,7 @@ import DropDownInput from '../../../input/dropdown/index'
 import Button from "../../../button/base/index";
 import {useState} from 'react';
 import axios from 'axios';
-const GETFORM_FORM_ENDPOINT = "http://localhost:8080/swagger-ui.html#/make-nft-controller/getAllUsingGET";
+const GETFORM_FORM_ENDPOINT = "http://localhost:8081/api/create";
 
 
 
@@ -33,9 +33,12 @@ function MakeNFTForm(){
 
     /* IMAGE UPLOADING */
     const handleFileChange = () => (e) => {
+        let file = e.target.files[0];
+        const imageData = new FormData();
+        imageData.append('image', file);
         setQuery((prevState) => ({
             ...prevState,
-            image: e.target.files[0]
+            image: imageData
         }));
         
     }
@@ -80,7 +83,7 @@ function MakeNFTForm(){
                 typeOfAsset: "NFT",
                 description: "",
                 nftMiningFee: "417",
-                image:""
+                image: ""
             });
             console.log(response);
         })
@@ -258,7 +261,7 @@ function MakeNFTForm(){
                                 `}>
                                     <input 
                                     aria-invalid="false" 
-                                    name="username" 
+                                    name="userName"
                                     placeholder="Enter Username" 
                                     type="text"
                                     className={`
@@ -278,7 +281,7 @@ function MakeNFTForm(){
                                 ${styles.muiInputLabelFormControl} 
                                 ${styles.muiInputLabelAnimated}`}
                                 data-shrink="false"
-                                name="phone"
+                                name="phoneNumber"
                                 placeholder="Enter Phone Number"
                                 >
                                 </label>
@@ -294,7 +297,7 @@ function MakeNFTForm(){
                                 `}>
                                     <input 
                                     aria-invalid="false" 
-                                    name="phone" 
+                                    name="phoneNumber"
                                     placeholder="Enter Phone Number" 
                                     type="text"
                                     className={`
@@ -499,7 +502,6 @@ function MakeNFTForm(){
                                             id="icon-button-photo" 
                                             type="file"
                                             name="file"
-                                            onChange={handleChange()}
                                             onChange={handleFileChange()}
                                             />
                                         </span>
@@ -589,7 +591,6 @@ function MakeNFTForm(){
                                         "position":"absolute",
                                         "overflow":"hidden",
                                         "height":"0px",
-                                        "height":"0px;",
                                         "top":"0px",
                                         "left":"0px",
                                         "transform":"translateZ(0px)",
@@ -608,7 +609,7 @@ function MakeNFTForm(){
                                 >NFT Minting Fee</label>
                                 $114.95
                             </div>
-                            <MintBtn/>
+                            <MintBtn type={"submit"}/>
                         </form>
                     </div>
                 </div>
