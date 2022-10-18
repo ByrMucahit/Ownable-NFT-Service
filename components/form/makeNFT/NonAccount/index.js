@@ -1,21 +1,15 @@
 import React from "react";
-import HeadTitle from "../../../text/head-title";
 import MintBtn from "../../../button/mint/index";
 import styles from './style.module.css'
 import * as Icon from '../../../icons'
-import Input from '../../../input/text/text'
-import CheckInput from '../../../input/check/index'
-import ImageButton from "../../../button/image/index"
-import DropDownInput from '../../../input/dropdown/index'
-import Button from "../../../button/base/index";
 import {useState} from 'react';
 import axios from 'axios';
-const GETFORM_FORM_ENDPOINT = "http://localhost:8081/api/create";
 
 
-
-function MakeNFTForm(){
+function MakeNFTForm() {
     /* Data which is input that have been entered by user  */
+    const [formStatus, setFormStatus] = useState(false);
+    const [createObjectURL, setCreateObjectURL] = useState(null);
     const [query, setQuery] = useState({
         firstName: "",
         lastName: "",
@@ -28,19 +22,21 @@ function MakeNFTForm(){
         typeOfAsset: "NFT",
         description: "",
         nftMiningFee: "417",
-        image:""
+        image: ""
     })
 
     /* IMAGE UPLOADING */
-    const handleFileChange = () => (e) => {
+    const handleFileChange =() => (e) => {
         let file = e.target.files[0];
+        console.log("image:", file);
         const imageData = new FormData();
         imageData.append('image', file);
+        console.log('imagedata:', imageData);
         setQuery((prevState) => ({
             ...prevState,
-            image: imageData
+            image: file
         }));
-        
+        setCreateObjectURL(URL.createObjectURL(file));
     }
 
     /* IF ANY CHANGING HAVE BEEN DONE */
@@ -61,38 +57,41 @@ function MakeNFTForm(){
 
         const formData = new FormData();
         Object.entries(query).forEach(([key, value]) => {
+            console.log("key: ", key);
+            console.log("value: ", value);
             formData.append(key, value);
         });
 
+        console.log("Form data: ", formData);
         axios.post(
-            GETFORM_FORM_ENDPOINT,
+            process.env.GETFORM_FORM_ENDPOINT,
             formData,
             {headers: {Accept: "application/json"}}
         )
-        .then(function(response) {
-            setFormStatus(true);
-            setQuery({
-                firstName: "",
-                lastName: "",
-                email: "",
-                userName: "",
-                phoneNumber: "",
-                password: "",
-                confirmPassword: "",
-                tokenName: "",
-                typeOfAsset: "NFT",
-                description: "",
-                nftMiningFee: "417",
-                image: ""
+            .then(function (response) {
+                setFormStatus(true);
+                setQuery({
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    userName: "",
+                    phoneNumber: "",
+                    password: "",
+                    confirmPassword: "",
+                    tokenName: "",
+                    typeOfAsset: "NFT",
+                    description: "",
+                    nftMiningFee: "417",
+                    image: ""
+                });
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
             });
-            console.log(response);
-        })
-        .catch(function(error){
-            console.log(error);
-        });
     }
 
-    return(
+    return (
         <div className={styles.container}>
             <div className={`${styles.tempContext} ${styles.iterContext}`}>
                 <div className={styles.cssContainer}>
@@ -107,23 +106,22 @@ function MakeNFTForm(){
                                 `${styles.muiTypographyRoot} 
                                  ${styles.cssAccountLinkContent} 
                                  ${styles.muiTypographyH3}`}
-                                 >
-                                     Already have an account ?
+                            >
+                                Already have an account ?
                             </h3>
-                            
+
                             <div className={styles.muiFormControlRoot}>
                                 <label className={`
                                 ${styles.muiFormLabelRoot} 
                                 ${styles.muiInputLabelRoot} 
                                 ${styles.muiInputLabelFormControl} 
                                 ${styles.muiInputLabelAnimated}`}
-                                data-shrink="false"
-                                name="firstName"
-                                placeholder="Enter First Name"
-                                style={{"marginRight":"20px;"}}
+                                       data-shrink="false"
+                                       placeholder="Enter First Name"
+                                       style={{"marginRight": "20px;"}}
                                 >
                                 </label>
-                                
+
                                 <div className={`
                                 ${styles.muiInputBaseRoot} 
                                 ${styles.muiInputRoot} 
@@ -132,26 +130,25 @@ function MakeNFTForm(){
                                 ${styles.muiInputBaseFormControl}
                                 ${styles.muiInputFormControl}
                                 `}
-                                style={{"marginRight":"20px;"}}
+                                     style={{"marginRight": "20px;"}}
                                 >
                                     <input aria-invalid="false"
-                                    name="firstName"
-                                    placeholder="Enter First Name"
-                                    type="text"
-                                    className={`
+                                           name="firstName"
+                                           placeholder="Enter First Name"
+                                           type="text"
+                                           className={`
                                     ${styles.muiInputBaseInput}
                                     ${styles.muiInputInput}`}
-                                    onChange={handleChange()}
-                                    onClick={() => console.log(query.key+" "+"from first Name field")}
+                                           onChange={handleChange()}
+                                           onClick={() => console.log(query.key + " " + "from first Name field")}
                                     >
                                     </input>
                                 </div>
                                 <p className={`
                                 ${styles.muiFormHelperTextRoot} 
                                 ${styles.muiError}`}
-                                name="firstName"
-                                placeholder="Enter First Name"
-                                style={{"marginRight":"20px;"}}>
+                                   placeholder="Enter First Name"
+                                   style={{"marginRight": "20px;"}}>
                                     Provide Your First Name
                                 </p>
                             </div>
@@ -162,29 +159,27 @@ function MakeNFTForm(){
                                 ${styles.muiInputRoot} 
                                 ${styles.muiInputLabelFormControl} 
                                 ${styles.muiInputLabelAnimated}`}
-                                data-shrink="false"
-                                name="lastName"
-                                placeholder="Enter Last Name"
+                                       data-shrink="false"
+                                       placeholder="Enter Last Name"
                                 >
                                 </label>
                                 <div className={`
                                 ${styles.muiInputBaseRoot} 
                                 ${styles.muiInputRoot} 
                                 ${styles.muiInputUnderline} 
-                                ${styles.cssInput} 
-                                ${styles.muiInputBaseFormControl}
+                                ${styles.cssInput}                     
                                 ${styles.muiInputFormControl}`}>
 
-                                    <input 
-                                    aria-invalid="false" 
-                                    name="lastName" 
-                                    placeholder="Enter Last Name" 
-                                    type="text" 
-                                    className={`
+                                    <input
+                                        aria-invalid="false"
+                                        name="lastName"
+                                        placeholder="Enter Last Name"
+                                        type="text"
+                                        className={`
                                     ${styles.muiInputBaseInput} 
                                     ${styles.muiInputInput}`}
-                                    onChange={handleChange()}
-                                    onClick={() => console.log(query+" "+"from last name field")}
+                                        onChange={handleChange()}
+                                        onClick={() => console.log(query + " " + "from last name field")}
                                     >
 
                                     </input>
@@ -192,8 +187,7 @@ function MakeNFTForm(){
                                 <p className={`
                                 ${styles.muiFormHelperTextRoot} 
                                 ${styles.muiError}`}
-                                name="firstName"
-                                placeholder="Enter Last Name"
+                                   placeholder="Enter Last Name"
                                 >
                                     Provide Your Last Name
                                 </p>
@@ -205,9 +199,8 @@ function MakeNFTForm(){
                                 ${styles.muiInputLabelRoot} 
                                 ${styles.muiInputLabelFormControl} 
                                 ${styles.muiInputLabelAnimated}`}
-                                data-shrink="false"
-                                name="email"
-                                placeholder="Enter Email"
+                                       data-shrink="false"
+                                       placeholder="Enter Email"
                                 >
                                 </label>
                                 <div className={`
@@ -220,21 +213,22 @@ function MakeNFTForm(){
                                 ${styles.muiInputBaseFormControl}
                                 ${styles.muiInputFormControl}
                                 `}>
-                                    <input 
-                                    aria-invalid="false" 
-                                    name="email" 
-                                    placeholder="Enter Email" 
-                                    type="text"
-                                    className={`
+                                    <input
+                                        aria-invalid="false"
+                                        name="email"
+                                        placeholder="Enter Email"
+                                        type="text"
+                                        className={`
                                     ${styles.muiInputBaseInput}
                                     ${styles.muiInputInput}`}
-                                    onChange={handleChange()}
-                                    onClick={() => console.log(query+" "+"from email field.")}
+                                        onChange={handleChange()}
+                                        onClick={() => console.log(query + " " + "from email field.")}
                                     />
                                 </div>
-                                <div className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} name="email" placeholder="Enter Email">
-                                        Provide the email
-                                    </div>
+                                <div className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`}
+                                     placeholder="Enter Email">
+                                    Provide the email
+                                </div>
                             </div>
 
 
@@ -244,9 +238,8 @@ function MakeNFTForm(){
                                 ${styles.muiInputLabelRoot} 
                                 ${styles.muiInputLabelFormControl} 
                                 ${styles.muiInputLabelAnimated}`}
-                                data-shrink="false"
-                                name="userName"
-                                placeholder="Enter Username"
+                                       data-shrink="false"
+                                       placeholder="Enter Username"
                                 >
                                 </label>
                                 <div className={`
@@ -259,19 +252,20 @@ function MakeNFTForm(){
                                 ${styles.muiInputBaseFormControl}
                                 ${styles.muiInputFormControl}
                                 `}>
-                                    <input 
-                                    aria-invalid="false" 
-                                    name="userName"
-                                    placeholder="Enter Username" 
-                                    type="text"
-                                    className={`
+                                    <input
+                                        aria-invalid="false"
+                                        name="userName"
+                                        placeholder="Enter Username"
+                                        type="text"
+                                        className={`
                                     ${styles.muiInputBaseInput}
                                     ${styles.muiInputInput}`}
-                                    onChange={handleChange()}
-                                    onClick={() => console.log(query+" "+"from username field")}
+                                        onChange={handleChange()}
+                                        onClick={() => console.log(query + " " + "from username field")}
                                     />
                                 </div>
-                                <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} name="username" placeholder="Enter Username">Provide a username</p>
+                                <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`}
+                                   placeholder="Enter Username">Provide a username</p>
                             </div>
 
                             <div className={`${styles.muiFormControlRoot} ${styles.muiFormControlFullWidth}`}>
@@ -280,9 +274,8 @@ function MakeNFTForm(){
                                 ${styles.muiInputLabelRoot} 
                                 ${styles.muiInputLabelFormControl} 
                                 ${styles.muiInputLabelAnimated}`}
-                                data-shrink="false"
-                                name="phoneNumber"
-                                placeholder="Enter Phone Number"
+                                       data-shrink="false"
+                                       placeholder="Enter Phone Number"
                                 >
                                 </label>
                                 <div className={`
@@ -291,29 +284,26 @@ function MakeNFTForm(){
                                 ${styles.muiInputUnderline} 
                                 ${styles.cssInput} 
                                 ${styles.muiInputBaseFullWidth}
-                                ${styles.muiInputFullWidth}
-                                ${styles.muiInputBaseFormControl}
                                 ${styles.muiInputFormControl}
                                 `}>
-                                    <input 
-                                    aria-invalid="false" 
-                                    name="phoneNumber"
-                                    placeholder="Enter Phone Number" 
-                                    type="text"
-                                    className={`
+                                    <input
+                                        aria-invalid="false"
+                                        name="phoneNumber"
+                                        placeholder="Enter Phone Number"
+                                        type="text"
+                                        className={`
                                     ${styles.muiInputBaseInput}
                                     ${styles.muiInputInput}`}
-                                    onChange={handleChange()}
-                                    onClick={()=> console.log(query+" "+"from phone number field")}
+                                        onChange={handleChange()}
+                                        onClick={() => console.log(query + " " + "from phone number field")}
                                     />
                                 </div>
-                                    <p className={styles.muiFormHelperTextRoot}
-                                    name="phone"
-                                    placeholder="Enter Phone Number"
-                                    type="text"
-                                    value inputMode="numeric">If provided text messages will be sent here for security.</p>
-                                
-                               
+                                <p className={styles.muiFormHelperTextRoot}
+                                   placeholder="Enter Phone Number"
+                                   inputMode="numeric"
+                                >If provided text messages will be sent here for security.</p>
+
+
                             </div>
 
                             <div className={`${styles.muiBoxRoot} ${styles.cssPasswordContent}`}>
@@ -323,11 +313,9 @@ function MakeNFTForm(){
                                     ${styles.muiInputLabelRoot} 
                                     ${styles.muiInputLabelFormControl} 
                                     ${styles.muiInputLabelAnimated}`}
-                                    data-shrink="false"
-                                    name="password"
-                                    style="password"
-                                    placeholder="Enter Password"
-                                    style={{"marginRight":"20px;"}}
+                                           data-shrink="false"
+                                           placeholder="Enter Password"
+                                           style={{"marginRight": "20px;"}}
                                     >
                                     </label>
                                     <div className={`
@@ -335,27 +323,24 @@ function MakeNFTForm(){
                                     ${styles.muiInputRoot} 
                                     ${styles.muiInputUnderline} 
                                     ${styles.cssInput} 
-                                    ${styles.muiInputBaseFormControl}
                                     ${styles.muiInputFormControl}
                                     `}
-                                    style={{"marginRight":"20px"}}>
-                                        <input 
-                                        aria-invalid="false" 
-                                        name="password" 
-                                        placeholder="Enter Password" 
-                                        type="text"
-                                        className={`
+                                         style={{"marginRight": "20px"}}>
+                                        <input
+                                            aria-invalid="false"
+                                            name="password"
+                                            placeholder="Enter Password"
+                                            type="text"
+                                            className={`
                                         ${styles.muiInputBaseInput}
                                         ${styles.muiInputInput}`}
-                                        onChange={handleChange()}
-                                        onClick={() => console.log(query+" "+"from password field.")}
+                                            onChange={handleChange()}
+                                            onClick={() => console.log(query + " " + "from password field.")}
                                         />
                                     </div>
-                                    <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} 
-                                    name="password" 
-                                    type="password" 
-                                    placeholder="Enter Password"
-                                    style={{"marginRight":"20px"}}>Provide your password</p>
+                                    <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`}
+                                       placeholder="Enter Password"
+                                       style={{"marginRight": "20px"}}>Provide your password</p>
                                 </div>
 
                                 <div className={styles.muiFormControlRoot}>
@@ -364,11 +349,8 @@ function MakeNFTForm(){
                                     ${styles.muiInputLabelRoot} 
                                     ${styles.muiInputLabelFormControl} 
                                     ${styles.muiInputLabelAnimated}`}
-                                    data-shrink="false"
-                                    name="confirmPassword"
-                                    style="password"
-                                    placeholder="Confirm Password"
-                                    style={{"marginRight":""}}
+                                           data-shrink="false"
+                                           placeholder="Confirm Password"
                                     >
                                     </label>
                                     <div className={`
@@ -376,26 +358,23 @@ function MakeNFTForm(){
                                     ${styles.muiInputRoot} 
                                     ${styles.muiInputUnderline} 
                                     ${styles.cssInput} 
-                                    ${styles.muiInputBaseFormControl}
                                     ${styles.muiInputFormControl}
                                     `}>
-                                        <input 
-                                        aria-invalid="false" 
-                                        name="confirmPassword" 
-                                        placeholder="Confirm password" 
-                                        type="confirmPassword"
-                                        className={`
+                                        <input
+                                            aria-invalid="false"
+                                            name="confirmPassword"
+                                            placeholder="Confirm password"
+                                            type="confirmPassword"
+                                            className={`
                                         ${styles.muiInputBaseInput}
                                         ${styles.muiInputInput}`}
-                                        onChange={handleChange()}
-                                        onClick={()=> console.log(query+" "+"from confirm password field.")}
+                                            onChange={handleChange()}
+                                            onClick={() => console.log(query + " " + "from confirm password field.")}
                                         />
                                     </div>
-                                    <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} 
-                                    name="confirmPassword" 
-                                    type="password" 
-                                    placeholder="Enter Password"
-                                    style={{"marginRight":"20px"}}>Confirm your password</p>
+                                    <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`}
+                                       placeholder="Enter Password"
+                                       style={{"marginRight": "20px"}}>Confirm your password</p>
                                 </div>
                             </div>
 
@@ -406,27 +385,31 @@ function MakeNFTForm(){
                                     ${styles.muiIconButtonRoot} 
                                     ${styles.cssButtonContent} 
                                     ${styles.muiCheckBoxRoot} 
-                                    ${styles.muiCheckBoxColorSecondary}
                                     ${styles.muiIconButtonColorSecondary}`}
-                                    aria-disabled="false"
+                                          aria-disabled="false"
                                     >
                                         <span className={styles.muiIconButtonLabel}>
-                                            <input  className={styles.cssCheckBox} type="checkbox" value="true" name="checkbox"   name="tosCheckbox" required value/>
-                                            <Icon.İconmonstrCheckbox6 className={`${styles.muiSvgIconRoot} ${styles.muiCheckBoxRoot}`} focusable="false"/>
+                                            <input
+                                                className={styles.cssCheckBox}
+                                                type="checkbox"
+                                                value="true"
+                                                name="checkbox"
+                                                required/>
+                                            <Icon.İconmonstrCheckbox6
+                                                className={`${styles.muiSvgIconRoot} ${styles.muiCheckBoxRoot}`}
+                                                focusable="false"/>
                                         </span>
                                     </span>
                                     <span className={`
                                         ${styles.muiTypographyRoot} 
-                                        ${styles.muiFormControlLabelLabel} 
                                         ${styles.muiTypographyBody1}`}
-                                        >
+                                    >
                                             <p>I have read and agree to the 
                                                 <a className={`
                                                 ${styles.muiTypographyRoot} 
-                                                ${styles.muiLinkRoot} 
                                                 ${styles.muiLinkUnderLineHover} 
                                                 ${styles.muiTypographyColorPrimary}`}
-                                                target="tos"> terms of service</a>
+                                                   target="tos"> terms of service</a>
                                                 .
                                             </p>
                                         </span>
@@ -435,11 +418,11 @@ function MakeNFTForm(){
                         </div>
 
                         <form className={styles.cssForm}
-                        acceptCharset="UTF-8"
-                        method="POST"
-                        encType="multipart/form-data"
-                        id="ajaxForm"
-                        onSubmit={handleSubmit}
+                              acceptCharset="UTF-8"
+                              method="POST"
+                              encType="multipart/form-data"
+                              id="ajaxForm"
+                              onSubmit={handleSubmit}
                         >
                             <div className={`${styles.muiFormControlRoot} ${styles.muiFormControlFullWidth}`}>
                                 <label className={`
@@ -455,26 +438,22 @@ function MakeNFTForm(){
                                 ${styles.muiInputUnderline} 
                                 ${styles.cssInput} 
                                 ${styles.muiInputBaseFullWidth}
-                                ${styles.muiInputFullWidth}
-                                ${styles.muiInputBaseFormControl}
                                 ${styles.muiInputFormControl}`}>
-                                    <input 
-                                    aria-invalid="false" 
-                                    name="tokenName" 
-                                    placeholder="Enter Token Name" 
-                                    type="text" 
-                                    className={`
+                                    <input
+                                        aria-invalid="false"
+                                        name="tokenName"
+                                        placeholder="Enter Token Name"
+                                        type="text"
+                                        className={`
                                     ${styles.muiInputBaseInput} 
-                                    ${styles.muiInputInput}`} 
-                                    onChange={handleChange()}
-                                    onClick={()=> console.log(query+" "+"from new token name field.")}
+                                    ${styles.muiInputInput}`}
+                                        onChange={handleChange()}
+                                        onClick={() => console.log(query + " " + "from new token name field.")}
                                     />
                                 </div>
-                                <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`} 
-                                    name="tokenName" 
-                                    type="text" 
-                                    placeholder="Enter Token Name"
-                                    style={{"marginRight":"20px"}}>Token name is required</p>
+                                <p className={`${styles.muiFormHelperTextRoot} ${styles.muiError}`}
+                                   placeholder="Enter Token Name"
+                                   style={{"marginRight": "20px"}}>Token name is required</p>
                             </div>
 
                             <div className={`${styles.muiFormControlRoot} ${styles.cssMedia}`}>
@@ -482,31 +461,42 @@ function MakeNFTForm(){
                                 ${styles.muiInputLabelRoot} 
                                 ${styles.muiInputLabelFormControl} 
                                 ${styles.muiInputLabelAnimated}`}
-                                data-shrink="false"
-                                style={{"position":"relative;","marginTop":"30px;","top":"-35px;","marginBottom":"10px;"}}>Media</label>
-                                <div>
-                                    <label className={`
+                                       data-shrink="false"
+                                       style={{
+                                           "position": "relative",
+                                           "marginTop": "30px;",
+                                           "top": "-35px;",
+                                           "marginBottom": "10px;"
+                                       }}>Media</label>
+                                <div style={{"display": "flex"}}>
+                                    <div>
+                                        <label className={`
                                     ${styles.muiButtonBaseRoot} 
                                     ${styles.muiButtonRoot} 
                                     ${styles.muiButtonContained} 
                                     ${styles.muiButtonContainedPrimary}`}
-                                    >
+                                        >
                                         <span className={styles.muiButtonLabel}>
                                             <span className={styles.cssMediaContent}>
                                                 <Icon.Upload className={`${styles.muiSvgIconRoot} ${styles.cssSvg}`}/>
                                                 UPLOAD FILE
                                             </span>
-                                            <input 
-                                            accept="image/*" 
-                                            className={styles.cssSvgContent} 
-                                            id="icon-button-photo" 
-                                            type="file"
-                                            name="file"
-                                            onChange={handleFileChange()}
+                                            <input
+                                                accept="image/*"
+                                                className={styles.cssSvgContent}
+                                                id="icon-button-photo"
+                                                type="file"
+                                                name="file"
+                                                onChange={handleFileChange()}
                                             />
                                         </span>
-                                    </label>
-                                    <p className={styles.muiFormHelperTextRoot}>Any image file or animated gif accepted up to 10mb file size.</p>
+                                        </label>
+                                        <p className={styles.muiFormHelperTextRoot}>Any image file or animated gif
+                                            accepted up to 10mb file size.</p>
+                                    </div>
+                                    <div className={styles.imageContainer}>
+                                        <img src={createObjectURL}  alt={'image'}/>
+                                    </div>
                                 </div>
                             </div>
                             <div className={styles.muiFormControlRoot}>
@@ -516,30 +506,30 @@ function MakeNFTForm(){
                                 ${styles.muiInputLabelFormControl} 
                                 ${styles.muiInputLabelAnimated}
                                 ${styles.muiInputLabelShrink}
-                                ${styles.muiInputLabelFilled}`}
-                                data-shrink="true">What type of asset is this?</label>
+                                `}
+                                       data-shrink="true">What type of asset is this?</label>
                                 <div className={`
                                 ${styles.muiInputBaseRoot} 
                                 ${styles.muiInputRoot} 
                                 ${styles.muiInputUnderline} 
-                                ${styles.muiInputBaseFormControl} 
                                 ${styles.muiInputFormControl}`}>
-                                    <div className={`
-                                    ${styles.muiSelectRoot} 
+                                    <div className={` 
                                     ${styles.muiSelectSelect} 
                                     ${styles.muiSelectSelectMenu} 
                                     ${styles.muiInputBaseInput} 
-                                    ${styles.muiInputInput}`}>NFT (Non Fungible Token)</div>
-                                    <input 
-                                    name="assetType" 
-                                    aria-hidden="true" 
-                                    tabIndex={"-1"} 
-                                    className={styles.muiSelectNativeInput}
-                                    onClick={()=> console.log(query+" "+"from asset type field.")}/>
-                                    <Icon.DownArrow className={`${styles.muiSvgIconRoot} ${styles.muiSelectIcon} ${styles.muiSelectIconOpen}`}/>
+                                    ${styles.muiInputInput}`}>NFT (Non Fungible Token)
+                                    </div>
+                                    <input
+                                        name="assetType"
+                                        aria-hidden="true"
+                                        className={styles.muiSelectNativeInput}
+                                        onClick={() => console.log(query + " " + "from asset type field.")}/>
+                                    <Icon.DownArrow
+                                        className={`${styles.muiSvgIconRoot} ${styles.muiSelectIcon} ${styles.muiSelectIconOpen}`}/>
                                 </div>
                                 <p className={`${styles.muiFormHelperTextRoot} ${styles.muiFormHelperTextFilled}`}>
-                                    NFT's (Non fungible tokens) represent things that are wholly owned by one person like art or merchandise.
+                                    NFT's (Non fungible tokens) represent things that are wholly owned by one person
+                                    like art or merchandise.
                                 </p>
                             </div>
 
@@ -549,10 +539,9 @@ function MakeNFTForm(){
                                 ${styles.muiInputLabelRoot} 
                                 ${styles.muiInputLabelFormControl}
                                 ${styles.muiInputLabelAnimated}`}
-                                data-shrink="false"
-                                name="description"
-                                placeholder="Enter description"></label>
-                                
+                                       data-shrink="false"
+                                       placeholder="Enter description"></label>
+
                                 <div className={`
                                 ${styles.muiInputBaseRoot} 
                                 ${styles.muiInputRoot} 
@@ -564,37 +553,35 @@ function MakeNFTForm(){
                                 ${styles.muiInputFormControl}
                                 ${styles.muiInputBaseMultiLine}
                                 ${styles.muiInputMultiLine}`}>
-                                    <textarea 
-                                    rows={"1"} 
-                                    aria-onInvalid={"false"} 
-                                    name="description" 
-                                    placeholder="Enter description"
-                                    className={`
+                                    <textarea
+                                        name="description"
+                                        placeholder="Enter description"
+                                        className={`
                                     ${styles.muiInputBaseInput} 
                                     ${styles.muiInputInput} 
                                     ${styles.muiInputBaseInputMultiLine} 
                                     ${styles.muiInputInputMultiLine}`}
-                                    style={{"height":"30px;", "overflow":"hidden;"}}
-                                    onChange={handleChange()}
-                                    onClick={() => console.log(query+" "+"from description field.")}
+                                        style={{"height": "30px;", "overflow": "hidden;"}}
+                                        onChange={handleChange()}
+                                        onClick={() => console.log(query + " " + "from description field.")}
                                     />
-                                    <textarea 
-                                    aria-hidden="true" 
-                                    className={`
+                                    <textarea
+                                        aria-hidden="true"
+                                        className={`
                                     ${styles.muiInputBaseInput} 
                                     ${styles.muiInputInput} 
                                     ${styles.muiInputBaseInputMultiLine}
                                     ${styles.muiInputInputMultiLine}`}
-                                    readOnly tabIndex={"-1"}
-                                    style={{
-                                        "visibility":"hidden",
-                                        "position":"absolute",
-                                        "overflow":"hidden",
-                                        "height":"0px",
-                                        "top":"0px",
-                                        "left":"0px",
-                                        "transform":"translateZ(0px)",
-                                        "width":"734.652px"}}></textarea>
+                                        style={{
+                                            "visibility": "hidden",
+                                            "position": "absolute",
+                                            "overflow": "hidden",
+                                            "height": "0px",
+                                            "top": "0px",
+                                            "left": "0px",
+                                            "transform": "translateZ(0px)",
+                                            "width": "734.652px"
+                                        }}></textarea>
                                 </div>
                             </div>
 
@@ -604,8 +591,8 @@ function MakeNFTForm(){
                                 ${styles.muiInputLabelRoot} 
                                 ${styles.muiInputLabelFormControl} 
                                 ${styles.muiInputLabelAnimated}`}
-                                data-shrink="false"
-                                style={{"position":"relative","marginTop":"30px","top":"-40px"}}
+                                       data-shrink="false"
+                                       style={{"position": "relative", "marginTop": "30px", "top": "-40px"}}
                                 >NFT Minting Fee</label>
                                 $114.95
                             </div>

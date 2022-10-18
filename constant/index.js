@@ -89,7 +89,7 @@ export const MENU = [
         key: 'make-an-nft',
         icon: '',
         title: 'Make an NFT',
-        href: '/makeNft'
+        href: '/makenft'
     },
     {
         key: 'business-signup',
