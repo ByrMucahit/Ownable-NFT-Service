@@ -1,15 +1,15 @@
-.container{
+.container {
     flex: 1;
     display: flex;
     flex-direction: column;
 
-    .iterContext{
+    .iterContext {
         padding-left: 3%;
         padding-right: 3%;
-        
+
     }
 
-    .tempContext{
+    .tempContext {
         flex: 1;
         display: flex;
         min-height: 200px;
@@ -18,22 +18,22 @@
         background-color: var(--c-icon-color);
     }
 
-    .cssContainer{
+    .cssContainer {
         display: flex;
         -webkit-box-pack: center;
         justify-content: center;
         height: 100%;
         width: 100%;
 
-        .cssContext{
+        .cssContext {
 
-            @media(--m){
+            @media (--m) {
                 max-width: 1795px;
                 padding-left: 150px;
                 padding-right: 150px;
             }
 
-            @media(--o) {
+            @media (--o) {
                 padding-left: 75px;
                 padding-right: 75px;
                 max-width: 1645px;
@@ -45,7 +45,7 @@
             padding-right: 20px;
 
 
-            .muiTypographyH1{
+            .muiTypographyH1 {
                 font-size: 30px;
                 margin-top: 40px;
                 font-family: "Nunito Sans", sans-serif;
@@ -54,23 +54,23 @@
                 margin-bottom: 0;
             }
 
-            .muiTypographyRoot{
+            .muiTypographyRoot {
                 margin: 0;
             }
 
-           
 
-            .cssAccountLinkContent{
+            .cssAccountLinkContent {
                 margin-top: 40px;
             }
 
-            .muiTypographyH3{
+            .muiTypographyH3 {
                 font-size: 20px;
-                font-family: "Nunito Sans",sans-serif;
+                font-family: "Nunito Sans", sans-serif;
                 font-weight: 700;
                 line-height: 32px;
             }
-            .muiFormControlRoot{
+
+            .muiFormControlRoot {
                 border: 0;
                 margin: 0;
                 display: inline-flex;
@@ -82,14 +82,14 @@
                 vertical-align: top;
             }
 
-            
-            .cssMedia{
+
+            .cssMedia {
                 margin-bottom: 20px;
             }
 
-            .muiFormControlRoot{
+            .muiFormControlRoot {
 
-                .muiFormLabelRoot{
+                .muiFormLabelRoot {
                     color: var(--c-label-color);
                     padding: 0;
                     font-size: 20px;
@@ -97,34 +97,34 @@
                     font-weight: 400;
                     line-height: 2px;
                 }
-                .muiInputLabelRoot{
+
+                .muiInputLabelRoot {
                     display: block;
                     transform-origin: top left;
                 }
-                
-                .muiInputLabelFormControl{
+
+                .muiInputLabelFormControl {
                     top: 0;
                     left: 0;
                     position: absolute;
                     transform: translate(0, 28px) scale(1);
                 }
 
-                .muiInputLabelShrink{
+                .muiInputLabelShrink {
                     transform: translate(0, 1.5px) scale(0.75);
                     transform-origin: top left;
                 }
-                .muiInputLabelAnimated{
+
+                .muiInputLabelAnimated {
                     transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms, transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
                 }
 
-                label + .muiInputFormControl{
+                label + .muiInputFormControl {
                     margin-top: 16px;
                 }
 
-               
 
-
-                .muiInputBaseRoot{
+                .muiInputBaseRoot {
                     color: var(--c-text-color-87);
                     display: inline-flex;
                     position: relative;
@@ -136,22 +136,24 @@
                     line-height: 1.1876em;
                 }
 
-                  
-                .muiInputBaseMultiLine{
+
+                .muiInputBaseMultiLine {
                     padding: 6px 0 7px;
                 }
-                .muiInputBaseFullWidth{
+
+                .muiInputBaseFullWidth {
                     width: 100%;
                 }
-                .muiInputRoot{
+
+                .muiInputRoot {
                     position: relative;
                 }
 
-                .cssInput{
+                .cssInput {
                     margin-top: 0;
                 }
 
-                .muiInputUnderline::before{
+                .muiInputUnderline::before {
                     left: 0;
                     right: 0;
                     bottom: 0;
@@ -162,9 +164,8 @@
                     pointer-events: none;
                 }
 
-               
 
-                .muiInputBaseInput{
+                .muiInputBaseInput {
                     font: inherit;
                     color: currentColor;
                     width: 100%;
@@ -181,40 +182,40 @@
                     animation-duration: 10ms;
                     -webkit-tap-highlight-color: transparent;
                 }
-            
 
-                .muiInputInput{
+
+                .muiInputInput {
                     font-size: 20px;
                     font-family: "Nunito Sans", sans-serif;
                     line-height: 24px;
                 }
 
-            .muiSelectSelect{
-                cursor: pointer;
-                min-width: 16px;
-                user-select: none;
-                border-radius: 0;
-                -moz-appearance: none;
-                -webkit-appearance: none;
-            }
+                .muiSelectSelect {
+                    cursor: pointer;
+                    min-width: 16px;
+                    user-select: none;
+                    border-radius: 0;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                }
 
-                .muiSelectSelectMenu{
+                .muiSelectSelectMenu {
                     height: auto;
                     overflow: hidden;
                     min-height: 1.1876em;
                     white-space: nowrap;
                     text-overflow: ellipsis;
-                 }
-                
-                .muiSelectSelect , .muiSelectSelect{
-                     padding-right: 24px;
                 }
 
-                input{
+                .muiSelectSelect, .muiSelectSelect {
+                    padding-right: 24px;
+                }
+
+                input {
                     overflow: visible;
                 }
 
-                .muiSelectNativeInput{
+                .muiSelectNativeInput {
                     left: 0;
                     width: 100%;
                     bottom: 0;
@@ -223,7 +224,7 @@
                     pointer-events: none;
                 }
 
-                .muiInputUnderline::after{
+                .muiInputUnderline::after {
                     left: 0;
                     right: 0;
                     bottom: 0;
@@ -235,39 +236,39 @@
                     pointer-events: none;
                 }
 
-                .muiInputUnderline .muiError::after{
+                .muiInputUnderline .muiError::after {
                     transform: scaleX(1);
                     border-bottom-color: var(--c-error-color);
                 }
 
-                .muiFormHelperTextRoot{
+                .muiFormHelperTextRoot {
                     color: var(--c-text-color-87);
                     margin: 0;
                     font-size: 15px;
                     margin-top: 3px;
                     text-align: left;
-                    font-family: "Nunito Sans",sans-serif;
+                    font-family: "Nunito Sans", sans-serif;
                     font-weight: 400;
                     line-height: 28px;
                 }
 
-                .muiError{
+                .muiError {
                     color: var(--c-error-color);
                 }
             }
 
-            .muiFormControlFullWidth{
+            .muiFormControlFullWidth {
                 width: 100%
             }
 
-            .cssPasswordContent{
+            .cssPasswordContent {
                 display: flex;
             }
 
-            .cssBoxContent{
+            .cssBoxContent {
                 display: flex;
 
-                .muiFormControlLabelRoot{
+                .muiFormControlLabelRoot {
                     cursor: pointer;
                     display: inline-flex;
                     align-items: center;
@@ -276,35 +277,9 @@
                     vertical-align: middle;
                     -webkit-tap-highlight-color: transparent;
 
-
-                    .muiButtonBaseRoot{
-                        color: inherit;
-                        border: 0;
-                        cursor: pointer;
-                        margin: 0;
-                        display: inline-flex;
-                        outline: 0;
-                        padding: 0;
-                        position: relative;
-                        align-items: center;
-                        user-select: none;
-                        border-radius: 0;
-                        vertical-align: middle;
-                        -moz-appearance: none;
-                        justify-content: center;
-                        text-decoration: none;
-                        background-color: transparent;
-                        -webkit-appearance: none;
-                        -webkit-tap-highlight-color: transparent;
-                    }
-
-                    .imageContainer {
-                        width: 10px !important;
-                    }
-                    
-                    .muiIconButtonRoot{
+                    .muiIconButtonRoot {
                         flex: 0 0 auto;
-                        color:var(--c-text-color-54);
+                        color: var(--c-text-color-54);
                         padding: 12px;
                         overflow: visible;
                         font-size: 1.7142857142857142rem;
@@ -313,24 +288,25 @@
                         border-radius: 50%;
                     }
 
-                    .muiIconButtonColorSecondary{
-                        color: var( --c-Icon-Button-Color-Secondary);
+                    .muiIconButtonColorSecondary {
+                        color: var(--c-Icon-Button-Color-Secondary);
                     }
 
-                    .cssButtonContent{
+                    .cssButtonContent {
                         padding: 9px;
                     }
 
-                    .muiCheckBoxRoot{
-                        color:var(--c-text-color-54);
+                    .muiCheckBoxRoot {
+                        color: var(--c-text-color-54);
                     }
-                    .muiIconButtonLabel{
+
+                    .muiIconButtonLabel {
                         width: 100%;
                         display: flex;
                         align-items: inherit;
                         justify-content: inherit;
 
-                        .cssCheckBox{
+                        .cssCheckBox {
                             top: 0;
                             left: 0;
                             width: 100%;
@@ -343,7 +319,7 @@
                             position: absolute;
                         }
 
-                        .muiSvgIconRoot{
+                        .muiSvgIconRoot {
                             fill: currentColor;
                             width: 1em;
                             height: 1em;
@@ -353,47 +329,47 @@
                             flex-shrink: 0;
                             user-select: none;
                         }
-                        
-                        .muiCheckBoxRoot{
+
+                        .muiCheckBoxRoot {
                             width: 25px;
                             height: auto;
                         }
 
 
-
                     }
 
-                    .muiTypographyRoot{
+                    .muiTypographyRoot {
                         margin: 0;
                     }
 
-                    .muiTypographyBody1{
+                    .muiTypographyBody1 {
                         font-size: 16px;
                         font-family: "Nunito Sans", sans-serif;
                         font-weight: 400;
                         line-height: 1.5;
                     }
 
-                    .muiLinkUnderLineHover{
+                    .muiLinkUnderLineHover {
                         text-decoration: none;
                     }
 
-                    .muiTypographyColorPrimary{
+                    .muiTypographyColorPrimary {
                         color: var(--c-btn-background);
                     }
 
-                    a{
+                    a {
                         color: var(--c-btn-background);
                     }
                 }
             }
         }
     }
-    .cssForm{
+
+    .cssForm {
         display: flex;
         flex-direction: column;
 
-        .muiSelectIcon{
+        .muiSelectIcon {
             top: calc(50% - 12px);
             color: var(--c-text-color-54);
             right: 0;
@@ -401,7 +377,7 @@
             pointer-events: none;
         }
 
-        .muiSvgIconRoot{
+        .muiSvgIconRoot {
             fill: currentColor;
             width: 1em;
             height: 1em;
@@ -412,87 +388,88 @@
             user-select: none;
         }
 
-        .muiFormHelperTextRoot{
+        .muiFormHelperTextRoot {
             color: var(--c-text-color-87);
             margin: 0;
             font-size: 15px;
             margin-top: 3px;
             text-align: left;
-            font-family: "Nunito Sans",sans-serif;
+            font-family: "Nunito Sans", sans-serif;
             font-weight: 400;
             line-height: 28px;
         }
 
-       .muiInputInputMultiLine{
-           min-height: 1.1875em;
-           line-height: 30px;
-       }
+        .muiInputInputMultiLine {
+            min-height: 1.1875em;
+            line-height: 30px;
+        }
 
-       .muiInputBaseInputMultiLine{
-           height: auto;
-           resize: none;
-           padding: 0;
-       }
+        .muiInputBaseInputMultiLine {
+            height: auto;
+            resize: none;
+            padding: 0;
+        }
 
-      
+
     }
 
-   .muiButtonRoot{
-       color: var(--c-text-color-87);
-       height: 51px;
-       padding: 17px 48px;
-       font-size: 14px;
-       min-width: 64px;
-       box-shadow: none;
-       box-sizing: border-box;
-       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-       font-family: Work Sans;
-       font-weight: 700;
-       line-height: 15px;
-       border-radius: 3px;
-       letter-spacing: 0.11px;
-       text-transform: uppercase;
-       text-decoration: none;
-   }
-
-   
-   .muiButtonContained{
-    color: var(--c-icon-color) !important;
-    border: 1px solid var(--c-btn-background);
-    box-shadow: none;
-    background-color: var(--c-btn-background);
-}
-
-   .muiButtonContainedPrimary{
-    color: var(--c-icon-color);
-    background-color: var(--c-btn-background);
-}
- 
-
-   .muiButtonLabel{
-       width: 100%;
-       display: inherit;
-       align-items: inherit;
-       line-height: 1;
-       justify-content: inherit;
-
-       .cssMediaContent{
-           display: flex;
-           align-items: center;
-
-           .cssSvg{
-               margin-right: 10px;
-           }
-       }
-       .cssSvgContent{
-        display: none;
+    .muiButtonRoot {
+        color: var(--c-text-color-87);
+        height: 51px;
+        padding: 17px 48px;
+        font-size: 14px;
+        min-width: 64px;
+        box-shadow: none;
+        box-sizing: border-box;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        font-family: Work Sans;
+        font-weight: 700;
+        line-height: 15px;
+        border-radius: 3px;
+        letter-spacing: 0.11px;
+        text-transform: uppercase;
+        text-decoration: none;
     }
-   }
 
-   
+
+    .muiButtonContained {
+        color: var(--c-icon-color) !important;
+        border: 1px solid var(--c-btn-background);
+        box-shadow: none;
+        background-color: var(--c-btn-background);
+    }
+
+    .muiButtonContainedPrimary {
+        color: var(--c-icon-color);
+        background-color: var(--c-btn-background);
+    }
+
+
+    .muiButtonLabel {
+        width: 100%;
+        display: inherit;
+        align-items: inherit;
+        line-height: 1;
+        justify-content: inherit;
+
+        .cssMediaContent {
+            display: flex;
+            align-items: center;
+
+            .cssSvg {
+                margin-right: 10px;
+            }
+        }
+
+        .cssSvgContent {
+            display: none;
+        }
+    }
+
 }
 
-.muiButtonBaseRoot{
+
+.muiButtonBaseRoot {
     color: inherit;
     border: 0;
     cursor: pointer;
@@ -513,3 +490,17 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   img {
+       text-align: center;
+       justify-content: center;
+       width: 100%;
+       max-width: 600px;
+       max-height: 300px;
+       object-fit: contain;
+   }
+}

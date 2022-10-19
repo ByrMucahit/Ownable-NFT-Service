@@ -4,7 +4,8 @@ import styles from './style.module.css'
 import * as Icon from '../../../icons'
 import {useState} from 'react';
 import axios from 'axios';
-
+import 'antd/dist/antd.css';
+import { Button, Modal } from 'antd';
 
 function MakeNFTForm() {
     /* Data which is input that have been entered by user  */
@@ -39,6 +40,11 @@ function MakeNFTForm() {
         setCreateObjectURL(URL.createObjectURL(file));
     }
 
+    const handleFilledField = () => {
+        setCreateObjectURL(null);
+        setQuery(null);
+    }
+
     /* IF ANY CHANGING HAVE BEEN DONE */
     const handleChange = () => (e) => {
         const name = e.target.name;
@@ -51,18 +57,43 @@ function MakeNFTForm() {
         console.log(query);
     }
 
+    const countDown = (responseData) => {
+        let secondsToGo = 5;
+        const modal = Modal.success({
+            title: "Success",
+            content: {responseData},
+        });
+        const timer = setInterval(() => {
+            secondsToGo -= 1;
+            modal.update({
+                content: `This modal will be destroyed after ${secondsToGo} second.`,
+            });
+        }, 1000);
+        setTimeout(() => {
+            clearInterval(timer);
+            modal.destroy();
+        }, secondsToGo * 1000);
+    };
+
+    const handleResponse = (response) => {
+        console.log("Reponse from be: ", response);
+        if(response.status === 200 || response.status === 201) {
+            if(response.data.key==="MAKE_NFT_ON") {
+                countDown( "Hey, Your file has been made nft.");
+            }
+        }
+    }
+
     /* SUBMIT TRANSACTION */
     const handleSubmit = (e) => {
         e.preventDefault();
 
         const formData = new FormData();
+
         Object.entries(query).forEach(([key, value]) => {
-            console.log("key: ", key);
-            console.log("value: ", value);
             formData.append(key, value);
         });
 
-        console.log("Form data: ", formData);
         axios.post(
             process.env.GETFORM_FORM_ENDPOINT,
             formData,
@@ -85,6 +116,8 @@ function MakeNFTForm() {
                     image: ""
                 });
                 console.log(response);
+                handleResponse(response);
+                handleFilledField();
             })
             .catch(function (error) {
                 console.log(error);
@@ -468,7 +501,7 @@ function MakeNFTForm() {
                                            "top": "-35px;",
                                            "marginBottom": "10px;"
                                        }}>Media</label>
-                                <div style={{"display": "flex"}}>
+                                <div style={{"display": "flex", "justify-content":"space-between;"}}>
                                     <div>
                                         <label className={`
                                     ${styles.muiButtonBaseRoot} 
@@ -495,7 +528,7 @@ function MakeNFTForm() {
                                             accepted up to 10mb file size.</p>
                                     </div>
                                     <div className={styles.imageContainer}>
-                                        <img src={createObjectURL}  alt={'image'}/>
+                                        {createObjectURL ? <img src={createObjectURL}  alt={'image'}/>:null}
                                     </div>
                                 </div>
                             </div>
