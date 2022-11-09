@@ -32,12 +32,14 @@
     "@svgr/cli": "^5.5.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.7",
+    "hardhat": "^2.12.2",
     "postcss-custom-media": "^7.0.8",
     "postcss-loader": "^3.0.0",
     "postcss-nested": "^4.2.3",
     "style-loader": "^2.0.0"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^4.8.0",
     "antd": "^4.23.4",
     "axios": "^0.24.0",
     "classnames": "^2.3.1",
