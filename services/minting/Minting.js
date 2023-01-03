@@ -21,7 +21,8 @@ const Minting = () => {
 }
 
 export const connectWalletPressed = async () => {
-
+    console.log("Log from connect wallet pressed")
+    return "Hello World";
 }
 
 export default Minting;

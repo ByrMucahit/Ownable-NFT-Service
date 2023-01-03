@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import MintBtn from "../../../button/mint/index";
 import styles from './style.module.css'
 import * as Icon from '../../../icons'
@@ -8,8 +8,12 @@ import 'antd/dist/antd.css';
 import { Button, Modal } from 'antd';
 import Minting from "../../../../services/minting/Minting";
 import {connectWalletPressed} from "../../../../services/minting/Minting";
+import {MintContext} from "../../../../context/MintingProvider";
 
 function MakeNFTForm() {
+
+    const walletAddress = useContext(MintContext)
+
     /* Data which is input that have been entered by user  */
     const [formStatus, setFormStatus] = useState(false);
     const [createObjectURL, setCreateObjectURL] = useState(null);
@@ -137,13 +141,43 @@ function MakeNFTForm() {
                         <p className={styles.muiFormHelperTextRoot}>Fungible And non-fungible tokens</p>
 
                         <div>
-                            <h3 className={
-                                `${styles.muiTypographyRoot} 
+                            <div className={"registerContainer"} style={{"display":"flex"}}>
+                                <h3 className={
+                                    `${styles.muiTypographyRoot} 
                                  ${styles.cssAccountLinkContent} 
                                  ${styles.muiTypographyH3}`}
-                            >
-                                Already have an account ?
-                            </h3>
+                                >
+                                    Already have an account ?
+                                </h3>
+
+                                <div className={styles.muiFormControlRoot}>
+                                    <label className={`
+                                ${styles.muiFormLabelRoot} 
+                                ${styles.muiInputLabelRoot} 
+                                ${styles.muiInputLabelFormControl} 
+                                ${styles.muiInputLabelAnimated}`}
+                                           data-shrink="false"
+                                           placeholder="Enter First Name"
+                                           style={{}}
+                                    >
+                                    </label>
+
+                                    <div className={`walletButtonContainer`}
+                                         style={{}}
+                                    >
+                                        <button id={"walletButton"} onClick={connectWalletPressed}>
+                                            Wallet
+                                        </button>
+                                    </div>
+                                    <p className={`
+                                ${styles.muiFormHelperTextRoot} 
+                                ${styles.muiError}`}
+                                       placeholder="Enter First Name"
+                                       style={{"marginRight": "20px;"}}>
+                                        Provide Your First Name
+                                    </p>
+                                </div>
+                            </div>
 
                             <div className={styles.muiFormControlRoot}>
                                 <label className={`
@@ -188,39 +222,6 @@ function MakeNFTForm() {
                                 </p>
                             </div>
 
-                            <div className={styles.muiFormControlRoot}>
-                                <label className={`
-                                ${styles.muiFormLabelRoot} 
-                                ${styles.muiInputLabelRoot} 
-                                ${styles.muiInputLabelFormControl} 
-                                ${styles.muiInputLabelAnimated}`}
-                                       data-shrink="false"
-                                       placeholder="Enter First Name"
-                                       style={{"marginRight": "20px;"}}
-                                >
-                                </label>
-
-                                <div className={`
-                                ${styles.muiInputBaseRoot} 
-                                ${styles.muiInputRoot} 
-                                ${styles.muiInputUnderline} 
-                                ${styles.cssInput} 
-                                ${styles.muiInputBaseFormControl}
-                                ${styles.muiInputFormControl}
-                                `}
-                                     style={{"marginRight": "20px;"}}
-                                >
-                                    <button id={"walletButton"} onClick={connectWalletPressed}>
-                                    </button>
-                                </div>
-                                <p className={`
-                                ${styles.muiFormHelperTextRoot} 
-                                ${styles.muiError}`}
-                                   placeholder="Enter First Name"
-                                   style={{"marginRight": "20px;"}}>
-                                    Provide Your First Name
-                                </p>
-                            </div>
 
                             <div className={styles.muiFormControlRoot}>
                                 <label className={`
