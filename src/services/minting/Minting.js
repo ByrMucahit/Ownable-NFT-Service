@@ -1,5 +1,5 @@
-import {useState} from 'React';
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
+import { connectWallet} from "../interact";
 
 
 const Minting = () => {
@@ -21,8 +21,9 @@ const Minting = () => {
 }
 
 export const connectWalletPressed = async () => {
-    console.log("Log from connect wallet pressed")
-    return "Hello World";
+    const walletResponse = await connectWallet();
+    setStatus(walletResponse.status);
+    setWallet(walletResponse.address);
 }
 
 export default Minting;

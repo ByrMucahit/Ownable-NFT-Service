@@ -6,17 +6,16 @@ import {useState} from 'react';
 import axios from 'axios';
 import 'antd/dist/antd.css';
 import { Button, Modal } from 'antd';
-import Minting from "../../../../services/minting/Minting";
-import {connectWalletPressed} from "../../../../services/minting/Minting";
+import Minting from "../../../../src/services/minting/Minting";
+import {connectWalletPressed} from "../../../../src/services/minting/Minting";
 import {MintContext} from "../../../../context/MintingProvider";
 
 function MakeNFTForm() {
 
-    const walletAddress = useContext(MintContext)
-
     /* Data which is input that have been entered by user  */
     const [formStatus, setFormStatus] = useState(false);
     const [createObjectURL, setCreateObjectURL] = useState(null);
+    const [walletAddress, setWalletAddress] = useState("");
     const [query, setQuery] = useState({
         firstName: "",
         lastName: "",
@@ -166,7 +165,10 @@ function MakeNFTForm() {
                                          style={{}}
                                     >
                                         <button id={"walletButton"} onClick={connectWalletPressed}>
-                                            Wallet
+                                            {walletAddress.length > 0 ?
+                                                ("Conntected:" + String(walletAddress).substring(0, 6) + "..."):
+                                                (<span>Connect Wallet</span>)
+                                            }
                                         </button>
                                     </div>
                                     <p className={`

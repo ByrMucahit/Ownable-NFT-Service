@@ -1,6 +1,6 @@
 import {createContext, useContext} from "react";
 import {useState} from "React";
-import {connectWalletPressed} from "../services/minting/Minting";
+import {connectWalletPressed} from "../src/services/minting/Minting";
 
 
 export const MintContext = createContext("unknown");
