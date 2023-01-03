@@ -6,6 +6,8 @@ import {useState} from 'react';
 import axios from 'axios';
 import 'antd/dist/antd.css';
 import { Button, Modal } from 'antd';
+import Minting from "../../../../services/minting/Minting";
+import {connectWalletPressed} from "../../../../services/minting/Minting";
 
 function MakeNFTForm() {
     /* Data which is input that have been entered by user  */
@@ -176,6 +178,40 @@ function MakeNFTForm() {
                                            onClick={() => console.log(query.key + " " + "from first Name field")}
                                     >
                                     </input>
+                                </div>
+                                <p className={`
+                                ${styles.muiFormHelperTextRoot} 
+                                ${styles.muiError}`}
+                                   placeholder="Enter First Name"
+                                   style={{"marginRight": "20px;"}}>
+                                    Provide Your First Name
+                                </p>
+                            </div>
+
+                            <div className={styles.muiFormControlRoot}>
+                                <label className={`
+                                ${styles.muiFormLabelRoot} 
+                                ${styles.muiInputLabelRoot} 
+                                ${styles.muiInputLabelFormControl} 
+                                ${styles.muiInputLabelAnimated}`}
+                                       data-shrink="false"
+                                       placeholder="Enter First Name"
+                                       style={{"marginRight": "20px;"}}
+                                >
+                                </label>
+
+                                <div className={`
+                                ${styles.muiInputBaseRoot} 
+                                ${styles.muiInputRoot} 
+                                ${styles.muiInputUnderline} 
+                                ${styles.cssInput} 
+                                ${styles.muiInputBaseFormControl}
+                                ${styles.muiInputFormControl}
+                                `}
+                                     style={{"marginRight": "20px;"}}
+                                >
+                                    <button id={"walletButton"} onClick={connectWalletPressed}>
+                                    </button>
                                 </div>
                                 <p className={`
                                 ${styles.muiFormHelperTextRoot} 
