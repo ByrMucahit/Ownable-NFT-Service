@@ -1,15 +1,29 @@
-import {createContext, useContext} from "react";
+import {createContext, useContext, useEffect} from "react";
 import {useState} from "React";
 import {connectWalletPressed} from "../src/services/minting/Minting";
+import {getCurrentWalletConnected} from "../src/services/interact";
 
 
 export const MintContext = createContext("unknown");
 
 const MintProvider = (props) => {
 
-    const getWalletAddress = () => {
+    const [walletAddress, setWallet] = useState("");
+    const [status, setStatus] = useState("");
 
+    useEffect(async () => {
+        const {address, status} = await getCurrentWalletConnected();
+        setWallet(address);
+        setStatus(status);
+
+        addWalletListener();
+    }, []);
+
+    const connectWalletManager = () => {
+        let {wallet, status} = connectWalletPressed();
     }
+
+
 
     return (
         <MintContext.Provider>
