@@ -1,32 +1,45 @@
-import {createContext, useContext, useEffect} from "react";
-import {useState} from "React";
-import {connectWalletPressed} from "../src/services/minting/Minting";
+import {createContext, useContext, useEffect, useState} from "react";
 import {getCurrentWalletConnected} from "../src/services/interact";
-
 
 export const MintContext = createContext("unknown");
 
 const MintProvider = (props) => {
-
-    const [walletAddress, setWallet] = useState("");
     const [status, setStatus] = useState("");
+    const [wallet, setWallet] = useState("selamlar");
 
     useEffect(async () => {
         const {address, status} = await getCurrentWalletConnected();
-        setWallet(address);
         setStatus(status);
+        setWallet(address)
 
         addWalletListener();
     }, []);
 
-    const connectWalletManager = () => {
-        let {wallet, status} = connectWalletPressed();
+    function addWalletListener() {
+        if (window.ethereum) {
+            window.ethereum.on("accountChanged", (accounts) => {
+                if (accounts.length > 0) {
+                    setStatus("Write a message in the text-field above.");
+                } else {
+                    setStatus("Connect to Metamask using the top right button.");
+                }
+            });
+        } else {
+            setStatus(
+                <p>
+                    {" "}
+                    {" "}
+                    <a target={"_blank"} href={`https://metamask.io/download.html`}>
+                        You must install Metamask, a virtual Ethereum wallet, in your browser.
+                    </a>
+                </p>
+            )
+        }
     }
 
 
-
     return (
-        <MintContext.Provider>
+        <MintContext.Provider value={{status, wallet}}>
             {props.children}
         </MintContext.Provider>
     )

@@ -7,8 +7,8 @@ import axios from 'axios';
 import 'antd/dist/antd.css';
 import { Button, Modal } from 'antd';
 import Minting from "../../../../src/services/minting/Minting";
-import {connectWalletPressed} from "../../../../src/services/minting/Minting";
 import {MintContext} from "../../../../context/MintingProvider";
+import {connectWallet} from "../../../../src/services/interact";
 
 function MakeNFTForm() {
 
@@ -16,6 +16,9 @@ function MakeNFTForm() {
     const [formStatus, setFormStatus] = useState(false);
     const [createObjectURL, setCreateObjectURL] = useState(null);
     const [walletAddress, setWalletAddress] = useState("");
+    const {status, setStatus, wallet, setWallet} = useContext(MintContext);
+
+
     const [query, setQuery] = useState({
         firstName: "",
         lastName: "",
@@ -164,7 +167,7 @@ function MakeNFTForm() {
                                     <div className={`walletButtonContainer`}
                                          style={{}}
                                     >
-                                        <button id={"walletButton"} onClick={connectWalletPressed}>
+                                        <button id={"walletButton"} onClick={connectWallet}>
                                             {walletAddress.length > 0 ?
                                                 ("Conntected:" + String(walletAddress).substring(0, 6) + "..."):
                                                 (<span>Connect Wallet</span>)
@@ -672,7 +675,7 @@ function MakeNFTForm() {
                         </form>
                     </div>
                 </div>
-
+                {console.log("Hey you: ", wallet)}
             </div>
         </div>
     )
