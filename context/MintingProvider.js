@@ -5,7 +5,7 @@ export const MintContext = createContext("unknown");
 
 const MintProvider = (props) => {
     const [status, setStatus] = useState("");
-    const [wallet, setWallet] = useState("selamlar");
+    const [wallet, setWallet] = useState("");
 
     useEffect(async () => {
         const {address, status} = await getCurrentWalletConnected();
