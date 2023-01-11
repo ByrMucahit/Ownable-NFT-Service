@@ -1,4 +1,4 @@
-import {pinJSONToIPFS} from "../pin";
+import {pinJSONToIPFS} from "../../services/pin";
 
 require('dotenv').config();
 const alchemyKey = process.env["REACT_ALCHEMY_API_KEY "];

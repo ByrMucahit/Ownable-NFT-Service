@@ -1,5 +1,5 @@
 import {createContext, useContext, useEffect, useState} from "react";
-import {getCurrentWalletConnected} from "../src/services/interact";
+import {getCurrentWalletConnected} from "../src/utils/interact";
 
 export const MintContext = createContext("unknown");
 

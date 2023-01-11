@@ -8,7 +8,7 @@ import 'antd/dist/antd.css';
 import { Button, Modal } from 'antd';
 import Minting from "../../../../src/services/minting/Minting";
 import {MintContext} from "../../../../context/MintingProvider";
-import {connectWallet} from "../../../../src/services/interact";
+import {connectWallet} from "../../../../src/utils/interact";
 
 function MakeNFTForm() {
 

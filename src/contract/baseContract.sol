@@ -11,6 +11,12 @@ contract baseContract is ERC721URIStorage, Ownable {
     constructor() public ERC721("BaseContract", "NFT") {}
 
     function mintNFT(address recipient, string memory tokenURI) public onlyOwner returns (uint256) {
+    _tokenIds.increment();
 
-}
+    uint256 newItemId = _tokenIds.current();
+    _mint(recipient, newItemId);
+    _setTokenURI(newItemId, tokenURI);
+
+    return newItemId;
+    }
 }
