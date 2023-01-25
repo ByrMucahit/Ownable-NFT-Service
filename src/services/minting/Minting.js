@@ -1,5 +1,5 @@
 import {useContext, useEffect, useState} from "react";
-import {connectWallet, getCurrentWalletConnected} from "../../utils/interact";
+import {connectWallet, getCurrentWalletConnected, mintNFT} from "../../utils/interact";
 import {MintContext} from "../../../context/MintingProvider";
 
 
@@ -22,10 +22,9 @@ export const Minting = () => {
 }
 
 
-export const onMintPressed = async () => {
-    const {setStatus, wallet, setWallet} = useContext(MintContext);
+export const onMintPressed = async ({url, name, description}) => {
+    const {setStatus} = useContext(MintContext);
 
     const {status} = await mintNFT(url, name, description);
     setStatus(status);
-}
-
+};

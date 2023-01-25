@@ -1,13 +1,5 @@
 import {pinJSONToIPFS} from "../../services/pin";
 
-require('dotenv').config();
-const alchemyKey = process.env["REACT_ALCHEMY_API_KEY "];
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-const web3 = createAlchemyWeb3(alchemyKey);
-
-const contractABI = require('../../../contract-abi.json');
-const contractAddress = "0x2fb67a6410836e74D88a0d52F587683C0378c6d7";
-
 export const connectWallet = async () => {
     if(window.ethereum) {
         try {
@@ -85,6 +77,17 @@ export const getCurrentWalletConnected = async () => {
     }
 };
 
+const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
+const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
+
+// Using HTTPS
+const web3 = createAlchemyWeb3("https://eth-mainnet.g.alchemy.com/xjxP2tzn3QxlIamX6rtHo6aJiK1kpIjG");
+
+const contractABI = require('../../../contract-abi.json');
+const contractAddress = "0x2fb67a6410836e74D88a0d52F587683C0378c6d7";
+
+
+
 export const mintNFT = async (url, name, description) => {
     if(url.trim() == "" || (name.trim() == "" || description.trim() == "")) {
         return {
@@ -104,7 +107,7 @@ export const mintNFT = async (url, name, description) => {
     if(!pinataResponse.success) {
         return {
             success: false,
-            status: ":( Something went wrong while uploadinbg your tokenURI.",
+            status: ":( Something went wrong while uploading your tokenURI.",
         }
     }
     const tokenURI = pinataResponse.pinataUrl;

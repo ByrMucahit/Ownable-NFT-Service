@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./style.module.css"
 
-function mintBtn(){
+function mintBtn({onClick,...props}){
     return(
         <button className={`
         ${styles.muiInputBaseRoot} 
@@ -10,7 +10,7 @@ function mintBtn(){
         ${styles.cssButton} 
         ${styles.muiButtonContainedPrimary}
         `}
-        
+        onClick={onClick}
         type="submit"
         >
             <span className={styles.muiButtonLabel}>Mint NFT</span>

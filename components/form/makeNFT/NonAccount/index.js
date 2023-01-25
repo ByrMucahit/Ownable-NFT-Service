@@ -8,15 +8,14 @@ import 'antd/dist/antd.css';
 import { Button, Modal } from 'antd';
 import Minting from "../../../../src/services/minting/Minting";
 import {MintContext} from "../../../../context/MintingProvider";
-import {connectWallet} from "../../../../src/utils/interact";
+import {connectWallet, mintNFT, onMintPressed} from "../../../../src/utils/interact";
 
 function MakeNFTForm() {
 
     /* Data which is input that have been entered by user  */
     const [formStatus, setFormStatus] = useState(false);
     const [createObjectURL, setCreateObjectURL] = useState(null);
-    const [walletAddress, setWalletAddress] = useState("");
-    const {status, setStatus, wallet, setWallet} = useContext(MintContext);
+    const {status, setStatus, wallet, setWallet, onMintPressed} = useContext(MintContext);
 
 
     const [query, setQuery] = useState({
@@ -168,8 +167,8 @@ function MakeNFTForm() {
                                          style={{}}
                                     >
                                         <button id={"walletButton"} onClick={connectWallet}>
-                                            {walletAddress.length > 0 ?
-                                                ("Conntected:" + String(walletAddress).substring(0, 6) + "..."):
+                                            {wallet.length > 0 ?
+                                                ("Conntected:" + String(wallet).substring(0, 6) + "..."):
                                                 (<span>Connect Wallet</span>)
                                             }
                                         </button>
@@ -671,7 +670,7 @@ function MakeNFTForm() {
                                 >NFT Minting Fee</label>
                                 $114.95
                             </div>
-                            <MintBtn type={"submit"}/>
+                            <MintBtn type={"submit"} onClick={onMintPressed}/>
                         </form>
                     </div>
                 </div>
