@@ -17,7 +17,6 @@ function MakeNFTForm() {
     const [createObjectURL, setCreateObjectURL] = useState(null);
     const {status, setStatus, wallet, setWallet, onMintPressed} = useContext(MintContext);
 
-
     const [query, setQuery] = useState({
         firstName: "",
         lastName: "",
@@ -89,7 +88,7 @@ function MakeNFTForm() {
                 countDown( "Hey, Your file has been made nft.");
             }
         }
-    }
+    };
 
     /* SUBMIT TRANSACTION */
     const handleSubmit = (e) => {

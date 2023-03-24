@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import useWindowSize from '../../../hook/useWindowSize'
-
+import {useDispatch} from "react-redux";
 import styles from './style.module.css'
 import CONST from '../../../constant'
 import Navigation from "../../navigation/navigation"
@@ -9,8 +9,11 @@ import Quotation from "../../row/quotation"
 import ReasonSide from "../../row/reasonSide"
 import GetStartedSide from "../../row/getStarted"
 import FooterSide from "../../footer/index"
+import {increment} from "../../../src/redux/reducers/userReducer";
 
 function Layout() {
+    const [msg, setMsg] = useState('');
+    const dispatch = useDispatch();
 
     const makeSomething = () => {
         console.log("Hello World");
@@ -26,7 +29,7 @@ function Layout() {
                 </div>
 
                 <div>
-                    <button onClick={() => makeSomething() }>makes something</button>
+                    <button onClick={() => dispatch(increment(msg))}>makes something</button>
                 </div>
 
                 {/* Exhibition */}
