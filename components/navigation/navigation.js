@@ -56,7 +56,7 @@ function Navigation({flat = false}) {
                        ${styles.muiListItemRoot} 
                        ${styles.cssNavigatorContent} 
                        ${styles.muiListItemGutters} 
-                       ${styles.muiListItemButton}`}>
+                       ${styles.muiListItemButton}`} key={menu.key}>
                                     <NavigationButton
                                         className={styles.subBtn}
                                         key={menu.key}
